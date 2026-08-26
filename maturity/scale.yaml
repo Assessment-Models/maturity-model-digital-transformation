@@ -1,0 +1,129 @@
+# Maturity Scale — maturity-model-digital-transformation v1.0.0 (5-level)
+# Composite model-owned scale (CR-AM-11 §6, §31). Five levels with
+# structural L-0…L-4 identifiers, linear topology, exponential
+# progression (the maturity-v2 diminishing-returns insight). Subject of
+# the assessment is the org's overall digital-transformation posture,
+# spanning operations + technology + services-delivery + culture.
+#
+# This scale is COMPOSITE — it borrows the L-0..L-4 structural identifiers
+# from the canonical OpenDEA scale convention but its level semantics are
+# the composite model's own. Identity is (model, scale, level) per
+# CR-AM-09 §9 — never normalised across models.
+
+id: dea:scale-digital-transformation-v1
+version: "1.0.0"
+metamodel_version: "1.0.0"
+name: Digital Transformation Maturity Scale (composite, 5-level)
+description: >-
+  Model-owned scale for the Digital Transformation maturity model.
+  Five levels: L-0 Absent, L-1 Piloting, L-2 Defined, L-3 Scaled,
+  L-4 Self-Optimising. Linear topology; exponential progression; per-
+  level effort_multiplier documented at the model level (a 6x jump from
+  L-0 to L-4 reflects the maturity-v2 diminishing-returns insight).
+status: stable
+
+levels:
+  - id: L-0
+    ordinal: 0
+    name: Absent
+    definition: >-
+      No digital transformation initiative is in flight. Operations,
+      technology, and services-delivery practices are unchanged from
+      their pre-DT state.
+    short_description: No DT initiative
+    characteristics:
+      - No executive sponsor for digital transformation.
+      - Strategy, operations, and technology roadmaps do not reference
+        digital transformation.
+      - No measurable DT KPIs.
+
+  - id: L-1
+    ordinal: 1
+    name: Piloting
+    definition: >-
+      Isolated digital pilots exist (one or two teams experimenting with
+      automation, AI-assisted tooling, or new delivery models), but
+      success is person-dependent and there is no shared playbook.
+    short_description: Isolated pilots, person-dependent
+    characteristics:
+      - One or two teams run isolated DT pilots.
+      - A champion drives adoption informally.
+      - No centralised metric for DT outcomes.
+
+  - id: L-2
+    ordinal: 2
+    name: Defined
+    definition: >-
+      The org has documented a DT strategy and a small set of shared
+      playbooks; some components (digital culture, technology adoption)
+      are imported from the OpenDEA component registry. Governance
+      exists but enforcement is inconsistent.
+    short_description: DT strategy + shared playbooks; partial enforcement
+    characteristics:
+      - DT strategy document names the org's DT target and is signed off
+        by leadership.
+      - At least three of the four components are imported from the
+        OpenDEA component registry.
+      - A DT review board meets on a fixed cadence (>= monthly).
+
+  - id: L-3
+    ordinal: 3
+    name: Scaled
+    definition: >-
+      DT practice is operationalised across most of the org. Adoption
+      is enforced through tooling and conformance CI; benchmark
+      participation is routine. Practice is repeatable and reviewable.
+    short_description: Operationalised + benchmarked
+    characteristics:
+      - All four components imported and extended/overridden in at least
+        one org-specific dimension.
+      - Conformance CI runs on every DT artefact PR; failures block
+        promotion.
+      - The org participates in the OpenDEA Benchmark 2026 cohort
+        (composite scoring against the v2 bands).
+
+  - id: L-4
+    ordinal: 4
+    name: Self-Optimising
+    definition: >-
+      The org's DT practice is self-improving: usage telemetry feeds
+      back into the playbooks, baseline benchmarks are locked for
+      historical reproducibility, and the org contributes back to the
+      Assessment-Models ecosystem (registry records, component
+      donations, schema change requests).
+    short_description: Self-improving + ecosystem-active
+    characteristics:
+      - At least one Maturity Scale Baseline is locked (Benchmark 2026
+        or later).
+      - At least one DT-related component is published back to the
+        OpenDEA component registry.
+      - The DT practice mentors other orgs through the ecosystem.
+
+ordering: ascending
+
+progression:
+  topology: linear
+  function: exponential
+  transition_rules:
+    - Forward-only; no level skipping (the maturity-v2 diminishing-
+      returns insight — reaching L-4 is intentionally costly).
+    - Exit from a level requires the documented exit criteria AND
+      evidence expectations from the corresponding criterion's level
+      expectations (evaluation model).
+  # Per-level effort_multiplier is a model-level parameter; reported in
+  # AssessmentResults as the effort-adjusted value.
+  effort_multiplier:
+    L-0: 1.0
+    L-1: 1.5
+    L-2: 2.5
+    L-3: 4.0
+    L-4: 6.0
+
+conformance:
+  statuses:
+    - conformant
+    - partially-conformant
+    - non-conformant
+    - indeterminate
+    - not-assessable
+  highest_conformant_level_resolution: true

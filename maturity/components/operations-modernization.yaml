@@ -1,0 +1,30 @@
+# Composite component — operations modernization (CR-AM-10 §4 kind: extend)
+#
+# Extends the canonical operations-modernization dimension cluster with
+# two composite-model-specific dimensions: DT-instrumentation-coverage
+# (composite) and DT-observability-budget (composite). Kind = `extend`
+# — consumer adds to the imported content.
+id: dea:component-operations-modernization
+type: component
+kind: extend
+source:
+  repository: technehub-labs/dea-metamodel
+version: 1.0.0
+reference: v1.0.0
+extends:
+  - id: dea:dimension-operations-service-reliability
+  - id: dea:dimension-operations-incident-response
+additions:
+  - id: dea:dimension-dt-instrumentation-coverage
+    name: DT instrumentation coverage
+    description: >-
+      Composite-model dimension: instrumented touchpoints across the
+      DT pipeline (added by the DT model).
+  - id: dea:dimension-dt-observability-budget
+    name: DT observability budget
+    description: >-
+      Composite-model dimension: explicit observability budget per DT
+      initiative (added by the DT model).
+notes: >-
+  Extends the imported operations-modernization dimension cluster with
+  two composite dimensions specific to the DT model.

@@ -1,0 +1,27 @@
+# Composite component — services delivery (CR-AM-10 §4 kind: override)
+#
+# Overrides the canonical services-delivery dimension cluster with a
+# composite-specific replacement: platform-engineering becomes the
+# canonical dimension name (replacing the generic delivery-cadence).
+# Kind = `override` — consumer replaces the imported dimension with
+# its own definition. The override is consumer-scoped; the canonical
+# registry entry remains unchanged for other consumers.
+id: dea:component-services-delivery
+type: component
+kind: override
+source:
+  repository: technehub-labs/dea-metamodel
+version: 1.0.0
+reference: v1.0.0
+overrides:
+  - replaces: dea:dimension-services-delivery-cadence
+    with:
+      id: dea:dimension-services-delivery-platform-engineering
+      name: Platform engineering
+      description: >-
+        Composite-model replacement: platform engineering adoption as
+        the canonical services-delivery maturity signal (added by the
+        DT model).
+notes: >-
+  Override is consumer-scoped to the DT model. The canonical registry
+  entry remains the default for non-DT consumers.

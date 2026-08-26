@@ -1,0 +1,31 @@
+# Composite component — digital culture (CR-AM-10 §4 kind: import)
+#
+# Imports the canonical digital-culture dimension cluster from the
+# OpenDEA maturity-component registry. Reused verbatim by the composite
+# DT model. Kind = `import` — consumer takes the content as-is.
+id: dea:component-digital-culture
+type: component
+kind: import
+source:
+  repository: technehub-labs/dea-metamodel
+version: 1.0.0
+reference: v1.0.0
+content:
+  - id: dea:dimension-digital-culture-leadership
+    name: Leadership sponsorship
+    description: >-
+      Executive sponsorship of digital transformation, with charter
+      and budget authority.
+  - id: dea:dimension-digital-culture-vocabulary
+    name: Shared DT vocabulary
+    description: >-
+      Org-wide shared terminology for digital transformation
+      initiatives and outcomes.
+  - id: dea:dimension-digital-culture-experimentation
+    name: Safe-to-fail experimentation
+    description: >-
+      Organisational permission to fail fast and learn; pulse-driven
+      iteration cadence.
+notes: >-
+  Imported from the OpenDEA maturity-component registry v1.0.0. The
+  consumer (composite DT model) takes the content as-is.

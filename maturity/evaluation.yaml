@@ -1,0 +1,149 @@
+# Maturity Evaluation Model — maturity-model-digital-transformation v1.0.0
+# Composite model evaluation. Native 0–100 weighted mean over four criteria,
+# each carrying per-level expectations against the L-0…L-4 composite scale.
+#
+# This model is the FIRST INDEPENDENT MODEL in the Assessment-Models
+# ecosystem. It is published as a Phase 4 first-model candidate under
+# CR-AM-11 §31 — the same model demonstrates all three CI levels on its
+# own repository.
+
+id: dea:evaluation-digital-transformation-v1
+version: "1.0.0"
+metamodel_version: "1.0.0"
+name: Digital Transformation Evaluation Model (composite)
+description: >-
+  Model-owned evaluation contract for the Digital Transformation composite
+  maturity model. Weighted native 0–100 aggregation over four criteria
+  (digital-culture, technology-adoption, operations-modernization,
+  services-delivery). Per-level expectations reference the L-0…L-4
+  composite scale (scale.yaml).
+status: stable
+
+scale:
+  id: dea:scale-digital-transformation-v1
+  version: "1.0.0"
+
+scoring:
+  mechanism: weighted
+  domain:
+    kind: numeric-0-100
+    minimum: 0
+    maximum: 100
+  aggregation_rule: >-
+    Weighted mean over the four criteria's native 0-100 scores, with
+    declared weights: digital-culture 0.20, technology-adoption 0.30,
+    operations-modernization 0.25, services-delivery 0.25. The result
+    is banded through the maturity-v2 canonical band instance
+    (dea:maturity-bands-v2 v1.0.0) and resolved to the L-0...L-4
+    scale via highest-conformant-level resolution. Per-level
+    effort_multiplier from scale.yaml is applied to the aggregated
+    value to produce the effort-adjusted value reported in
+    AssessmentResults.
+
+level_resolution_inputs:
+  - criterion-scores
+  - mandatory-criteria
+  - evidence-confidence
+  - ecosystem-participation
+
+criteria:
+  - id: digital-culture
+    name: Digital culture
+    description: >-
+      Does the org's culture support digital transformation — including
+      exec sponsorship, time shared language, and willingness to fail?
+    mandatory: true
+    evidence_requirements:
+      - DT charter or strategy document with exec sign-off.
+      - Survey or pulse data on DT readiness.
+    level_expectations:
+      - level: L-0
+        expectation: No DT charter exists; no exec sponsor.
+      - level: L-1
+        expectation: A champion drives informal DT adoption; no charter.
+      - level: L-2
+        expectation: Charter exists and is signed off; pulse data
+          collected but not acted on consistently.
+      - level: L-3
+        expectation: Charter is reviewed quarterly; pulse data drives
+          quarterly DT roadmap updates.
+      - level: L-4
+        expectation: Charter evolves; org mentors other orgs; pulse
+          data is published externally as a benchmark.
+
+  - id: technology-adoption
+    name: Technology adoption
+    description: >-
+      Are the org's technology choices aligned with the DT strategy —
+      cloud, automation, AI-assisted tooling, and platform practices?
+    mandatory: true
+    evidence_requirements:
+      - Reference architecture documenting adopted technologies.
+      - Adoption metrics per technology (e.g. cloud migration %, CI/CD
+        coverage, AIOps usage).
+    level_expectations:
+      - level: L-0
+        expectation: No reference architecture; tech choices ad-hoc.
+      - level: L-1
+        expectation: A few teams have adopted cloud or automation
+          tooling locally.
+      - level: L-2
+        expectation: Reference architecture exists and is referenced in
+          architecture decisions.
+      - level: L-3
+        expectation: Reference architecture is enforced via tooling;
+          adoption metrics tracked.
+      - level: L-4
+        expectation: Reference architecture self-improves; org
+          contributes reference patterns back upstream.
+
+  - id: operations-modernization
+    name: Operations modernization
+    description: >-
+      Are operations practices modernized to support DT — including
+      observability, incident response, and autonomous operations?
+    mandatory: false
+    evidence_requirements:
+      - Observability coverage report.
+      - Incident response cadence (MTTD, MTTR) trends.
+      - Autonomous operations adoption metrics.
+    level_expectations:
+      - level: L-0
+        expectation: Operations unchanged from pre-DT state.
+      - level: L-1
+        expectation: One team experiments with observability or
+          autonomous tooling.
+      - level: L-2
+        expectation: Operations playbooks documented; observability
+          partially deployed.
+      - level: L-3
+        expectation: Observability and incident response are governed;
+          autonomous operations piloted in >=1 domain.
+      - level: L-4
+        expectation: Autonomous operations are routine; the org
+          contributes operational patterns back upstream.
+
+  - id: services-delivery
+    name: Services delivery
+    description: >-
+      Are delivery practices modernized — agile-at-scale, platform
+      engineering, and customer-facing service design?
+    mandatory: false
+    evidence_requirements:
+      - Delivery cadence metrics (deployment frequency, change lead
+        time, change failure rate).
+      - Platform engineering adoption metrics.
+    level_expectations:
+      - level: L-0
+        expectation: Delivery unchanged from pre-DT state.
+      - level: L-1
+        expectation: A few teams experiment with new delivery models.
+      - level: L-2
+        expectation: Delivery playbooks documented; cadence metrics
+          tracked manually.
+      - level: L-3
+        expectation: Cadence metrics tracked automatically; platform
+          engineering deployed org-wide.
+      - level: L-4
+        expectation: Delivery practice self-improves; org contributes
+          delivery patterns back upstream.
