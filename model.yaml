@@ -35,28 +35,28 @@ compatibility:
     - id: conformance-contract
       version: "^1.0"
 components:
-  - id: dea:component-digital-culture
+  - id: digital-culture
     type: dimension
     kind: import
     source:
       repository: technehub-labs/dea-metamodel
     version: 1.0.0
     reference: v1.0.0
-  - id: dea:component-technology-adoption
+  - id: technology-adoption
     type: dimension
     kind: import
     source:
       repository: technehub-labs/dea-metamodel
     version: 1.0.0
     reference: v1.0.0
-  - id: dea:component-operations-modernization
+  - id: operations-modernization
     type: dimension
     kind: extend
     source:
       repository: technehub-labs/dea-metamodel
     version: 1.0.0
     reference: v1.0.0
-  - id: dea:component-services-delivery
+  - id: services-delivery
     type: dimension
     kind: override
     source:
@@ -64,10 +64,5 @@ components:
     version: 1.0.0
     reference: v1.0.0
 dependencies:
-  - id: dea:evaluation-opendea-enterprise-architecture-v1
+  - id: dea-evaluation-opendea-enterprise-architecture-v1
     reference: v1.0.0
-notes: >-
-  The dependencies entry pins the OpenDEA EA reference instance evaluation
-  model (Phase 3) at its v1.0.0 tag — the scoring anchor for the four
-  components and the model itself. The reference instance is published at
-  technehub-labs/dea-metamodel/assessment-models/evaluation-examples/opendea-enterprise-architecture.yaml.
