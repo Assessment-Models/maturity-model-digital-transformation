@@ -1,0 +1,18 @@
+# Composite component — technology adoption (CR-AM-10 §4 kind: import)
+id: dea:component-technology-adoption
+type: component
+kind: import
+source:
+  repository: technehub-labs/dea-metamodel
+version: 1.0.0
+reference: v1.0.0
+content:
+  - id: dea:dimension-technology-reference-architecture
+    name: Reference architecture
+    description: >-
+      Documented reference architecture aligned with DT strategy.
+  - id: dea:dimension-technology-automation-coverage
+    name: Automation coverage
+    description: >-
+      CI/CD coverage, IaC adoption, and AI-assisted tooling usage.
+notes: Imported from the OpenDEA maturity-component registry v1.0.0.

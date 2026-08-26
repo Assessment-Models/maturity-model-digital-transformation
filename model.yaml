@@ -1,0 +1,73 @@
+# CR-AM-11 §15 contract handshake — Digital Transformation first-model candidate.
+#
+# The contract family (`maturity-scale-contract`) and the canonical source
+# (`technehub-labs/dea-metamodel`) are resolved by the reusable Level 2
+# workflow `Assessment-Models/assessment-ci/.github/workflows/contract-conformance.yml`
+# against the published suite at the pinned release.
+#
+# `version: "1.0"` is a prefix of the published `1.0.0` — acceptable per
+# the resolver's prefix-compatibility rule.
+id: maturity-model-digital-transformation
+type: maturity-model
+name: Digital Transformation Maturity Model
+description: >-
+  Composite maturity model spanning operations, technology, and
+  services-delivery child models, plus the org's own adoption of
+  OpenDEA itself. First independent model in the Assessment-Models
+  ecosystem (CR-AM-11 §31 first-model candidate).
+version: 1.0.0
+conformance:
+  contract:
+    id: maturity-scale-contract
+  source:
+    organization: technehub-labs
+    repository: dea-metamodel
+  version: "1.0"
+compatibility:
+  metamodel:
+    minimum: 1.0.0
+    maximum: "<2.0.0"
+  contracts:
+    - id: maturity-scale-contract
+      version: "^1.0"
+    - id: maturity-model-contract
+      version: "^1.0"
+    - id: conformance-contract
+      version: "^1.0"
+components:
+  - id: dea:component-digital-culture
+    type: dimension
+    kind: import
+    source:
+      repository: technehub-labs/dea-metamodel
+    version: 1.0.0
+    reference: v1.0.0
+  - id: dea:component-technology-adoption
+    type: dimension
+    kind: import
+    source:
+      repository: technehub-labs/dea-metamodel
+    version: 1.0.0
+    reference: v1.0.0
+  - id: dea:component-operations-modernization
+    type: dimension
+    kind: extend
+    source:
+      repository: technehub-labs/dea-metamodel
+    version: 1.0.0
+    reference: v1.0.0
+  - id: dea:component-services-delivery
+    type: dimension
+    kind: override
+    source:
+      repository: technehub-labs/dea-metamodel
+    version: 1.0.0
+    reference: v1.0.0
+dependencies:
+  - id: dea:evaluation-opendea-enterprise-architecture-v1
+    reference: v1.0.0
+notes: >-
+  The dependencies entry pins the OpenDEA EA reference instance evaluation
+  model (Phase 3) at its v1.0.0 tag — the scoring anchor for the four
+  components and the model itself. The reference instance is published at
+  technehub-labs/dea-metamodel/assessment-models/evaluation-examples/opendea-enterprise-architecture.yaml.

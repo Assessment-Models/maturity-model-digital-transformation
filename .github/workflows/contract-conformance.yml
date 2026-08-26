@@ -1,0 +1,24 @@
+# Level 2 — contract conformance for the Digital Transformation model
+# (CR-AM-11 §14). Reuses Assessment-Models/assessment-ci's reusable
+# Level 2 workflow (`contract-conformance.yml`) to resolve the §15
+# contract handshake against the published contract suite at the pinned
+# dea-metamodel release.
+#
+# The `dea-metamodel-ref` input is the immutable pin — Phase 4 first
+# candidate pins `v1.0.0` once the Phase 3 reference instance ships its
+# first tag; until then we pin to a known-good dea-metamodel release or
+# a 40-char SHA. Mutable refs (main/master/latest) are rejected by the
+# reusable workflow's guard.
+name: Contract conformance (Level 2)
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  contract-conformance:
+    uses: Assessment-Models/assessment-ci/.github/workflows/contract-conformance.yml@main
+    with:
+      dea-metamodel-ref: 1bbc08d0                # dea-metamodel main tip at Phase 3 merge (commit SHA); switch to v1.0.0 tag when published
+      manifest-path: model.yaml

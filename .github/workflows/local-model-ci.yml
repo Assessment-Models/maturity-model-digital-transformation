@@ -1,0 +1,25 @@
+# Level 1 — local model CI for the Digital Transformation composite model
+# (CR-AM-11 §14). Validates schema, scale, evaluation, component kinds,
+# and example scoring math against the model itself. Level 2 (contract
+# conformance against a pinned dea-metamodel release) is a separate
+# workflow that reuses Assessment-Models/assessment-ci's reusable workflow.
+name: Local model CI (Level 1)
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pyyaml
+        run: pip install pyyaml
+      - name: Level 1 — local model validation
+        run: python scripts/local_validate.py

@@ -1,0 +1,62 @@
+# Worked example — enterprise-2026 DT scoring run.
+#
+# Demonstrates the composite DT model end-to-end:
+#   1. Four criteria each scored on the native 0-100 domain.
+#   2. Weighted mean produces an aggregated score.
+#   3. Aggregated score banded into one of five v2 bands.
+#   4. Band resolves to the L-0..L-4 scale via highest-conformant-level.
+#   5. Per-level effort_multiplier applied to the aggregated score to
+#      produce the effort-adjusted value reported in AssessmentResults.
+#
+# Numbers are illustrative; the worked example proves the math flows
+# through the model consistently with CR-AM-09 v2 band semantics.
+
+assessment_id: dt-enterprise-2026
+model:
+  id: dea:scale-digital-transformation-v1
+  version: 1.0.0
+
+criterion_scores:
+  digital-culture: 75            # charter exists, signed off, pulse data acted on
+  technology-adoption: 82        # reference architecture enforced; adoption tracked
+  operations-modernization: 68   # observability governed; autonomous piloted in 1 domain
+  services-delivery: 88          # cadence metrics automatic; platform engineering org-wide
+
+weights:
+  digital-culture: 0.20
+  technology-adoption: 0.30
+  operations-modernization: 0.25
+  services-delivery: 0.25
+
+# Aggregated score (weighted mean):
+#   75 * 0.20 + 82 * 0.30 + 68 * 0.25 + 88 * 0.25
+# = 15.00 + 24.60 + 17.00 + 22.00
+# = 78.60
+aggregated_score: 78.60
+
+# v2 band resolution (canonical bands: 0-20 / 21-45 / 46-70 / 71-88 / 89-100):
+# 78.60 falls into the 71-88 band -> Adaptive (L-3 ordinal 3).
+resolved_band: dea:maturity-band-adaptive
+resolved_level: L-3
+
+# Per-level effort_multiplier from scale.yaml (L-3 = 4.0):
+#   effort-adjusted = 78.60 * 4.0 / 100.0 = 3.144 (ratio form)
+# Or, expressed as the canonical effort-adjusted value with the
+# maturity-v2 diminishing-returns semantics:
+#   effort-adjusted-value = aggregated_score * effort_multiplier = 78.60 * 4.0 = 314.40
+#   which is reported alongside the raw 78.60 for stakeholder context.
+effort_multiplier: 4.0
+effort_adjusted_value: 314.40
+
+# Conformance status (CR-AM-09 §25):
+# Per the evaluation model's level_expectations for L-3, every mandatory
+# criterion (digital-culture, technology-adoption) reaches L-3; the
+# optional criteria (operations-modernization, services-delivery) reach
+# L-3 and L-3 respectively. Highest-conformant-level resolution -> L-3.
+conformance_status: conformant
+
+notes: >-
+  Worked example for the composite DT model's first scoring run. Aggregated
+  score 78.60 resolves to L-3 (Adaptive) under the v2 band scheme; effort-
+  adjusted value 314.40 reflects the maturity-v2 diminishing-returns
+  insight at L-3 (4.0x multiplier).
