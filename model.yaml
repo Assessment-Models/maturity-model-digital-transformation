@@ -7,6 +7,11 @@
 #
 # `version: "1.0"` is a prefix of the published `1.0.0` — acceptable per
 # the resolver's prefix-compatibility rule.
+#
+# Component references point at the component packages published in
+# Assessment-Models/maturity-components (CR-AM-11 sections 18-20); the
+# upstream canonical component registry remains
+# technehub-labs/dea-metamodel assessment-models/maturity/components/registry.yaml (CR-AM-10).
 id: maturity-model-digital-transformation
 type: maturity-model
 name: Digital Transformation Maturity Model
@@ -39,28 +44,28 @@ components:
     type: dimension
     kind: import
     source:
-      repository: technehub-labs/dea-metamodel
+      repository: Assessment-Models/maturity-components
     version: 1.0.0
     reference: v1.0.0
   - id: technology-adoption
     type: dimension
     kind: import
     source:
-      repository: technehub-labs/dea-metamodel
+      repository: Assessment-Models/maturity-components
     version: 1.0.0
     reference: v1.0.0
   - id: operations-modernization
     type: dimension
     kind: extend
     source:
-      repository: technehub-labs/dea-metamodel
+      repository: Assessment-Models/maturity-components
     version: 1.0.0
     reference: v1.0.0
   - id: services-delivery
     type: dimension
     kind: override
     source:
-      repository: technehub-labs/dea-metamodel
+      repository: Assessment-Models/maturity-components
     version: 1.0.0
     reference: v1.0.0
 dependencies:

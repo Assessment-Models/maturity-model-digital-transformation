@@ -1,5 +1,18 @@
 # Changelog
 
+## [Unreleased] — CR-AM-11 Phase 5: component references normalized
+
+### Changed
+
+- `model.yaml` component references now source from
+  `Assessment-Models/maturity-components` (the published component packages,
+  CR-AM-11 §18–20) instead of `technehub-labs/dea-metamodel`. The upstream
+  canonical component registry stays in dea-metamodel
+  (`assessment-models/maturity/components/registry.yaml`, CR-AM-10); consumers
+  reference component releases from the maturity-components repository. All
+  references remain immutable (`v1.0.0` tag) and keep their CR-AM-10 §4 kinds
+  (import / extend / override).
+
 ## [Unreleased] — CR-AM-11 Phase 4: First independent model (Digital Transformation)
 
 The first independent model in the Assessment-Models ecosystem. CR-AM-11
