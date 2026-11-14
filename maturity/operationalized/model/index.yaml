@@ -1,0 +1,300 @@
+# Operationalized criteria register — index (per-dimension files alongside)
+
+id: dea:model-digital-transformation-operationalized-v1
+version: 1.0.0-alpha
+name: Digital Transformation Operationalized — criteria register
+description: 'MECE register: 6 dimensions -> 23 sub-dimensions -> 70 criteria. Each criterion has one home, 12 transversal
+  levers as tags (not dimensions), 5 evidence-anchored progression levels (model levels 1-5 = canonical L-0..L-4 per scale.yaml
+  correlation), and observable evidence. Lite rapid path: lite_question per sub-dimension (5-point Likert). Local home:
+  maturity-model-digital-transformation/maturity/operationalized/model/. Catalog twin: dea:maturity-digital-transformation-operationalized
+  (dea-catalog-maturity-models, PRs #6/#10/#12).'
+transversal_levers:
+- id: agentic-ai
+  name: Agentic AI & Agents
+  description: Autonomous/semi-autonomous software entities that perceive, decide, act and achieve goals with minimal human
+    supervision; multi-agent systems orchestrated toward strategic objectives. Agency is graded (levels of agency) and governed
+    (Gartner Top Strategic Technology Trends 2025).
+- id: autonomy
+  name: Autonomy Ladder
+  description: 'TM Forum Autonomous Networks L0-L5: per domain, who owns awareness, analysis, decision, execution, and intent.
+    L4 = system owns awareness-to-execution with intent shared; L5 = system sets its own intents.'
+- id: digital-twins
+  name: Digital Twins & Simulation
+  description: Dynamic software models on operational/contextual data that understand, simulate and respond - from network/service
+    twins to the Digital Twin of an Organization (DTO) used to prioritize, plan, monitor, simulate and scale initiatives
+    (Gartner).
+- id: human-agent-teaming
+  name: Human-Agent Teaming
+  description: People and AI agents collaborating/coordinating toward shared goals as teammates, with trust calibration,
+    delegation protocols, adaptive autonomy, and human oversight (human-in/on-the-loop) (HMT/HAIT literature).
+- id: ecosystem-platforms
+  name: Ecosystems, Platforms & Network APIs
+  description: Platform and ecosystem business models incl. GSMA Open Gateway / CAMARA network APIs (number verification,
+    SIM swap, location, quality-on-demand, edge discovery, carrier billing), NaaS, slicing, B2B2X marketplaces.
+- id: trust-security-privacy
+  name: Security, Privacy, Trust & AI TRiSM
+  description: 'Zero trust, supply-chain security, privacy/PETs, sovereignty, and AI TRiSM (AI trust, risk and security
+    management): continuous monitoring, explainability, bias/fairness, guardrails, guardian agents, EU AI Act readiness
+    (Gartner).'
+- id: sustainability-esg
+  name: Sustainability & ESG
+  description: ESG strategy and reporting (CSRD/double materiality), carbon accounting (Scopes 1-3), GreenOps, circular
+    IT and e-waste.
+- id: composability
+  name: Composability & Open APIs
+  description: Composable, API-first, event-driven architecture aligned to open standards (e.g., TM Forum ODA) with governed
+    API catalogs and golden paths.
+- id: business-value
+  name: Business Value & Monetization
+  description: 'Customer/ecosystem-centric value: digital business models, pricing and charging, revenue assurance, unit
+    economics, measurable outcomes.'
+- id: innovation
+  name: Innovation & Experimentation
+  description: Experimentation culture, safe-to-fail, flow metrics, venturing, open-source and standards participation.
+- id: grc
+  name: Governance, Risk & Compliance
+  description: ERM, internal audit, regtech, DORA/NIS2 resilience testing, third-party/vendor risk, concentration and exit.
+- id: data-intelligence
+  name: Data & Decision Intelligence
+  description: Data products, quality, lineage, governance, sharing, AI data readiness, twins data, insights-to-action loops.
+hotspots: see catalog entry dea:maturity-digital-transformation-operationalized (hotspots block); mirrored below
+hotspot_entries:
+- lever: agentic-ai
+  criterion_id: d3c8
+  min_level: 4
+  rationale: Multi-agent orchestration in production with graded agency levels and full audit trails
+- lever: agentic-ai
+  criterion_id: d3c9
+  min_level: 3
+  rationale: 'AI TRiSM operational: inventory, risk-scored models, runtime guardrails, guardian agents'
+- lever: agentic-ai
+  criterion_id: d4c6
+  min_level: 4
+  rationale: Agentic operations with human-on-the-loop oversight, rollback and kill-switch
+- lever: agentic-ai
+  criterion_id: d5c7
+  min_level: 3
+  rationale: 'Explicit delegation matrix: task types, autonomy ceilings, escalation paths'
+- lever: agentic-ai
+  criterion_id: d5c9
+  min_level: 3
+  rationale: HITL for high-impact actions; tested kill-switch; zero-harm safety record
+- lever: agentic-ai
+  criterion_id: d6c7
+  min_level: 3
+  rationale: 'Governed agent data fabric: semantic layer + tool registry, per-agent permissions, usage logged'
+- lever: autonomy
+  criterion_id: d4c4
+  min_level: 4
+  rationale: 'AN L4+ in domains: closed-loop, intent-driven; system owns awareness-to-execution'
+- lever: autonomy
+  criterion_id: d4c5
+  min_level: 4
+  rationale: Zero-touch self-healing across most domains; predictive prevention
+- lever: autonomy
+  criterion_id: d4c2
+  min_level: 3
+  rationale: Closed-loop assurance with SLOs/error budgets gating releases
+- lever: autonomy
+  criterion_id: d6c11
+  min_level: 4
+  rationale: 'Autonomous decision fabric: insights-to-decisions-to-actions closed loops'
+- lever: digital-twins
+  criterion_id: d4c7
+  min_level: 3
+  rationale: Real-time network/service twins feeding assurance and planning
+- lever: digital-twins
+  criterion_id: d4c8
+  min_level: 3
+  rationale: DTO + process mining live for top value streams; used to plan initiatives
+- lever: digital-twins
+  criterion_id: d4c9
+  min_level: 4
+  rationale: Simulate-then-execute standard for major strategy/ops decisions
+- lever: digital-twins
+  criterion_id: d6c9
+  min_level: 3
+  rationale: Governed twin data pipelines with freshness/quality SLAs
+- lever: human-agent-teaming
+  criterion_id: d5c7
+  min_level: 3
+  rationale: Delegation protocols defined per domain
+- lever: human-agent-teaming
+  criterion_id: d5c8
+  min_level: 3
+  rationale: 'Trust calibration: oversight matches verified reliability; explanations on demand'
+- lever: human-agent-teaming
+  criterion_id: d5c9
+  min_level: 3
+  rationale: Oversight matches autonomy level; escalation + kill-switch always available
+- lever: human-agent-teaming
+  criterion_id: d5c10
+  min_level: 3
+  rationale: Agent identity, owner, audit trail per action; RACI includes agents
+- lever: ecosystem-platforms
+  criterion_id: d1c4
+  min_level: 3
+  rationale: Self-service partner onboarding, governed marketplace
+- lever: ecosystem-platforms
+  criterion_id: d1c5
+  min_level: 3
+  rationale: Structured B2B2X value networks with shared platform
+- lever: ecosystem-platforms
+  criterion_id: d1c6
+  min_level: 4
+  rationale: API products monetized; network APIs (Open Gateway/CAMARA-class) in production
+- lever: ecosystem-platforms
+  criterion_id: d6c6
+  min_level: 3
+  rationale: Governed data exchange / marketplace with partners
+- lever: ecosystem-platforms
+  criterion_id: d2c12
+  min_level: 3
+  rationale: TPRM with audit/exit clauses; concentration managed
+- lever: trust-security-privacy
+  criterion_id: d3c10
+  min_level: 3
+  rationale: 'Standardized zero trust: federated IDM, MFA, segmentation'
+- lever: trust-security-privacy
+  criterion_id: d3c11
+  min_level: 3
+  rationale: SBOM per release, signed provenance (SLSA), automated DevSecOps gates
+- lever: trust-security-privacy
+  criterion_id: d3c12
+  min_level: 3
+  rationale: DPIAs, consent platform, residency controls; PQC roadmap approved
+- lever: trust-security-privacy
+  criterion_id: d3c9
+  min_level: 3
+  rationale: AI TRiSM runtime enforcement; EU AI Act documentation per high-risk system
+- lever: trust-security-privacy
+  criterion_id: d6c5
+  min_level: 3
+  rationale: Encryption, DLP, consent-aware access, sovereignty audits
+- lever: sustainability-esg
+  criterion_id: d2c7
+  min_level: 3
+  rationale: CSRD-aligned reporting with controls and owners
+- lever: sustainability-esg
+  criterion_id: d2c8
+  min_level: 3
+  rationale: Full Scope 1-3 carbon accounting with Net Zero roadmap and KPIs
+- lever: sustainability-esg
+  criterion_id: d2c9
+  min_level: 3
+  rationale: Standard circular lifecycle; certified disposal; green procurement
+- lever: sustainability-esg
+  criterion_id: d4c12
+  min_level: 3
+  rationale: Energy per workload tracked; carbon-aware scheduling
+- lever: composability
+  criterion_id: d3c1
+  min_level: 3
+  rationale: Open/composable standards (e.g., ODA) applied in key domains
+- lever: composability
+  criterion_id: d3c2
+  min_level: 3
+  rationale: API catalog + gateway; governed lifecycle; standard integration patterns
+- lever: composability
+  criterion_id: d3c3
+  min_level: 3
+  rationale: Structured de-layering program with measured legacy reduction
+- lever: composability
+  criterion_id: d1c7
+  min_level: 3
+  rationale: Composable product architecture with reusable component catalog
+- lever: composability
+  criterion_id: d4c1
+  min_level: 3
+  rationale: Intent-driven orchestration over open APIs for key services
+- lever: business-value
+  criterion_id: d2c1
+  min_level: 3
+  rationale: Customer/ecosystem-centric strategy with outcome KPIs
+- lever: business-value
+  criterion_id: d2c2
+  min_level: 3
+  rationale: New digital business models live with P&L ownership
+- lever: business-value
+  criterion_id: d2c4
+  min_level: 3
+  rationale: Digital revenue/margin per product; unit economics drive decisions
+- lever: business-value
+  criterion_id: d1c8
+  min_level: 3
+  rationale: Usage-based real-time charging; dynamic/outcome pricing with guardrails
+- lever: business-value
+  criterion_id: d1c9
+  min_level: 3
+  rationale: Automated revenue assurance + AI fraud detection; experimentation platform
+- lever: business-value
+  criterion_id: d4c11
+  min_level: 3
+  rationale: DORA flow metrics + FinOps cost per workload tracked and acted on
+- lever: innovation
+  criterion_id: d5c11
+  min_level: 3
+  rationale: Product-centric teams own outcomes; value streams mapped; flow metrics used
+- lever: innovation
+  criterion_id: d5c12
+  min_level: 3
+  rationale: Experiment platform standard; blameless postmortems
+- lever: innovation
+  criterion_id: d5c13
+  min_level: 2
+  rationale: Open-source strategy; contributions; standards-body participation
+- lever: innovation
+  criterion_id: d2c3
+  min_level: 3
+  rationale: Value-stream portfolio with forward-looking ROI and data-driven reallocation
+- lever: grc
+  criterion_id: d2c10
+  min_level: 3
+  rationale: ERM framework with quarterly reviews and audit plan
+- lever: grc
+  criterion_id: d2c11
+  min_level: 3
+  rationale: Regtech continuous monitoring; TLPT scheduled; EU AI Act obligations tracked
+- lever: grc
+  criterion_id: d2c12
+  min_level: 3
+  rationale: Ongoing TPRM; concentration quantified; exit strategies tested
+- lever: grc
+  criterion_id: d4c10
+  min_level: 3
+  rationale: Incident command + SLOs + chaos/game days; TLPT/DR tests regular
+- lever: grc
+  criterion_id: d6c4
+  min_level: 3
+  rationale: Central catalog with owners/stewards; lineage; policies enforced
+- lever: data-intelligence
+  criterion_id: d6c1
+  min_level: 3
+  rationale: Lakehouse/fabric with domain ownership; data products with contracts/SLAs
+- lever: data-intelligence
+  criterion_id: d6c2
+  min_level: 3
+  rationale: Streaming platform for critical events; freshness SLAs
+- lever: data-intelligence
+  criterion_id: d6c3
+  min_level: 3
+  rationale: Automated quality tests, lineage, data SLOs on critical products
+- lever: data-intelligence
+  criterion_id: d6c10
+  min_level: 3
+  rationale: Self-service + augmented analytics (NLQ/AutoML) widely adopted
+- lever: data-intelligence
+  criterion_id: d6c11
+  min_level: 4
+  rationale: Closed-loop decision systems in key domains with guardrails
+- lever: data-intelligence
+  criterion_id: d6c12
+  min_level: 3
+  rationale: Full audit trail data-to-decision-to-outcome; explainability on demand
+dimension_files:
+- d1.yaml
+- d2.yaml
+- d3.yaml
+- d4.yaml
+- d5.yaml
+- d6.yaml
