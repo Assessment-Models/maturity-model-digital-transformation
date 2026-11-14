@@ -17,6 +17,10 @@ Checks:
        - resolved_band corresponds to the canonical v2 bands
          (0-20 / 21-45 / 46-70 / 71-88 / 89-100)
        - effort_adjusted_value = aggregated_score * effort_multiplier
+  6. maturity/operationalized/ model line (added 1.1.0-alpha, additive):
+     scale L-0..L-4, evaluation scale-ref + level coverage, register
+     (per-dimension files under model/), component kinds, hotspot refs,
+     operationalized example math
 
 Exit 0 with OK when clean; exit 1 listing every failure otherwise.
 """
@@ -152,6 +156,52 @@ def main() -> int:
                 f"{example_path.relative_to(ROOT)}: effort_adjusted_value "
                 f"{example['effort_adjusted_value']} != computed {round(expected_adjusted, 2)}"
             )
+
+    # 6. operationalized model line (maturity/operationalized/) — additive check
+    op = ROOT / "maturity/operationalized"
+    if (op / "scale.yaml").exists():
+        oscale = load_yaml(op / "scale.yaml")
+        ol = oscale.get("levels") or []
+        if [(x["id"], x["ordinal"]) for x in ol] != [(f"L-{i}", i) for i in range(5)]:
+            errors.append("operationalized/scale.yaml: levels must be L-0..L-4 ordinals 0..4")
+        oev = load_yaml(op / "evaluation.yaml")
+        if (oev.get("scale") or {}).get("id") != oscale.get("id"):
+            errors.append("operationalized/evaluation.yaml: scale.id mismatch")
+        lvl_ids = {x["id"] for x in ol}
+        for c in oev.get("criteria") or []:
+            covered = {e["level"] for e in c.get("level_expectations") or []}
+            if covered != lvl_ids:
+                errors.append(f"operationalized/evaluation.yaml: criterion {c['id']!r} covers {covered} != {lvl_ids}")
+        reg = {"dimensions": [], "hotspot_entries": []}
+        for mf in sorted((op / "model").glob("*.yaml")):
+            m = load_yaml(mf)
+            if "dimensions" in m:
+                reg["dimensions"] += m["dimensions"]
+            if "sub_dimensions" in m:
+                reg["dimensions"].append(m)
+            reg["hotspot_entries"] += m.get("hotspot_entries") or []
+        ids = set()
+        for d in reg.get("dimensions") or []:
+            for s in d["sub_dimensions"]:
+                for c in s["criteria"]:
+                    if c["id"] in ids:
+                        errors.append(f"operationalized register: duplicate id {c['id']}")
+                    ids.add(c["id"])
+                    if [a["level"] for a in c.get("anchors") or []] != [1, 2, 3, 4, 5]:
+                        errors.append(f"operationalized register: {c['id']} anchors not 1..5")
+        for comp_path in sorted((op / "components").glob("*.yaml")):
+            comp = load_yaml(comp_path)
+            if comp.get("kind") not in ("import", "extend", "override"):
+                errors.append(f"{comp_path.name}: bad kind {comp.get('kind')!r}")
+        for h in reg.get("hotspot_entries") or []:
+            if h["criterion_id"] not in ids:
+                errors.append(f"operationalized register: hotspot unknown criterion {h['criterion_id']}")
+        ex = load_yaml(ROOT / "examples/operationalized-2026.yaml")
+        t = sum(ex["criterion_scores"][k] * ex["weights"][k] for k in ex["criterion_scores"])
+        if not math.isclose(t, ex["aggregated_score"], abs_tol=0.01):
+            errors.append(f"operationalized-2026.yaml: aggregated {ex['aggregated_score']} != {round(t,2)}")
+        if ex["resolved_band"] != band_for(t):
+            errors.append(f"operationalized-2026.yaml: band {ex['resolved_band']} != {band_for(t)}")
 
     if errors:
         print(f"FAIL — Level 1 local validation, {len(errors)} error(s):")
