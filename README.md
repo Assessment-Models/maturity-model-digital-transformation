@@ -22,12 +22,14 @@ services-delivery child models. It uses the **OpenDEA EA reference instance**
 
 This repository declares adoption of
 [AM-MODEL-REPOSITORY-STANDARD](https://github.com/Assessment-Models/maturity-model-standard)
-v1.0.0 (CR-AM-ORG-RES-000) at conformance level **`registered`** via a root
+v1.0.1 (CR-AM-ORG-RES-000) at conformance level **`structural`** via a root
 `standard.yaml` declaration, validated by the reusable repository-standard
 workflow — an additive gate alongside Levels 1/2/3. The composite model
-definition (`maturity/evaluation.yaml` + `maturity/components/`) is **mapped,
-not restructured** (migration matrix M2); `model.yaml` remains the
-authoritative identity manifest.
+definition (`maturity/evaluation.yaml` + `maturity/components/`) satisfies
+the `model-definition` role through a **recorded structure mapping** (added
+in standard v1.0.1, maturity-model-standard#3; rule R1: map, never rename;
+migration matrix M2), integrity-checked and logged by the conformance gate.
+`model.yaml` remains the authoritative identity manifest.
 
 ## Conformance contract (CR-AM-11 §15)
 
