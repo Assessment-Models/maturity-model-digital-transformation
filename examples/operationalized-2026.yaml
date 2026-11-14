@@ -1,0 +1,28 @@
+# Worked example - operationalized model line, 2026 scoring run (v2 bands, L-0..L-4)
+
+assessment_id: dto-operationalized-2026
+model:
+  id: dea:scale-digital-transformation-operationalized-v1
+  version: 1.0.0-alpha
+criterion_scores:
+  d1: 72
+  d2: 64
+  d3: 58
+  d4: 70
+  d5: 80
+  d6: 66
+weights:
+  d1: 0.2
+  d2: 0.2
+  d3: 0.2
+  d4: 0.15
+  d5: 0.1
+  d6: 0.15
+aggregated_score: 67.2
+resolved_band: dea:maturity-band-systematic
+resolved_level: L-2
+effort_multiplier: 2.5
+effort_adjusted_value: 168.0
+conformance_status: conformant
+notes: Weighted mean 67.2 -> v2 band dea:maturity-band-systematic -> L-2 (Systematic); mandatory dims d1-d4 all >= 46, so
+  highest-conformant-level holds; effort-adjusted = 67.2 * 2.5 = 168.0.
