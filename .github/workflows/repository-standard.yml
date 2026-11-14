@@ -1,0 +1,14 @@
+# Repository-standard conformance (AM-MODEL-REPOSITORY-STANDARD, CR-AM-ORG-RES-000).
+# Reusable workflow owned by maturity-model-standard; validates the standard.yaml
+# declaration, identity coherence (standard.yaml / model.yaml / VERSION / README)
+# and structure by declared conformance level. Additive to Levels 1/2/3; replaces none.
+name: Repository standard conformance
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  repository-standard:
+    uses: Assessment-Models/maturity-model-standard/.github/workflows/repository-conformance.yml@main

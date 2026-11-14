@@ -14,6 +14,21 @@ This model is a **composite** spanning operations, technology, and
 services-delivery child models. It uses the **OpenDEA EA reference instance**
 (scale + evaluation + Benchmark 2026 baseline) as its scoring anchor.
 
+## Status
+
+`1.0.0` · stable — composite model, anchored on the OpenDEA EA reference instance
+
+## Repository standard
+
+This repository declares adoption of
+[AM-MODEL-REPOSITORY-STANDARD](https://github.com/Assessment-Models/maturity-model-standard)
+v1.0.0 (CR-AM-ORG-RES-000) at conformance level **`registered`** via a root
+`standard.yaml` declaration, validated by the reusable repository-standard
+workflow — an additive gate alongside Levels 1/2/3. The composite model
+definition (`maturity/evaluation.yaml` + `maturity/components/`) is **mapped,
+not restructured** (migration matrix M2); `model.yaml` remains the
+authoritative identity manifest.
+
 ## Conformance contract (CR-AM-11 §15)
 
 ```yaml
@@ -34,6 +49,8 @@ Resolved live by [`Assessment-Models/assessment-ci/scripts/resolve_contract.py`]
 maturity-model-digital-transformation/
 ├── README.md                              ← this file
 ├── model.yaml                             ← the contract handshake (Level 2 entry point)
+├── standard.yaml                          ← repository-standard declaration (CR-AM-ORG-RES-000)
+├── VERSION
 ├── maturity/
 │   ├── scale.yaml                         ← the composite model-owned scale (5-level digital-native)
 │   ├── evaluation.yaml                    ← weighted 0–100 evaluation over four criteria
@@ -46,7 +63,8 @@ maturity-model-digital-transformation/
 │   └── enterprise-2026.yaml              ← worked scoring example
 ├── .github/workflows/
 │   ├── local-model-ci.yml                 ← Level 1
-│   └── contract-conformance.yml           ← Level 2 (reusable workflow_call)
+│   ├── contract-conformance.yml           ← Level 2 (reusable workflow_call)
+│   └── repository-standard.yml            ← repository-standard conformance (reusable)
 └── scripts/
     └── check_immutable_refs.py            ← Level 3 immutable-reference guard (consumer copy)
 ```
