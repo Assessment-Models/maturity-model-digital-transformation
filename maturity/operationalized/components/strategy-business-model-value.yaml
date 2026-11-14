@@ -1,0 +1,50 @@
+# DTO dimension component - Strategy, Business Model & Value (kind: extend)
+
+id: dea:component-dto-strategy-business-model-value
+type: component
+kind: extend
+source:
+  repository: Assessment-Models/maturity-model-digital-transformation
+version: 1.1.0-alpha
+reference: v1.1.0-alpha
+name: DTO dimension - Strategy, Business Model & Value
+description: Customer- and ecosystem-centric digital strategy, novel digital business models, value and financial performance,
+  sustainability, and enterprise governance/risk/compliance.
+content:
+- id: d2s1
+  name: Digital Strategy & Business Models
+  criteria:
+  - id: d2c1
+    name: Customer/ecosystem-centric digital strategy
+  - id: d2c2
+    name: New digital business models
+  - id: d2c3
+    name: Portfolio & investment allocation
+- id: d2s2
+  name: Value & Financial Performance
+  criteria:
+  - id: d2c4
+    name: Measurable digital value & unit economics
+  - id: d2c5
+    name: Brand & competitive position
+  - id: d2c6
+    name: Financial management & reporting agility
+- id: d2s3
+  name: Sustainability & ESG
+  criteria:
+  - id: d2c7
+    name: ESG strategy & reporting
+  - id: d2c8
+    name: Carbon accounting & green technology
+  - id: d2c9
+    name: Circular IT & e-waste
+- id: d2s4
+  name: Governance, Risk & Compliance
+  criteria:
+  - id: d2c10
+    name: Enterprise risk management & audit
+  - id: d2c11
+    name: Regulatory compliance & regtech
+  - id: d2c12
+    name: Third-party & vendor risk, concentration, exit
+notes: Local component of the operationalized model line; publish to Assessment-Models/maturity-components as a follow-up.
