@@ -1,0 +1,50 @@
+# DTO dimension component - Operations & Autonomous Service Delivery (kind: extend)
+
+id: dea:component-dto-operations-autonomous-delivery
+type: component
+kind: extend
+source:
+  repository: Assessment-Models/maturity-model-digital-transformation
+version: 1.1.0-alpha
+reference: v1.1.0-alpha
+name: DTO dimension - Operations & Autonomous Service Delivery
+description: How services and the network are orchestrated, assured, and increasingly run autonomously (intent-driven, closed-loop),
+  with digital twins/simulation and quantitative performance, cost, and carbon management.
+content:
+- id: d4s1
+  name: Service Orchestration & Assurance
+  criteria:
+  - id: d4c1
+    name: Intent-driven orchestration
+  - id: d4c2
+    name: Closed-loop assurance & SLOs
+  - id: d4c3
+    name: Service portfolio management
+- id: d4s2
+  name: Autonomous Operations (AN Ladder)
+  criteria:
+  - id: d4c4
+    name: Autonomy level per domain (AN L0-L5)
+  - id: d4c5
+    name: Zero-touch operations & self-healing
+  - id: d4c6
+    name: Agentic operations & human-on-the-loop
+- id: d4s3
+  name: Digital Twins & Simulation
+  criteria:
+  - id: d4c7
+    name: Network & service digital twins
+  - id: d4c8
+    name: Digital Twin of the Organization (DTO) & process mining
+  - id: d4c9
+    name: Simulation-driven planning
+- id: d4s4
+  name: Resilience, Performance & Sustainable Ops
+  criteria:
+  - id: d4c10
+    name: Incident response & resilience testing
+  - id: d4c11
+    name: Performance & flow management
+  - id: d4c12
+    name: Carbon-aware operations (GreenOps)
+notes: Local component of the operationalized model line; publish to Assessment-Models/maturity-components as a follow-up.
