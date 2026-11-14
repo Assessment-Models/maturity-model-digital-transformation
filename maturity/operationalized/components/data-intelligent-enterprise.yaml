@@ -1,0 +1,50 @@
+# DTO dimension component - Data & the Intelligent Enterprise (kind: extend)
+
+id: dea:component-dto-data-intelligent-enterprise
+type: component
+kind: extend
+source:
+  repository: Assessment-Models/maturity-model-digital-transformation
+version: 1.1.0-alpha
+reference: v1.1.0-alpha
+name: DTO dimension - Data & the Intelligent Enterprise
+description: 'Data as the foundation of the digital business: modern architecture and data products, governance/trust/sharing,
+  AI- and agent-ready data, and decision intelligence that closes the loop into action.'
+content:
+- id: d6s1
+  name: Data Foundation & Architecture
+  criteria:
+  - id: d6c1
+    name: Modern data architecture & data products
+  - id: d6c2
+    name: Real-time & streaming data
+  - id: d6c3
+    name: Data quality & observability
+- id: d6s2
+  name: Data Governance, Trust & Sharing
+  criteria:
+  - id: d6c4
+    name: Data governance, catalog & lineage
+  - id: d6c5
+    name: Data protection, privacy & sovereignty
+  - id: d6c6
+    name: Open & collaborative data ecosystems
+- id: d6s3
+  name: AI- & Agent-Ready Data
+  criteria:
+  - id: d6c7
+    name: Agent-accessible data & tool interfaces
+  - id: d6c8
+    name: RAG, vector, feature & synthetic data
+  - id: d6c9
+    name: Twin & simulation data pipelines
+- id: d6s4
+  name: Decision Intelligence
+  criteria:
+  - id: d6c10
+    name: Self-service & augmented analytics
+  - id: d6c11
+    name: Autonomous insights & decision loops
+  - id: d6c12
+    name: Insight-to-action accountability
+notes: Local component of the operationalized model line; publish to Assessment-Models/maturity-components as a follow-up.
