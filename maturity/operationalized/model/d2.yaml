@@ -1,0 +1,297 @@
+# Operationalized register — dimension d2 Strategy, Business Model & Value
+
+id: dea:model-dto-d2
+dimension: d2
+name: Strategy, Business Model & Value
+weight: 0.2
+description: Customer- and ecosystem-centric digital strategy, novel digital business models, value and financial performance,
+  sustainability, and enterprise governance/risk/compliance.
+sub_dimensions:
+- id: d2s1
+  name: Digital Strategy & Business Models
+  lite_question: Our digital strategy is customer/ecosystem-centric and creates new digital business models.
+  criteria:
+  - id: d2c1
+    name: Customer/ecosystem-centric digital strategy
+    statement: Digital strategy is explicitly centered on customers and the ecosystems the organization cultivates, with
+      measurable outcomes.
+    levers:
+    - business-value
+    anchors:
+    - level: 1
+      text: No digital strategy; IT-led projects only
+    - level: 2
+      text: Strategy document exists but not customer/ecosystem-centric
+    - level: 3
+      text: Strategy names customer and ecosystem outcomes with KPIs
+    - level: 4
+      text: Strategy reviewed quarterly against customer/ecosystem metrics and market signals
+    - level: 5
+      text: 'Living strategy: real-time signals and twins continuously reshape priorities'
+    evidence:
+    - Strategy doc
+    - Board minutes
+    - Outcome KPIs (NPS, ARPU, ecosystem revenue)
+    - Quarterly strategy review records
+    - Signal-driven roadmap changes
+  - id: d2c2
+    name: New digital business models
+    statement: The organization actively designs and launches new digital business models (servitization, XaaS, outcome-based,
+      platform/ecosystem plays).
+    levers:
+    - business-value
+    - ecosystem-platforms
+    anchors:
+    - level: 1
+      text: No new business models; connectivity/product sales only
+    - level: 2
+      text: Ideas discussed; no funded pilots
+    - level: 3
+      text: Structured innovation funnel; first digital revenue streams live
+    - level: 4
+      text: Multiple digital business models in market with P&L ownership
+    - level: 5
+      text: Business-model portfolio self-optimizing; digital share of revenue dominant and growing
+    evidence:
+    - Business model canvas library
+    - Innovation funnel
+    - New-model P&Ls
+    - Revenue mix reports
+    - Portfolio review with kill/scale decisions
+  - id: d2c3
+    name: Portfolio & investment allocation
+    statement: Investment is allocated to value streams and portfolios with clear ROI, incl. FinOps-linked technology economics.
+    levers:
+    - business-value
+    anchors:
+    - level: 1
+      text: Budgets by department; no ROI tracking
+    - level: 2
+      text: Some business cases; retrospective ROI only
+    - level: 3
+      text: Portfolio managed by value streams with forward-looking ROI
+    - level: 4
+      text: 'Data-driven reallocation: predictive analytics shift funding to highest-value opportunities'
+    - level: 5
+      text: Continuous capital reallocation via AI; investments self-optimize to outcomes
+    evidence:
+    - Budget process docs
+    - Business case templates
+    - Value-stream funding map
+    - Predictive allocation models
+    - Capital efficiency metrics (ROI per stream)
+- id: d2s2
+  name: Value & Financial Performance
+  lite_question: Digital transformation delivers measurable financial and competitive value.
+  criteria:
+  - id: d2c4
+    name: Measurable digital value & unit economics
+    statement: Digital value is quantified (ARPU/CLTV, churn, margin per product/workload) and managed as unit economics.
+    levers:
+    - business-value
+    anchors:
+    - level: 1
+      text: No digital value metrics
+    - level: 2
+      text: Revenue tracked; no digital attribution
+    - level: 3
+      text: Digital revenue and margin tracked per product
+    - level: 4
+      text: Unit economics per customer/workload/partner drive decisions
+    - level: 5
+      text: Value continuously optimized by AI across portfolio and ecosystem
+    evidence:
+    - Financial reports
+    - Digital revenue attribution
+    - Product margin dashboards
+    - Unit-economics model
+    - Automated value-optimization actions
+  - id: d2c5
+    name: Brand & competitive position
+    statement: Brand and market position are actively built and measured (share of voice, sentiment, share of wallet).
+    levers:
+    - business-value
+    anchors:
+    - level: 1
+      text: Brand undefined; weak visibility
+    - level: 2
+      text: Brand guidelines exist; inconsistent execution
+    - level: 3
+      text: Defined brand strategy; sentiment and SOV tracked
+    - level: 4
+      text: Brand actively differentiated; sentiment strongly positive vs peers
+    - level: 5
+      text: Brand sets industry benchmarks; influences market direction
+    evidence:
+    - Brand guidelines
+    - Marketing plans
+    - SOV/sentiment reports
+    - Competitive win/loss analysis
+    - Industry awards/recognition
+  - id: d2c6
+    name: Financial management & reporting agility
+    statement: Finance processes (plan, close, report, revenue assurance) are digital, automated, and near-real-time.
+    levers:
+    - business-value
+    - grc
+    anchors:
+    - level: 1
+      text: Manual close; weeks-long reporting
+    - level: 2
+      text: ERP in place; partial automation
+    - level: 3
+      text: Automated close and continuous reporting; RA automated on key flows
+    - level: 4
+      text: 'Predictive finance: forecasts and RA driven by data/ML'
+    - level: 5
+      text: 'Self-adjusting finance: plans re-forecast continuously from operational data'
+    evidence:
+    - Close cycle time
+    - ERP/finops tooling
+    - RA automation coverage
+    - Forecast accuracy metrics
+    - Continuous reporting dashboards
+- id: d2s3
+  name: Sustainability & ESG
+  lite_question: Sustainability and ESG are embedded in strategy, operations, and reporting.
+  criteria:
+  - id: d2c7
+    name: ESG strategy & reporting
+    statement: ESG strategy, double-materiality assessment, and reporting (e.g., CSRD) are systematic and audit-ready.
+    levers:
+    - sustainability-esg
+    anchors:
+    - level: 1
+      text: No ESG reporting; compliance-driven only
+    - level: 2
+      text: Voluntary reporting; manual data collection
+    - level: 3
+      text: CSRD-aligned reporting with defined controls and owners
+    - level: 4
+      text: Data-driven ESG reporting; targets tied to incentives
+    - level: 5
+      text: 'ESG a differentiator: benchmarks set, standards shaped, real-time accountability'
+    evidence:
+    - ESG policy
+    - Materiality assessment
+    - CSRD-ready report
+    - ESG KPI dashboards
+    - Assurance/audit opinions
+  - id: d2c8
+    name: Carbon accounting & green technology
+    statement: Carbon footprint (Scopes 1-3) is measured and reduced; technology choices are GreenOps-aware.
+    levers:
+    - sustainability-esg
+    anchors:
+    - level: 1
+      text: No carbon accounting
+    - level: 2
+      text: Scope 1-2 estimated manually; Scope 3 unknown
+    - level: 3
+      text: Full Scope 1-3 accounting with Net Zero roadmap and KPIs
+    - level: 4
+      text: Data-driven reduction; carbon-aware workload placement and scheduling
+    - level: 5
+      text: AI-optimized operations minimize emissions in real time; industry-leading footprint
+    evidence:
+    - Carbon inventory
+    - Emissions reports
+    - Net Zero roadmap
+    - GreenOps metrics (carbon per workload)
+    - Reduction vs baseline; certifications
+  - id: d2c9
+    name: Circular IT & e-waste
+    statement: 'IT asset lifecycle is circular: refurbish, reuse, responsibly recycle; e-waste minimized and tracked.'
+    levers:
+    - sustainability-esg
+    anchors:
+    - level: 1
+      text: Ad hoc disposal; no tracking
+    - level: 2
+      text: Basic asset inventory; some recycling
+    - level: 3
+      text: Standard lifecycle processes; certified disposal; lifespan extended
+    - level: 4
+      text: Measured circularity (refurbishment %, e-waste recycled %); green procurement criteria
+    - level: 5
+      text: Circular economy principles embedded; AI plans lifecycle; e-waste standards exceeded
+    evidence:
+    - Asset register
+    - Disposal certificates
+    - Lifecycle SOPs
+    - Circularity metrics
+    - AI lifecycle planning; zero-waste targets met
+- id: d2s4
+  name: Governance, Risk & Compliance
+  lite_question: Enterprise risk, regulatory compliance, and third-party risk are governed and automated.
+  criteria:
+  - id: d2c10
+    name: Enterprise risk management & audit
+    statement: ERM with internal audit provides independent assurance over digital and transformation risks.
+    levers:
+    - grc
+    anchors:
+    - level: 1
+      text: No ERM; risks managed informally
+    - level: 2
+      text: Risk register exists; reviews irregular
+    - level: 3
+      text: ERM framework with quarterly risk reviews and audit plan
+    - level: 4
+      text: Quantified risk (e.g., FAIR); risk appetite enforced in digital investments
+    - level: 5
+      text: Continuous risk monitoring; audit automated; board-level risk posture real-time
+    evidence:
+    - Risk register
+    - Audit reports
+    - Risk committee minutes
+    - Quantified risk model
+    - Continuous monitoring dashboards
+  - id: d2c11
+    name: Regulatory compliance & regtech
+    statement: Compliance with applicable regulation (DORA/NIS2 digital resilience, EU AI Act, sector rules) is automated
+      via regtech and evidenced.
+    levers:
+    - grc
+    - trust-security-privacy
+    anchors:
+    - level: 1
+      text: Reactive compliance; case-by-case
+    - level: 2
+      text: Policies exist; manual checks
+    - level: 3
+      text: Compliance mapped to controls; automated evidence collection
+    - level: 4
+      text: Regtech monitors compliance continuously; DORA/NIS2 testing (TLPT) scheduled; EU AI Act obligations tracked
+        per system
+    - level: 5
+      text: Compliance by design and self-evidencing; regulator-ready posture; shapes standards
+    evidence:
+    - Compliance register
+    - Control mapping
+    - Regtech monitoring alerts
+    - TLPT/resilience test reports
+    - AI Act technical documentation per system
+  - id: d2c12
+    name: Third-party & vendor risk, concentration, exit
+    statement: Vendor/third-party risk, concentration (e.g., hyperscaler), and exit/multi-cloud strategies are managed.
+    levers:
+    - grc
+    - ecosystem-platforms
+    anchors:
+    - level: 1
+      text: No vendor risk process; single-vendor lock-in unmanaged
+    - level: 2
+      text: Basic vendor assessments at onboarding
+    - level: 3
+      text: Ongoing TPRM; contracts include audit/exit clauses
+    - level: 4
+      text: Concentration risk quantified; exit strategies tested for critical vendors
+    - level: 5
+      text: Resilient multi-vendor strategy; portable workloads; exits rehearsed; vendor ecosystem diversified
+    evidence:
+    - TPRM records
+    - Vendor contracts
+    - Concentration analysis
+    - Exit runbooks and test results
+    - Portability metrics (workload migration time)
