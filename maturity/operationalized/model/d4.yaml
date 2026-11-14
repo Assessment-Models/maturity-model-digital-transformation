@@ -1,0 +1,304 @@
+# Operationalized register — dimension d4 Operations & Autonomous Service Delivery
+
+id: dea:model-dto-d4
+dimension: d4
+name: Operations & Autonomous Service Delivery
+weight: 0.15
+description: How services and the network are orchestrated, assured, and increasingly run autonomously (intent-driven, closed-loop),
+  with digital twins/simulation and quantitative performance, cost, and carbon management.
+sub_dimensions:
+- id: d4s1
+  name: Service Orchestration & Assurance
+  lite_question: Services are orchestrated via open APIs with closed-loop assurance and SLOs.
+  criteria:
+  - id: d4c1
+    name: Intent-driven orchestration
+    statement: Services are designed, ordered, and fulfilled through intent-driven orchestration over open APIs (e.g., TMF
+      Open APIs/ODA).
+    levers:
+    - autonomy
+    - composability
+    anchors:
+    - level: 1
+      text: Manual order handling; siloed BSS/OSS
+    - level: 2
+      text: APIs exist for some systems; orchestration partial
+    - level: 3
+      text: Standard APIs + orchestration layer; intent interfaces for key services
+    - level: 4
+      text: Intent-driven, cross-domain orchestration for most services; NaaS-style exposure
+    - level: 5
+      text: Autonomous, intent-based fulfillment end to end; intent set by customer/partner, system executes
+    evidence:
+    - Order fallout reports
+    - API coverage
+    - Orchestration logs
+    - Intent interface usage; TTM per service
+    - Autonomous fulfillment metrics
+  - id: d4c2
+    name: Closed-loop assurance & SLOs
+    statement: Service assurance is closed-loop with SLOs/error budgets governing release and operations decisions.
+    levers:
+    - autonomy
+    anchors:
+    - level: 1
+      text: Reactive assurance; user-reported incidents
+    - level: 2
+      text: Monitoring exists; no SLOs
+    - level: 3
+      text: Observability stack; SLOs for top services; error budgets enforced
+    - level: 4
+      text: Closed-loop assurance across domains; predictive alerts; auto-remediation for known issues
+    - level: 5
+      text: 'Autonomous assurance: self-healing, self-optimizing; intent-level SLAs met automatically'
+    evidence:
+    - Incident records
+    - Monitoring dashboards
+    - SLO dashboards; error-budget policy
+    - Auto-remediation logs; predictive alert share
+    - SLA attainment; zero-touch incident share
+  - id: d4c3
+    name: Service portfolio management
+    statement: The service portfolio is customer-centric, data-driven, and continuously rationalized.
+    levers:
+    - business-value
+    anchors:
+    - level: 1
+      text: Legacy portfolio; no ownership
+    - level: 2
+      text: Catalog exists; owners assigned for some services
+    - level: 3
+      text: Portfolio governed with lifecycle (build/buy/retire) decisions
+    - level: 4
+      text: Portfolio optimized on usage, margin, and customer value
+    - level: 5
+      text: 'Self-optimizing portfolio: AI recommends rationalization and new services'
+    evidence:
+    - Service catalog
+    - Owner assignments
+    - Portfolio review minutes
+    - Margin/usage dashboards
+    - Rationalization actions; AI recommendations
+- id: d4s2
+  name: Autonomous Operations (AN Ladder)
+  lite_question: Operations progress along the autonomy ladder (L0-L5) with humans in/on the loop by design.
+  criteria:
+  - id: d4c4
+    name: Autonomy level per domain (AN L0-L5)
+    statement: 'Each operational domain is assessed against the AN ladder: who owns awareness, analysis, decision, execution,
+      intent.'
+    levers:
+    - autonomy
+    - agentic-ai
+    anchors:
+    - level: 1
+      text: 'L0/L1: manual, reactive operations'
+    - level: 2
+      text: 'L2: rule-based automation in some domains'
+    - level: 3
+      text: 'L3: conditional automation + AI monitoring in key domains'
+    - level: 4
+      text: 'L4: closed-loop, intent-driven autonomy in selected domains; system owns awareness-to-execution, intent shared
+        with humans'
+    - level: 5
+      text: 'L5: system sets its own intents within policy across scenarios; cognitive self-adaptation'
+    evidence:
+    - Ops runbooks
+    - Automation coverage
+    - AIOps deployment; AN level assessment per domain
+    - Closed-loop change logs; TMF AN validation/certification
+    - Intent ownership matrix; autonomous change records
+  - id: d4c5
+    name: Zero-touch operations & self-healing
+    statement: 'Routine operations are zero-touch: detect, decide, and remediate automatically.'
+    levers:
+    - autonomy
+    anchors:
+    - level: 1
+      text: All operations manual
+    - level: 2
+      text: Scripts for known issues; human executes
+    - level: 3
+      text: Auto-remediation for known failure modes in key domains
+    - level: 4
+      text: Self-healing/self-optimizing across most domains; MTTD/MTTR low
+    - level: 5
+      text: Fully zero-touch routine ops; predictive prevention before customer impact
+    evidence:
+    - Runbooks
+    - Script inventory
+    - Auto-remediation %; incident logs
+    - Self-healing metrics
+    - Prevented-incident count; customer-impact minutes
+  - id: d4c6
+    name: Agentic operations & human-on-the-loop
+    statement: AI agents run operational workflows (NOC/SOC/service) with defined agency, human-on-the-loop oversight, escalation,
+      and kill-switch.
+    levers:
+    - agentic-ai
+    - human-agent-teaming
+    - autonomy
+    anchors:
+    - level: 1
+      text: No agents in operations
+    - level: 2
+      text: Agent assistants suggest; humans execute
+    - level: 3
+      text: Agents execute defined runbooks under HITL supervision
+    - level: 4
+      text: Agents act autonomously in bounded scopes with logging, rollback, and human-on-the-loop
+    - level: 5
+      text: Agent swarms handle incidents end to end within policy; humans set intent and policy only
+    evidence:
+    - Agent use cases
+    - HITL logs
+    - Runbook automation coverage
+    - Agent action logs with rollback; kill-switch tests
+    - Autonomous incident resolution rate; safety record
+- id: d4s3
+  name: Digital Twins & Simulation
+  lite_question: We run living digital twins of network, services, and the organization to simulate before we act.
+  criteria:
+  - id: d4c7
+    name: Network & service digital twins
+    statement: Digital twins of network domains and services provide real-time state, prediction, and what-if simulation.
+    levers:
+    - digital-twins
+    - autonomy
+    anchors:
+    - level: 1
+      text: No twins; static inventory only
+    - level: 2
+      text: Partial models of some domains; not real-time
+    - level: 3
+      text: Real-time twins for key domains feeding assurance and planning
+    - level: 4
+      text: Cross-domain twins with predictive simulation (capacity, faults, changes)
+    - level: 5
+      text: 'Closed-loop: twin drives autonomous action and verifies outcome in the live system'
+    evidence:
+    - Inventory/CMDB
+    - Domain models
+    - Twin dashboards; prediction accuracy
+    - What-if simulation records
+    - Closed-loop change verification
+  - id: d4c8
+    name: Digital Twin of the Organization (DTO) & process mining
+    statement: A DTO, fed by process mining and operational data, models how the business actually runs to plan, simulate,
+      and optimize initiatives.
+    levers:
+    - digital-twins
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: No process mining; processes tribal knowledge
+    - level: 2
+      text: Process mining in one function; DTO concept known
+    - level: 3
+      text: DTO live for top value streams; used to plan initiatives
+    - level: 4
+      text: Enterprise DTO with simulation of strategy/operating-model changes
+    - level: 5
+      text: 'DTO as the operating sandbox: changes simulated, agents rehearse, then executed; benchmarks published'
+    evidence:
+    - Event logs
+    - Process models
+    - DTO coverage of value streams
+    - Simulation study reports
+    - DTO-driven decisions; agent sandbox usage
+  - id: d4c9
+    name: Simulation-driven planning
+    statement: Major decisions (capacity, launches, org/operating-model changes) are simulated in twins before commitment.
+    levers:
+    - digital-twins
+    - business-value
+    anchors:
+    - level: 1
+      text: Decisions by gut feel; no simulation
+    - level: 2
+      text: Spreadsheets for some plans
+    - level: 3
+      text: What-if analysis for major initiatives in twins
+    - level: 4
+      text: 'Standard practice: simulate-then-execute for strategy and ops changes'
+    - level: 5
+      text: 'Continuous simulation: twins recommend optimal actions; autonomous execution within policy'
+    evidence:
+    - Planning decks
+    - Model-based business cases
+    - Simulation records attached to decisions
+    - Decision log with simulated vs actual
+    - Autonomous optimization actions
+- id: d4s4
+  name: Resilience, Performance & Sustainable Ops
+  lite_question: Operations are resilient, tested, and managed for performance, cost, and carbon.
+  criteria:
+  - id: d4c10
+    name: Incident response & resilience testing
+    statement: Incident response is rehearsed and resilience is tested (chaos engineering, game days, TLPT-style tests).
+    levers:
+    - autonomy
+    - grc
+    anchors:
+    - level: 1
+      text: No IR process; recovery in days
+    - level: 2
+      text: Runbook exists; postmortems ad hoc
+    - level: 3
+      text: Incident command; SLOs; postmortems within 7 days; chaos experiments
+    - level: 4
+      text: Predictive detection; auto-remediation over 30% of incidents; regular TLPT/DR tests
+    - level: 5
+      text: Resilience proven continuously; self-healing prevents most incidents; regulatory tests passed
+    evidence:
+    - IR runbooks; MTTR trends
+    - Postmortem records
+    - Chaos/game-day reports
+    - TLPT/DR test results
+    - Incident prevention metrics; regulator reports
+  - id: d4c11
+    name: Performance & flow management
+    statement: 'Operational performance is managed with flow metrics (DORA: deployment frequency, lead time, change failure
+      rate, MTTR) and cost per workload (FinOps).'
+    levers:
+    - business-value
+    - innovation
+    anchors:
+    - level: 1
+      text: No flow/cost metrics
+    - level: 2
+      text: Deploy frequency tracked manually
+    - level: 3
+      text: DORA metrics tracked; cost per workload weekly
+    - level: 4
+      text: Metrics drive release and capacity decisions; FinOps automated
+    - level: 5
+      text: 'Self-optimizing flow: AI balances speed, reliability, and cost continuously'
+    evidence:
+    - Dashboards
+    - Manual reports
+    - DORA dashboard; FinOps reports
+    - Error-budget-driven releases
+    - Optimization actions; cost/reliability trends
+  - id: d4c12
+    name: Carbon-aware operations (GreenOps)
+    statement: 'Operations minimize energy/carbon: efficient infra, carbon-aware scheduling, renewable-powered facilities.'
+    levers:
+    - sustainability-esg
+    anchors:
+    - level: 1
+      text: No energy monitoring in ops
+    - level: 2
+      text: Basic DC energy metrics
+    - level: 3
+      text: Energy per workload tracked; efficiency targets in ops KPIs
+    - level: 4
+      text: Carbon-aware workload placement/scheduling automated
+    - level: 5
+      text: Net-zero operations; AI continuously minimizes emissions; industry leadership
+    evidence:
+    - DC energy reports
+    - Efficiency SOPs
+    - Energy-per-workload dashboards
+    - Carbon-aware scheduler logs
+    - Emissions reductions; green certifications
