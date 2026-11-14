@@ -1,0 +1,32 @@
+# Structure mapping / cross-reference - operationalized model line (additive, standard R1/R2)
+
+id: mapping-digital-transformation-operationalized
+name: 'Cross-reference: Digital Transformation Operationalized model line'
+description: This repository hosts the digital-transformation domain. It carries the composite model (v1.0.0, CR-AM-11 section
+  31 first-model candidate; model-definition via the structure mapping to maturity/evaluation.yaml + maturity/components/)
+  and, additively (standard R2, nothing renamed/deleted per R1), the operationalized model line v1.0.0-alpha under maturity/operationalized/.
+sources:
+- kind: catalog-model
+  id: dea:maturity-digital-transformation-operationalized
+  repository: Assessment-Models/dea-catalog-maturity-models
+  note: 'Merged via PRs #6 (model), #10 (findings register), #12 (hotspots); proposal 0003 has the DMM v5.0.2 gap review'
+- kind: upstream-source
+  id: TM Forum GB997A DMM v5.0.2
+  note: Re-harvested after full structural + gap review (S1-S18 defects; 22/54 missing capability areas)
+- kind: registry-issues
+  ids:
+  - assessment-registry#11
+  - '#12'
+  - '#13'
+  note: '#11 resolved by building on this repo; #12 assessment-model, #13 assessment-tool'
+- kind: composite-scale-in-this-repo
+  id: dea:scale-digital-transformation-v1
+  path: maturity/scale.yaml
+  note: Canonical L-0..L-4; the operationalized scale correlates 1:1 (never normalised, CR-AM-09 section 9)
+local_paths:
+- maturity/operationalized/scale.yaml
+- maturity/operationalized/evaluation.yaml
+- maturity/operationalized/model/
+- maturity/operationalized/components/
+- examples/operationalized-2026.yaml
+- mappings/digital-transformation-operationalized.yaml
