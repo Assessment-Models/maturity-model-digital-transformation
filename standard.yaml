@@ -22,7 +22,7 @@ standard:
 model:
   id: maturity-model-digital-transformation
   name: Digital Transformation Maturity Model
-  version: "1.0.0"
+  version: "1.1.0-alpha"
 structure:
   mappings:
     model-definition:
