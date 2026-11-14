@@ -16,7 +16,22 @@ services-delivery child models. It uses the **OpenDEA EA reference instance**
 
 ## Status
 
-`1.0.0` · stable — composite model, anchored on the OpenDEA EA reference instance
+`1.1.0-alpha` · composite model `1.0.0` stable + additive **operationalized** model line `1.0.0-alpha` · anchored on the OpenDEA EA reference instance
+
+## Model lines (cross-reference)
+
+This repository hosts the digital-transformation domain with two model lines:
+
+| Line | Version | Definition | Scale | Status |
+|---|---|---|---|---|
+| Composite (CR-AM-11 §31 first-model candidate) | 1.0.0 | `maturity/evaluation.yaml` + `maturity/components/` (structure mapping in `standard.yaml`) | `dea:scale-digital-transformation-v1` (L-0..L-4) | stable |
+| **Operationalized** (digital-business framing; from TM Forum DMM v5.0.2 re-harvest) | 1.0.0-alpha | `maturity/operationalized/` (scale + evaluation + model register 6 dims / 23 sub-dims / 70 criteria + 6 dimension components) + `examples/operationalized-2026.yaml` | `dea:scale-digital-transformation-operationalized-v1` (L-0..L-4, value-named levels, correlated 1:1 to the composite scale — never normalised, CR-AM-09 §9) | alpha |
+
+Cross-references: catalog twin `dea:maturity-digital-transformation-operationalized` in
+`dea-catalog-maturity-models` (PRs #6/#10/#12, proposal 0003 with the DMM v5.0.2 gap review);
+registry issues `assessment-registry#11/#12/#13`; full mapping in
+`mappings/digital-transformation-operationalized.yaml`. Added additively per repository
+standard rules R1/R2 — nothing renamed, moved, or deleted.
 
 ## Repository standard
 
@@ -54,21 +69,21 @@ maturity-model-digital-transformation/
 ├── standard.yaml                          ← repository-standard declaration (CR-AM-ORG-RES-000)
 ├── VERSION
 ├── maturity/
-│   ├── scale.yaml                         ← the composite model-owned scale (5-level digital-native)
+│   ├── scale.yaml                         ← composite model-owned scale (5-level digital-native)
 │   ├── evaluation.yaml                    ← weighted 0–100 evaluation over four criteria
-│   └── components/
-│       ├── digital-culture.yaml           ← CR-AM-10 component (reusable)
-│       ├── technology-adoption.yaml
-│       ├── operations-modernization.yaml
-│       └── services-delivery.yaml
+│   ├── components/                        ← CR-AM-10 components (reusable)
+│   └── operationalized/                   ← operationalized model line v1.0.0-alpha (added 1.1.0-alpha)
+│       ├── scale.yaml / evaluation.yaml / model/ / components/
+├── mappings/                              ← cross-references (incl. operationalized model line)
 ├── examples/
-│   └── enterprise-2026.yaml              ← worked scoring example
+│   ├── enterprise-2026.yaml               ← composite worked example
+│   └── operationalized-2026.yaml          ← operationalized worked example
 ├── .github/workflows/
 │   ├── local-model-ci.yml                 ← Level 1
 │   ├── contract-conformance.yml           ← Level 2 (reusable workflow_call)
 │   └── repository-standard.yml            ← repository-standard conformance (reusable)
 └── scripts/
-    └── check_immutable_refs.py            ← Level 3 immutable-reference guard (consumer copy)
+    └── local_validate.py                  ← Level 1 validator (extended for operationalized/)
 ```
 
 ## Reuse from CR-AM-10
