@@ -1,0 +1,52 @@
+# DTO dimension component - People, Culture & Human-Agent Teaming (kind: extend)
+
+id: dea:component-dto-people-culture-human-agent-teaming
+type: component
+kind: extend
+source:
+  repository: Assessment-Models/maturity-model-digital-transformation
+version: 1.1.0-alpha
+reference: v1.1.0-alpha
+name: DTO dimension - People, Culture & Human-Agent Teaming
+description: Leadership and culture for digital business, the digital workforce (skills, DEI, inclusion, EX), the designed
+  working model between humans and AI agents, and innovation ways of working.
+content:
+- id: d5s1
+  name: Leadership, Culture & Operating Model
+  criteria:
+  - id: d5c1
+    name: Executive sponsorship & digital values
+  - id: d5c2
+    name: Target operating model & org design
+  - id: d5c3
+    name: Change management & adoption
+- id: d5s2
+  name: Talent, Skills & Inclusive Workforce
+  criteria:
+  - id: d5c4
+    name: Digital & AI skills, reskilling, careers
+  - id: d5c5
+    name: DEI, accessibility & digital inclusion
+  - id: d5c6
+    name: Employee experience & hybrid work
+- id: d5s3
+  name: Human-Agent Teaming & Oversight
+  criteria:
+  - id: d5c7
+    name: Delegation & task-allocation protocols
+  - id: d5c8
+    name: Trust calibration & shared mental models
+  - id: d5c9
+    name: Human-in/on-the-loop oversight & safety
+  - id: d5c10
+    name: Agent accountability & identity
+- id: d5s4
+  name: Ways of Working & Innovation
+  criteria:
+  - id: d5c11
+    name: Product-centric agile at scale
+  - id: d5c12
+    name: Experimentation & safe-to-fail
+  - id: d5c13
+    name: Venturing, open source & standards participation
+notes: Local component of the operationalized model line; publish to Assessment-Models/maturity-components as a follow-up.

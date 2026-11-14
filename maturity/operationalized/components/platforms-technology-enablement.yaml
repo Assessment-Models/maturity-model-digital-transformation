@@ -1,0 +1,50 @@
+# DTO dimension component - Digital Platforms & Technology Enablement (kind: extend)
+
+id: dea:component-dto-platforms-technology-enablement
+type: component
+kind: extend
+source:
+  repository: Assessment-Models/maturity-model-digital-transformation
+version: 1.1.0-alpha
+reference: v1.1.0-alpha
+name: DTO dimension - Digital Platforms & Technology Enablement
+description: The composable, cloud-native, AI- and agent-ready platform and infrastructure estate, and security/privacy/resilience
+  by design. Technology is the enabler of the digital operating model - not the model's subject.
+content:
+- id: d3s1
+  name: Composable Architecture & Open APIs
+  criteria:
+  - id: d3c1
+    name: Open, composable enterprise architecture
+  - id: d3c2
+    name: API governance, catalogs & integration
+  - id: d3c3
+    name: Legacy simplification & de-layering
+- id: d3s2
+  name: Cloud-Native Infrastructure & Platform Engineering
+  criteria:
+  - id: d3c4
+    name: Cloud & hybrid/multi-cloud strategy
+  - id: d3c5
+    name: Platform engineering, IDP & developer experience
+  - id: d3c6
+    name: DevOps, SRE & secure delivery
+- id: d3s3
+  name: AI, Agents & Intelligent Platforms
+  criteria:
+  - id: d3c7
+    name: AI/GenAI adoption & LLMOps
+  - id: d3c8
+    name: Agentic AI & multi-agent orchestration
+  - id: d3c9
+    name: 'AI TRiSM: trust, risk, security & compliance'
+- id: d3s4
+  name: Security, Privacy & Resilience by Design
+  criteria:
+  - id: d3c10
+    name: Zero trust & identity
+  - id: d3c11
+    name: AppSec & software supply-chain security
+  - id: d3c12
+    name: Privacy, sovereignty & crypto roadmap
+notes: Local component of the operationalized model line; publish to Assessment-Models/maturity-components as a follow-up.

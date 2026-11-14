@@ -1,0 +1,321 @@
+# Operationalized register — dimension d5 People, Culture & Human-Agent Teaming
+
+id: dea:model-dto-d5
+dimension: d5
+name: People, Culture & Human-Agent Teaming
+weight: 0.1
+description: Leadership and culture for digital business, the digital workforce (skills, DEI, inclusion, EX), the designed
+  working model between humans and AI agents, and innovation ways of working.
+sub_dimensions:
+- id: d5s1
+  name: Leadership, Culture & Operating Model
+  lite_question: Leaders sponsor digital business and the operating model is designed for it.
+  criteria:
+  - id: d5c1
+    name: Executive sponsorship & digital values
+    statement: Executives sponsor transformation, model digital values, and are held accountable for outcomes.
+    levers:
+    - innovation
+    anchors:
+    - level: 1
+      text: No exec sponsor; transformation informal
+    - level: 2
+      text: Champion exists; leadership passive
+    - level: 3
+      text: Exec sponsor; digital values in leadership principles; board KPIs
+    - level: 4
+      text: Leaders visibly lead; values drive decisions; accountability in incentives
+    - level: 5
+      text: Culture self-reinforcing; leaders benchmark-set; transformation is how the org works
+    evidence:
+    - Charters; comms
+    - Pulse surveys
+    - Board KPI pack
+    - 360 reviews; incentive schemes
+    - Engagement scores; external recognition
+  - id: d5c2
+    name: Target operating model & org design
+    statement: The target operating model (teams, decision rights, platforms, governance) is explicitly designed and evolved.
+    levers:
+    - innovation
+    anchors:
+    - level: 1
+      text: Org by function/silo; no TOM
+    - level: 2
+      text: TOM documented; adoption partial
+    - level: 3
+      text: TOM implemented for value streams; decision rights clear
+    - level: 4
+      text: Operating model measured and tuned with data (flow, outcomes)
+    - level: 5
+      text: 'Self-adapting org design: structure and roles evolve with strategy automatically'
+    evidence:
+    - Org charts
+    - TOM doc
+    - Value-stream team maps
+    - Flow/outcome metrics per team
+    - Org change log driven by data
+  - id: d5c3
+    name: Change management & adoption
+    statement: 'Change is managed professionally: communication, training, adoption metrics, and feedback loops.'
+    levers:
+    - innovation
+    anchors:
+    - level: 1
+      text: Changes imposed; adoption poor
+    - level: 2
+      text: Comms plans exist; no adoption tracking
+    - level: 3
+      text: Structured change management with adoption metrics per initiative
+    - level: 4
+      text: Adoption predicted and managed proactively; resistance addressed early
+    - level: 5
+      text: 'Change is normal: high adoption by default; org learns continuously'
+    evidence:
+    - Change plans
+    - Comms analytics
+    - Adoption dashboards
+    - Predictive adoption models
+    - Learning loop records
+- id: d5s2
+  name: Talent, Skills & Inclusive Workforce
+  lite_question: We build digital and AI-fluent talent and an inclusive, accessible workplace.
+  criteria:
+  - id: d5c4
+    name: Digital & AI skills, reskilling, careers
+    statement: 'Workforce digital/AI fluency is systematically built: reskilling, career paths, talent marketplace/gig options.'
+    levers:
+    - innovation
+    - agentic-ai
+    anchors:
+    - level: 1
+      text: No training programs; skills ad hoc
+    - level: 2
+      text: Ad hoc courses; no career paths for digital roles
+    - level: 3
+      text: Skills ontology + reskilling programs; digital career paths defined
+    - level: 4
+      text: Continuous learning embedded; AI fluency expected of leaders; talent marketplace active
+    - level: 5
+      text: Workforce self-upskilling with AI tutors; gig/talent marketplace liquid; skills supply exceeds demand
+    evidence:
+    - Training catalog
+    - Skills assessments
+    - Learning platform analytics
+    - Career path docs; marketplace usage
+    - Skills supply/demand metrics; retention
+  - id: d5c5
+    name: DEI, accessibility & digital inclusion
+    statement: Diversity, equity, inclusion, accessibility (WCAG), and digital inclusion are designed into products, services,
+      and the workplace.
+    levers:
+    - innovation
+    anchors:
+    - level: 1
+      text: No DEI or accessibility program
+    - level: 2
+      text: Awareness; some accommodations
+    - level: 3
+      text: DEI program with metrics; WCAG conformance for customer-facing digital; inclusive hiring
+    - level: 4
+      text: DEI and accessibility KPIs in product/HR reviews; bias audited in AI
+    - level: 5
+      text: Inclusion by design; industry-leading accessibility and DEI; shapes standards
+    evidence:
+    - DEI policy
+    - Accommodation records
+    - DEI metrics; WCAG audit reports
+    - AI bias audit results
+    - Certifications; awards; benchmarks
+  - id: d5c6
+    name: Employee experience & hybrid work
+    statement: Employee experience, collaboration tooling, and hybrid-work models are deliberately designed and measured.
+    levers:
+    - innovation
+    anchors:
+    - level: 1
+      text: No EX focus; tools fragmented
+    - level: 2
+      text: Basic collaboration tools; EX surveyed annually
+    - level: 3
+      text: Digital workplace platform; EX measured continuously; hybrid model defined
+    - level: 4
+      text: EX drives decisions; AI-assisted productivity; wellbeing monitored
+    - level: 5
+      text: 'Self-optimizing workplace: EX, productivity, wellbeing continuously optimized'
+    evidence:
+    - EX survey tooling
+    - Hybrid policy
+    - EX dashboards
+    - Wellbeing metrics; tooling analytics
+    - EX-driven changes; productivity trends
+- id: d5s3
+  name: Human-Agent Teaming & Oversight
+  lite_question: Humans and AI agents work as a designed team with clear roles, trust, and oversight.
+  criteria:
+  - id: d5c7
+    name: Delegation & task-allocation protocols
+    statement: 'Who delegates what to agents is explicit: task types, autonomy ceilings, and escalation paths are defined.'
+    levers:
+    - human-agent-teaming
+    - agentic-ai
+    anchors:
+    - level: 1
+      text: No guidance; agents used ad hoc
+    - level: 2
+      text: Informal norms; humans approve everything
+    - level: 3
+      text: Delegation matrix per domain; agency levels per task risk
+    - level: 4
+      text: 'Dynamic delegation: autonomy granted by demonstrated agent performance'
+    - level: 5
+      text: 'Trusted autonomy: agents and humans divide work optimally by design'
+    evidence:
+    - Agent usage logs
+    - HITL records
+    - Delegation policy; agency-level matrix
+    - Performance-based autonomy grants
+    - Optimal task-split analytics
+  - id: d5c8
+    name: Trust calibration & shared mental models
+    statement: People understand agent capabilities/limits (shared mental models); trust is calibrated, not assumed.
+    levers:
+    - human-agent-teaming
+    anchors:
+    - level: 1
+      text: Blind trust or blind distrust
+    - level: 2
+      text: Basic training on AI limits
+    - level: 3
+      text: Training + explainability for agent decisions; trust metrics monitored
+    - level: 4
+      text: 'Calibrated trust: oversight matches verified reliability; explanations on demand'
+    - level: 5
+      text: 'Well-calibrated symbiosis: humans and agents anticipate each other; team performance exceeds either alone'
+    evidence:
+    - Training records
+    - Trust surveys
+    - Explainability tooling usage
+    - Trust-vs-reliability analysis
+    - Team performance metrics
+  - id: d5c9
+    name: Human-in/on-the-loop oversight & safety
+    statement: 'Oversight matches autonomy level: human-in-the-loop for high-impact actions; kill-switch, rollback, and
+      incident escalation always available.'
+    levers:
+    - human-agent-teaming
+    - trust-security-privacy
+    anchors:
+    - level: 1
+      text: No oversight; agents (if any) unsupervised
+    - level: 2
+      text: Human approves all agent actions
+    - level: 3
+      text: HITL for high-impact actions; kill-switch and rollback exist and are tested
+    - level: 4
+      text: Human-on-the-loop for bounded autonomy; continuous monitoring with automated escalation
+    - level: 5
+      text: 'Safety engineered in: guardrails + guardian agents; human oversight of the oversight; zero-harm record'
+    evidence:
+    - Oversight policy
+    - Approval logs
+    - Kill-switch test records
+    - Monitoring/escalation logs
+    - Safety audit; incident reviews
+  - id: d5c10
+    name: Agent accountability & identity
+    statement: Agents have identities, owners, and audit trails; accountability for agent actions is unambiguous (RACI incl.
+      agents).
+    levers:
+    - human-agent-teaming
+    - grc
+    anchors:
+    - level: 1
+      text: Agents anonymous; no owner
+    - level: 2
+      text: Agent inventory started; owners assigned
+    - level: 3
+      text: Agent identity + owner + audit log per action; RACI includes agents
+    - level: 4
+      text: 'Automated accountability: every agent action attributable, explainable, reversible'
+    - level: 5
+      text: Agent governance self-improving; audit-ready; contributes standards back
+    evidence:
+    - Agent registry
+    - Owner assignments
+    - Audit logs per action
+    - Attribution reports
+    - Audit opinions; standard contributions
+- id: d5s4
+  name: Ways of Working & Innovation
+  lite_question: We work in product-centric agile ways and innovate safely at scale.
+  criteria:
+  - id: d5c11
+    name: Product-centric agile at scale
+    statement: Product-centric, cross-functional teams deliver via value streams with flow metrics; agile-at-scale frameworks
+      as needed.
+    levers:
+    - innovation
+    anchors:
+    - level: 1
+      text: Waterfall projects; handoffs between silos
+    - level: 2
+      text: Some agile teams; rest waterfall
+    - level: 3
+      text: Product teams own outcomes; value streams mapped; flow metrics used
+    - level: 4
+      text: Agile at scale operating; flow optimized; dependencies managed
+    - level: 5
+      text: Self-organizing value networks; flow self-optimizing; elite DORA metrics
+    evidence:
+    - Team topologies
+    - Agile ceremonies
+    - Value-stream maps; DORA metrics
+    - Flow efficiency reports
+    - Optimization actions; trends
+  - id: d5c12
+    name: Experimentation & safe-to-fail
+    statement: 'Experimentation is the norm: hypotheses, A/B tests, blameless learning, safe-to-fail culture.'
+    levers:
+    - innovation
+    anchors:
+    - level: 1
+      text: Failure punished; no experiments
+    - level: 2
+      text: Experiments occasional; blame culture
+    - level: 3
+      text: Experiment platform; A/B standard; blameless postmortems
+    - level: 4
+      text: High experiment velocity; learning systematized
+    - level: 5
+      text: 'Innovation engine: continuous experiments self-optimize products and processes'
+    evidence:
+    - Postmortem culture records
+    - Experiment logs
+    - Experiment platform metrics
+    - Learning repository
+    - Innovation ROI; experiment velocity
+  - id: d5c13
+    name: Venturing, open source & standards participation
+    statement: 'The org engages beyond its walls: corporate venturing, open-source strategy, and participation in standards
+      bodies (TM Forum, GSMA/CAMARA, 3GPP, IETF).'
+    levers:
+    - innovation
+    - ecosystem-platforms
+    anchors:
+    - level: 1
+      text: No external engagement
+    - level: 2
+      text: Ad hoc contributions
+    - level: 3
+      text: Open-source strategy; contributions to key projects; standards participation
+    - level: 4
+      text: Strategic standards/OSS investments shaping industry direction; venturing arm active
+    - level: 5
+      text: 'Ecosystem leadership: standards authored, OSS projects led, ventures scaled'
+    evidence:
+    - OSS policy
+    - Contribution logs
+    - Standards body roles
+    - Patent/position papers; venture portfolio
+    - Industry leadership evidence

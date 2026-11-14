@@ -1,0 +1,214 @@
+# Operationalized model-line scale - canonical L-0..L-4, correlated to dea:scale-digital-transformation-v1
+
+id: dea:scale-digital-transformation-operationalized-v1
+version: 1.0.0-alpha
+metamodel_version: 1.0.0
+name: Digital Transformation Operationalized Maturity Scale (canonical L-0..L-4)
+description: Model line scale for the operationalized model. Canonical L-0..L-4 identifiers with v2 bands and effort multipliers;
+  value-named level aliases (Unrealized/Proven/Standardized/Compounding/Leading). Scale identity is (model, scale, level)
+  per CR-AM-09 section 9 - never normalised across models; correlation_to records the 1:1 mapping to this repository's composite
+  scale dea:scale-digital-transformation-v1 (maturity/scale.yaml).
+status: alpha
+levels:
+- id: L-0
+  ordinal: 0
+  name: Absent
+  v2_name: Emergent
+  value_name: Unrealized
+  v2_band: dea:maturity-band-emergent
+  v2_score_range:
+  - 0
+  - 20
+  catalog_level: level-1-unrealized
+  catalog_legacy_id: level-1-ad-hoc
+  definition: No coherent digital-business ambition yet. Initiatives are ad hoc pilots driven by individuals; no shared
+    strategy, vocabulary, or governance for AI, data, or platforms.
+  short_description: 'Value unrealized: digital activity is informal and person-dependent; transformation value is at risk'
+  characteristics:
+  - Digital initiatives are ad hoc pilots driven by individuals; no shared strategy or vocabulary
+  - Technology and process choices are reactive; no reference architecture or standards
+  - No measurable digital KPIs; customer journeys fragmented across channels
+  - AI used informally (e.g., personal copilots) with no governance, inventory, or oversight
+  - Data trapped in silos; no governance, quality, or sharing practices
+  unlocks:
+  - Executive attention and a signed digital strategy with named sponsor
+  - First governed pilots with documented results
+  - Baseline inventory of systems, AI use cases, and critical data
+  exit_criteria:
+  - Digital strategy document with executive sponsor approved
+  - Inventory of digital initiatives, systems, and AI use cases exists
+  - At least one governed pilot with documented results and lessons
+  evidence:
+  - No strategy/charter; initiatives tracked in personal spreadsheets
+  - No architecture review board; decisions in chat threads
+  - No AI inventory or data catalog
+- id: L-1
+  ordinal: 1
+  name: Piloting
+  v2_name: Structured
+  value_name: Proven
+  v2_band: dea:maturity-band-structured
+  v2_score_range:
+  - 21
+  - 45
+  catalog_level: level-2-proven
+  catalog_legacy_id: level-2-defined
+  definition: The organization has a documented digital strategy, target operating model, and playbooks, but enforcement
+    is inconsistent and value is not yet systematically measured.
+  short_description: 'Value proven in governed pilots: strategy and playbooks documented, adoption still uneven'
+  characteristics:
+  - Documented digital strategy, target operating model, and reference architecture
+  - Standard playbooks (CI/CD, security, data) exist but adoption is partial
+  - Customer journeys mapped; some channels integrated; CX metrics collected manually
+  - AI use cases inventoried; pilots in selected functions with basic guardrails
+  - Data governance framework defined; central catalog started
+  unlocks:
+  - Repeatable delivery in key domains; golden paths available to teams
+  - CX metrics trusted enough to steer; AI pilots governed; data catalog live
+  - First ecosystem/API products with paying partners
+  exit_criteria:
+  - Playbooks enforced via tooling (golden paths) in key domains
+  - CX metrics tracked systematically across all channels
+  - AI governance policy approved; agents confined to supervised sandboxes
+  - Data quality SLAs defined for critical data products
+  evidence:
+  - Strategy doc signed off; architecture decision records (ADRs) in use
+  - CI/CD pipelines for most teams; security scans in pipeline for key apps
+  - Data catalog live with owners assigned for critical data
+- id: L-2
+  ordinal: 2
+  name: Defined
+  v2_name: Systematic
+  value_name: Standardized
+  v2_band: dea:maturity-band-systematic
+  v2_score_range:
+  - 46
+  - 70
+  catalog_level: level-3-standardized
+  catalog_legacy_id: level-3-managed
+  definition: 'Digital-business capabilities are the default way of working: standards are enforced by CI/conformance tooling,
+    journeys are real-time and orchestrated, and AI agents operate in supervised workflows with AI TRiSM controls.'
+  short_description: 'Value standardized: digital practice is governed and tooling-enforced org-wide, so value is repeatable'
+  characteristics:
+  - Strategy, architecture, and platform standards enforced via CI/conformance tooling
+  - Composable, API-first platforms are the default for new services; legacy de-layering underway
+  - Omni-channel journeys orchestrated in real time; personalization data-driven
+  - Ecosystem/partner onboarding via self-service portals; API products monetized
+  - Agentic AI deployed in defined, supervised workflows (human-in-the-loop); AI TRiSM controls active
+  - Autonomous operations (AN L3) in key domains; digital twins used for assurance
+  - Data products with contracts, quality SLAs, and lineage; self-service analytics widely adopted
+  unlocks:
+  - Conformance CI blocks non-standard change; teams ship faster safely
+  - Customers experience one coherent, real-time brand across channels and partners
+  - Agents handle defined workflows end to end under supervision; humans focus on exceptions
+  - Operations in key domains run closed-loop (AN L3); twins inform assurance and planning
+  - Regulatory posture (DORA/NIS2/EU AI Act) automated and evidenced
+  exit_criteria:
+  - 'Metrics-driven management: SLOs/error budgets, flow metrics, unit economics tracked per domain'
+  - Autonomy at AN L4 in at least one domain (closed-loop, intent-driven)
+  - Digital twin of operations used for what-if planning
+  - AI agents act with defined agency levels under continuous monitoring and kill-switch oversight
+  - Regulatory compliance (DORA/NIS2/EU AI Act) automated and evidenced
+  evidence:
+  - Conformance CI blocks non-standard changes; golden-path templates mandatory
+  - SLO dashboards per service; error budgets gate releases
+  - AI inventory with risk scores; runtime guardrails and audit logs
+  - DTO/process-mining pipeline live for top value streams
+- id: L-3
+  ordinal: 3
+  name: Scaled
+  v2_name: Adaptive
+  value_name: Compounding
+  v2_band: dea:maturity-band-adaptive
+  v2_score_range:
+  - 71
+  - 88
+  catalog_level: level-4-compounding
+  catalog_legacy_id: level-4-quantitatively-managed
+  definition: 'The organization senses and responds: predictive closed-loop operations across domains (AN L4+), customer
+    and ecosystem outcomes optimized in real time, twins/simulation drive decisions, and agents act with graded autonomy
+    under human-on-the-loop oversight.'
+  short_description: 'Value compounding: the digital business is metrics-driven, predictive and self-adapting, so value
+    scales'
+  characteristics:
+  - 'Predictive, closed-loop operations across domains (AN L4+): system owns awareness, analysis, decision, execution; intent
+    shared human-machine'
+  - Customer and ecosystem outcomes predicted and optimized in real time (churn, CLTV, partner value)
+  - Digital twins/simulation drive planning, what-if, and agent rehearsal sandboxes
+  - AI agents operate with graded autonomy per use-case risk; human-on-the-loop; continuous TRiSM monitoring
+  - Value streams and flow metrics (DORA) drive portfolio allocation; FinOps/GreenOps cost and carbon per workload
+  - Resilience tested (chaos, TLPT); third-party risk and exit strategies managed quantitatively
+  unlocks:
+  - Release and capacity decisions driven by SLOs/error budgets and flow metrics, not meetings
+  - Major strategy and operating-model changes simulated in the DTO before a dollar is committed
+  - Network capabilities monetized as programmable products (Open Gateway/CAMARA-class APIs, NaaS)
+  - Agents act autonomously in bounded, high-trust scopes; humans on the loop, not in it
+  - Risk, cost, and carbon per workload visible and quantitatively managed
+  exit_criteria:
+  - 'Full autonomy (AN L5) demonstrated in selected scenarios: system sets its own intents within policy'
+  - DTO used to simulate strategy and operating-model changes before execution
+  - Regulatory and AI-risk posture continuously evidenced (audit-ready)
+  - 'Self-improving platforms: telemetry feeds back into standards and golden paths'
+  evidence:
+  - MTTD/MTTR, change failure rate, deployment frequency tracked and improving
+  - Predictive alerts >50% of sev-1; auto-remediation >30% of incidents
+  - Agent actions logged, explainable, and reversible; kill-switch tested
+  - Cost and carbon per workload tracked weekly
+- id: L-4
+  ordinal: 4
+  name: Self-Optimising
+  v2_name: Self-Optimising
+  value_name: Leading
+  v2_band: dea:maturity-band-self-optimising
+  v2_score_range:
+  - 89
+  - 100
+  catalog_level: level-5-leading
+  catalog_legacy_id: level-5-optimising
+  definition: Humans set outcomes, intent, and policy; agents and closed loops execute. Telemetry, twins, and benchmarks
+    continuously feed strategy, architecture, and roadmaps. The organization is an active ecosystem citizen (standards,
+    open source, benchmarks, mentoring).
+  short_description: 'Value leading: the digital business is self-optimizing and intent-driven end to end, setting benchmarks'
+  characteristics:
+  - 'Intent-driven, autonomous operating model across domains: humans set outcomes and policy; agents and closed loops execute'
+  - 'Continuous self-optimization: telemetry, twins, and benchmarks feed strategy, architecture, and roadmaps automatically'
+  - Network/edge capabilities exposed as programmable products (Open Gateway/CAMARA-class APIs, NaaS) at scale
+  - 'Human-agent teaming is a designed operating model: roles, trust, oversight, and accountability engineered'
+  - Organization benchmarks, mentors peers, and contributes back to standards, open source, and the assessment ecosystem
+  unlocks:
+  - Board-level digital KPIs tied to customer and ecosystem outcomes; transformation is simply how the org works
+  - 'Industry recognition: benchmarks locked, standards authored, peers mentored'
+  - 'Marginal gains compound: every level-4 investment pays for the next'
+  exit_criteria:
+  - None - continuous improvement is the practice
+  evidence:
+  - Locked benchmark baselines; published contributions to standards/open source
+  - Board-level digital KPIs tied to customer and ecosystem outcomes
+  - Post-incident and experiment learnings automatically update playbooks
+ordering: ascending
+progression:
+  topology: linear
+  function: exponential
+  transition_rules:
+  - Forward-only; no level skipping (diminishing-returns insight).
+  - Exit from a level requires the documented exit criteria AND evidence expectations from the corresponding criterion anchors
+    (evaluation model).
+  effort_multiplier:
+    L-0: 1.0
+    L-1: 1.5
+    L-2: 2.5
+    L-3: 4.0
+    L-4: 6.0
+conformance:
+  statuses:
+  - conformant
+  - partially-conformant
+  - non-conformant
+  - indeterminate
+  - not-assessable
+  highest_conformant_level_resolution: true
+correlation_to:
+  scale_id: dea:scale-digital-transformation-v1
+  version: 1.0.0
+  path: maturity/scale.yaml
+  mapping: this scale level N == canonical ordinal N-1 == composite L-(N-1)

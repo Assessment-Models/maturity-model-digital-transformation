@@ -1,0 +1,231 @@
+# Operationalized register — dimension d1 Customer & Ecosystem Value
+
+id: dea:model-dto-d1
+dimension: d1
+name: Customer & Ecosystem Value
+weight: 0.2
+description: How the digital business understands, serves, and grows with customers and the ecosystems it cultivates - journeys,
+  personalization, partnerships, and monetization.
+sub_dimensions:
+- id: d1s1
+  name: Customer Experience & Journey Orchestration
+  lite_question: We orchestrate seamless, real-time, personalized customer journeys across all channels.
+  criteria:
+  - id: d1c1
+    name: Omni-channel journey orchestration
+    statement: Customer journeys are orchestrated seamlessly across all digital and physical channels with unified context.
+    levers:
+    - business-value
+    anchors:
+    - level: 1
+      text: Channels fragmented; inconsistent experience; no shared customer view
+    - level: 2
+      text: Key channels (web/mobile) integrated; partial data synchronization
+    - level: 3
+      text: Unified omni-channel platform with real-time event-driven data flow
+    - level: 4
+      text: Journey orchestration engine drives context-aware interactions across channels
+    - level: 5
+      text: Predictive, intent-aware journeys anticipate needs across channels and partners
+    evidence:
+    - Channel inventory; CX journey maps
+    - CDP/journey analytics dashboards
+    - Real-time event bus; orchestration playbooks
+    - Journey orchestration platform metrics (conversion, drop-off)
+    - Predictive journey models with measured uplift
+  - id: d1c2
+    name: Real-time personalization & next-best-action
+    statement: Personalization and next-best-action are driven by real-time customer data (CDP/martech) on every touchpoint.
+    levers:
+    - business-value
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: No personalization; generic content and offers
+    - level: 2
+      text: Rule-based personalization on web only
+    - level: 3
+      text: Segment-based personalization across main digital channels
+    - level: 4
+      text: AI-driven next-best-action with real-time CDP on all touchpoints
+    - level: 5
+      text: Autonomous, context-aware personalization optimizing CLTV in real time
+    evidence:
+    - Martech stack inventory
+    - Personalization rules catalog
+    - CDP unified profile coverage %
+    - NBA engine logs and A/B results
+    - CLTV/CSAT uplift attributed to personalization
+  - id: d1c3
+    name: Voice of customer & CX measurement
+    statement: Customer feedback (NPS/CSAT/journey analytics/VoC) is captured continuously and closes the loop into product
+      and operations.
+    levers:
+    - business-value
+    anchors:
+    - level: 1
+      text: Feedback ad hoc; complaints handled reactively
+    - level: 2
+      text: Periodic surveys; no closed loop
+    - level: 3
+      text: Continuous NPS/CSAT plus journey analytics on key journeys
+    - level: 4
+      text: VoC program with analytics driving roadmap and ops fixes
+    - level: 5
+      text: 'Predictive CX management: issues prevented before customers report them'
+    evidence:
+    - Survey tooling
+    - NPS/CSAT dashboards
+    - Journey analytics; feedback-to-action tracker
+    - VoC governance board minutes
+    - Churn reduction correlated with VoC actions
+- id: d1s2
+  name: Ecosystem & Partner Orchestration
+  lite_question: We orchestrate trusted partners and marketplaces through self-service platforms.
+  criteria:
+  - id: d1c4
+    name: Partner lifecycle & marketplace operations
+    statement: Partners are onboarded, managed, and settled through governed, self-service platform/marketplace operations.
+    levers:
+    - ecosystem-platforms
+    anchors:
+    - level: 1
+      text: Partnerships ad hoc, bilateral, manual contracts
+    - level: 2
+      text: Basic partner portal; onboarding still manual
+    - level: 3
+      text: Self-service onboarding, standard agreements, governed marketplace
+    - level: 4
+      text: Partner performance and value metrics actively managed; co-creation programs
+    - level: 5
+      text: 'Autonomous partner ecosystem: AI-matched partners, dynamic revenue share, self-settling'
+    evidence:
+    - Partner contracts; onboarding checklist
+    - Partner portal analytics
+    - Marketplace GMV/partner NPS
+    - API adoption and partner value dashboards
+    - Settlement automation logs; partner SLAs
+  - id: d1c5
+    name: B2B2X value networks
+    statement: The organization builds and orchestrates B2B2X value networks, sharing risk, control, and revenue with partners.
+    levers:
+    - ecosystem-platforms
+    - business-value
+    anchors:
+    - level: 1
+      text: No B2B2X activity; pure direct model
+    - level: 2
+      text: Occasional white-label deals, no shared platform
+    - level: 3
+      text: Structured B2B2X partnerships on a shared platform
+    - level: 4
+      text: Multi-partner value networks with shared catalogs and joint go-to-market
+    - level: 5
+      text: 'Ecosystem-led growth: network effects, co-innovation, shared outcomes as the default model'
+    evidence:
+    - Partner revenue share of total
+    - White-label/OTT case list
+    - Joint GTM plans
+    - Value-network architecture diagrams
+    - Ecosystem revenue and retention metrics
+  - id: d1c6
+    name: API products, developer ecosystem & network APIs
+    statement: 'APIs are managed as products for internal and external developers, including telecom network capabilities
+      (GSMA Open Gateway/CAMARA: number verification, SIM swap, location, quality-on-demand, edge discovery, carrier billing;
+      NaaS/slicing).'
+    levers:
+    - ecosystem-platforms
+    - composability
+    anchors:
+    - level: 1
+      text: APIs ad hoc, internal only, undocumented
+    - level: 2
+      text: Some documented APIs; no developer portal or monetization
+    - level: 3
+      text: API catalog/portal, standard contracts, basic analytics; network APIs piloted
+    - level: 4
+      text: API products monetized via marketplace/aggregators; QoD, location, anti-fraud APIs in production
+    - level: 5
+      text: 'Programmable network/platform at scale: NaaS, slicing, edge - federated across operators; developer ecosystem
+        self-sustaining'
+    evidence:
+    - API inventory
+    - Developer portal; API analytics
+    - Open API conformance (e.g., TMF Open APIs)
+    - Network API transaction volumes and revenue
+    - Open Gateway/CAMARA certification; federation agreements
+- id: d1s3
+  name: Digital Products, Monetization & Growth
+  lite_question: We monetize digital products and network capabilities with modern pricing and growth practices.
+  criteria:
+  - id: d1c7
+    name: Composable digital product portfolio
+    statement: Digital products/services are composable, modular, and rapidly assembled from reusable components (composable
+      commerce/headless where relevant).
+    levers:
+    - business-value
+    - composability
+    anchors:
+    - level: 1
+      text: Monolithic product stack; slow releases
+    - level: 2
+      text: Some modular services; releases still coordinated manually
+    - level: 3
+      text: Composable product architecture with reusable components and catalog
+    - level: 4
+      text: Product teams assemble offerings via APIs/marketplace components; fast TTM
+    - level: 5
+      text: 'Self-assembling offerings: customers/partners compose solutions dynamically; continuous TTM under weeks'
+    evidence:
+    - Service/component catalog
+    - Release train records
+    - Component reuse metrics
+    - TTM dashboards
+    - Composable storefront/marketplace metrics
+  - id: d1c8
+    name: Pricing, billing & charging models
+    statement: Pricing and charging support dynamic, usage-based, and outcome-based models, incl. carrier billing and partner
+      settlement.
+    levers:
+    - business-value
+    anchors:
+    - level: 1
+      text: Static rate plans; manual billing
+    - level: 2
+      text: Some add-ons; billing batch-based
+    - level: 3
+      text: Usage-based pricing on main products; real-time charging
+    - level: 4
+      text: Dynamic/outcome-based pricing; carrier billing and partner settlement automated
+    - level: 5
+      text: 'Autonomous pricing: AI-adjusted offers per customer/segment with guardrails; revenue assured continuously'
+    evidence:
+    - Price book; billing system records
+    - Charging/rating configs
+    - Real-time charging latency metrics
+    - Dynamic pricing rules + guardrails
+    - Revenue assurance reports; settlement automation
+  - id: d1c9
+    name: Revenue assurance, fraud & growth experimentation
+    statement: Revenue assurance and fraud management protect monetization, and growth is driven by continuous experimentation
+      (A/B, OKRs).
+    levers:
+    - business-value
+    - innovation
+    anchors:
+    - level: 1
+      text: No RA/fraud controls; growth by anecdote
+    - level: 2
+      text: Manual RA checks; occasional campaigns
+    - level: 3
+      text: Automated RA/fraud detection on key flows; regular A/B tests
+    - level: 4
+      text: AI-driven fraud prevention (incl. scam/spam signals); experimentation platform org-wide
+    - level: 5
+      text: 'Autonomous growth loops: experiments, pricing, and fraud defenses self-optimize with measured uplift'
+    evidence:
+    - RA/leakage reports
+    - Fraud cases and recovery
+    - Experiment platform; A/B results
+    - Fraud ML models in production
+    - OKR-linked growth metrics; automated experiment loop

@@ -1,0 +1,159 @@
+# Operationalized evaluation - weighted 0-100 over 6 dimension criteria
+
+id: dea:evaluation-digital-transformation-operationalized-v1
+version: 1.0.0-alpha
+metamodel_version: 1.0.0
+name: Digital Transformation Operationalized Evaluation Model
+description: Weighted 0-100 over the six dimension criteria (0.20/0.20/0.20/0.15/0.10/0.15); criterion 1-5 -> 0-100; banded
+  via v2 bands; resolved to L-0..L-4 by highest-conformant-level with the mandatory-dimension gate (d1-d4).
+status: alpha
+scale:
+  id: dea:scale-digital-transformation-operationalized-v1
+  version: 1.0.0-alpha
+criteria_register: maturity/operationalized/model/
+scoring:
+  mechanism: weighted
+  domain:
+    kind: numeric-0-100
+    minimum: 0
+    maximum: 100
+  aggregation_rule: overall = sum(dim_score * weight); dim = mean(subdims); subdim = mean(criteria 0-100).
+criteria:
+- id: d1
+  name: Customer & Ecosystem Value
+  weight: 0.2
+  description: How the digital business understands, serves, and grows with customers and the ecosystems it cultivates -
+    journeys, personalization, partnerships, and monetization.
+  mandatory: true
+  evidence_requirements:
+  - Per-criterion evidence artifacts from maturity/operationalized/model/.
+  level_expectations:
+  - level: L-0
+    expectation: 'Unrealized: Value unrealized: digital activity is informal and person-dependent; transformation value
+      is at risk'
+  - level: L-1
+    expectation: 'Proven: Value proven in governed pilots: strategy and playbooks documented, adoption still uneven'
+  - level: L-2
+    expectation: 'Standardized: Value standardized: digital practice is governed and tooling-enforced org-wide, so value
+      is repeatable'
+  - level: L-3
+    expectation: 'Compounding: Value compounding: the digital business is metrics-driven, predictive and self-adapting,
+      so value scales'
+  - level: L-4
+    expectation: 'Leading: Value leading: the digital business is self-optimizing and intent-driven end to end, setting
+      benchmarks'
+- id: d2
+  name: Strategy, Business Model & Value
+  weight: 0.2
+  description: Customer- and ecosystem-centric digital strategy, novel digital business models, value and financial performance,
+    sustainability, and enterprise governance/risk/compliance.
+  mandatory: true
+  evidence_requirements:
+  - Per-criterion evidence artifacts from maturity/operationalized/model/.
+  level_expectations:
+  - level: L-0
+    expectation: 'Unrealized: Value unrealized: digital activity is informal and person-dependent; transformation value
+      is at risk'
+  - level: L-1
+    expectation: 'Proven: Value proven in governed pilots: strategy and playbooks documented, adoption still uneven'
+  - level: L-2
+    expectation: 'Standardized: Value standardized: digital practice is governed and tooling-enforced org-wide, so value
+      is repeatable'
+  - level: L-3
+    expectation: 'Compounding: Value compounding: the digital business is metrics-driven, predictive and self-adapting,
+      so value scales'
+  - level: L-4
+    expectation: 'Leading: Value leading: the digital business is self-optimizing and intent-driven end to end, setting
+      benchmarks'
+- id: d3
+  name: Digital Platforms & Technology Enablement
+  weight: 0.2
+  description: The composable, cloud-native, AI- and agent-ready platform and infrastructure estate, and security/privacy/resilience
+    by design. Technology is the enabler of the digital operating model - not the model's subject.
+  mandatory: true
+  evidence_requirements:
+  - Per-criterion evidence artifacts from maturity/operationalized/model/.
+  level_expectations:
+  - level: L-0
+    expectation: 'Unrealized: Value unrealized: digital activity is informal and person-dependent; transformation value
+      is at risk'
+  - level: L-1
+    expectation: 'Proven: Value proven in governed pilots: strategy and playbooks documented, adoption still uneven'
+  - level: L-2
+    expectation: 'Standardized: Value standardized: digital practice is governed and tooling-enforced org-wide, so value
+      is repeatable'
+  - level: L-3
+    expectation: 'Compounding: Value compounding: the digital business is metrics-driven, predictive and self-adapting,
+      so value scales'
+  - level: L-4
+    expectation: 'Leading: Value leading: the digital business is self-optimizing and intent-driven end to end, setting
+      benchmarks'
+- id: d4
+  name: Operations & Autonomous Service Delivery
+  weight: 0.15
+  description: How services and the network are orchestrated, assured, and increasingly run autonomously (intent-driven,
+    closed-loop), with digital twins/simulation and quantitative performance, cost, and carbon management.
+  mandatory: true
+  evidence_requirements:
+  - Per-criterion evidence artifacts from maturity/operationalized/model/.
+  level_expectations:
+  - level: L-0
+    expectation: 'Unrealized: Value unrealized: digital activity is informal and person-dependent; transformation value
+      is at risk'
+  - level: L-1
+    expectation: 'Proven: Value proven in governed pilots: strategy and playbooks documented, adoption still uneven'
+  - level: L-2
+    expectation: 'Standardized: Value standardized: digital practice is governed and tooling-enforced org-wide, so value
+      is repeatable'
+  - level: L-3
+    expectation: 'Compounding: Value compounding: the digital business is metrics-driven, predictive and self-adapting,
+      so value scales'
+  - level: L-4
+    expectation: 'Leading: Value leading: the digital business is self-optimizing and intent-driven end to end, setting
+      benchmarks'
+- id: d5
+  name: People, Culture & Human-Agent Teaming
+  weight: 0.1
+  description: Leadership and culture for digital business, the digital workforce (skills, DEI, inclusion, EX), the designed
+    working model between humans and AI agents, and innovation ways of working.
+  mandatory: false
+  evidence_requirements:
+  - Per-criterion evidence artifacts from maturity/operationalized/model/.
+  level_expectations:
+  - level: L-0
+    expectation: 'Unrealized: Value unrealized: digital activity is informal and person-dependent; transformation value
+      is at risk'
+  - level: L-1
+    expectation: 'Proven: Value proven in governed pilots: strategy and playbooks documented, adoption still uneven'
+  - level: L-2
+    expectation: 'Standardized: Value standardized: digital practice is governed and tooling-enforced org-wide, so value
+      is repeatable'
+  - level: L-3
+    expectation: 'Compounding: Value compounding: the digital business is metrics-driven, predictive and self-adapting,
+      so value scales'
+  - level: L-4
+    expectation: 'Leading: Value leading: the digital business is self-optimizing and intent-driven end to end, setting
+      benchmarks'
+- id: d6
+  name: Data & the Intelligent Enterprise
+  weight: 0.15
+  description: 'Data as the foundation of the digital business: modern architecture and data products, governance/trust/sharing,
+    AI- and agent-ready data, and decision intelligence that closes the loop into action.'
+  mandatory: false
+  evidence_requirements:
+  - Per-criterion evidence artifacts from maturity/operationalized/model/.
+  level_expectations:
+  - level: L-0
+    expectation: 'Unrealized: Value unrealized: digital activity is informal and person-dependent; transformation value
+      is at risk'
+  - level: L-1
+    expectation: 'Proven: Value proven in governed pilots: strategy and playbooks documented, adoption still uneven'
+  - level: L-2
+    expectation: 'Standardized: Value standardized: digital practice is governed and tooling-enforced org-wide, so value
+      is repeatable'
+  - level: L-3
+    expectation: 'Compounding: Value compounding: the digital business is metrics-driven, predictive and self-adapting,
+      so value scales'
+  - level: L-4
+    expectation: 'Leading: Value leading: the digital business is self-optimizing and intent-driven end to end, setting
+      benchmarks'

@@ -1,0 +1,306 @@
+# Operationalized register — dimension d3 Digital Platforms & Technology Enablement
+
+id: dea:model-dto-d3
+dimension: d3
+name: Digital Platforms & Technology Enablement
+weight: 0.2
+description: The composable, cloud-native, AI- and agent-ready platform and infrastructure estate, and security/privacy/resilience
+  by design. Technology is the enabler of the digital operating model - not the model's subject.
+sub_dimensions:
+- id: d3s1
+  name: Composable Architecture & Open APIs
+  lite_question: Our architecture is composable, API-first, and governed by open standards.
+  criteria:
+  - id: d3c1
+    name: Open, composable enterprise architecture
+    statement: 'Architecture follows open/composable principles (e.g., TM Forum ODA): modular, de-layered, standards-based.'
+    levers:
+    - composability
+    anchors:
+    - level: 1
+      text: Monolithic, tightly coupled, proprietary stacks
+    - level: 2
+      text: Open APIs/containers piloted in selected areas
+    - level: 3
+      text: Open architecture standards applied in key domains; reusable components
+    - level: 4
+      text: De-layered across domains; event-driven integration; conformance measured
+    - level: 5
+      text: Fully modular, open, interoperable architecture; portable services; continuous innovation enabled
+    evidence:
+    - Architecture diagrams; ADRs
+    - Pilot reports
+    - Standards conformance metrics
+    - API/component reuse %
+    - Architecture governance board records
+  - id: d3c2
+    name: API governance, catalogs & integration
+    statement: APIs and integrations are governed through catalogs, standards, and managed integration patterns.
+    levers:
+    - composability
+    - ecosystem-platforms
+    anchors:
+    - level: 1
+      text: Point-to-point, undocumented integrations
+    - level: 2
+      text: Some APIs documented; no central catalog
+    - level: 3
+      text: API catalog + gateway; standard integration patterns
+    - level: 4
+      text: API lifecycle governed (design, versioning, deprecation); event-driven at scale
+    - level: 5
+      text: API ecosystem self-service; internal marketplace; zero-friction integration for partners
+    evidence:
+    - Integration inventory
+    - API docs
+    - Catalog + gateway logs
+    - API governance policy; conformance scans
+    - Developer satisfaction; integration lead time
+  - id: d3c3
+    name: Legacy simplification & de-layering
+    statement: Legacy is actively de-layered and simplified, reducing cost, risk, and time-to-market.
+    levers:
+    - composability
+    anchors:
+    - level: 1
+      text: Legacy grows unchecked; no simplification plan
+    - level: 2
+      text: Awareness; isolated modernization projects
+    - level: 3
+      text: Structured de-layering program with roadmap and targets
+    - level: 4
+      text: Legacy reduction measured and funded; modular replacements standard
+    - level: 5
+      text: Simplification self-sustaining; architecture debt near zero; benchmarks set
+    evidence:
+    - Tech debt register
+    - Modernization backlog
+    - De-layering roadmap
+    - Legacy footprint metrics (apps, cost, incidents)
+    - Debt trend; TTM improvement
+- id: d3s2
+  name: Cloud-Native Infrastructure & Platform Engineering
+  lite_question: Cloud-native infrastructure and internal platforms make teams fast and safe by default.
+  criteria:
+  - id: d3c4
+    name: Cloud & hybrid/multi-cloud strategy
+    statement: Workloads run on scalable cloud/hybrid/multi-cloud infrastructure with managed concentration risk and exit
+      optionality.
+    levers:
+    - composability
+    - grc
+    anchors:
+    - level: 1
+      text: On-prem legacy; limited cloud use
+    - level: 2
+      text: Initial hybrid cloud; manual provisioning
+    - level: 3
+      text: Standardized cloud deployments; automated workload distribution (K8s); exit clauses in contracts
+    - level: 4
+      text: Multi-cloud optimized; cost/performance per workload tracked; portability tested
+    - level: 5
+      text: Fully resilient, portable cloud fabric; predictive placement; zero-downtime migrations
+    evidence:
+    - Cloud inventory
+    - Provisioning automation
+    - K8s/multi-cloud architecture
+    - Cost/uptime dashboards; portability tests
+    - Migration rehearsal results
+  - id: d3c5
+    name: Platform engineering, IDP & developer experience
+    statement: Internal developer platforms (IDP) with golden paths make the safe way the easy way.
+    levers:
+    - composability
+    - innovation
+    anchors:
+    - level: 1
+      text: No platform team; teams reinvent tooling
+    - level: 2
+      text: Shared tooling exists but optional; high cognitive load
+    - level: 3
+      text: IDP with golden-path templates (CI/CD, envs, security) adopted by most teams
+    - level: 4
+      text: 'Platform as a product: DevEx metrics, self-service, paved roads enforced'
+    - level: 5
+      text: 'Self-optimizing platform: telemetry improves golden paths automatically; industry-leading DevEx'
+    evidence:
+    - Team tooling surveys
+    - IDP backlog
+    - Golden-path adoption %
+    - DevEx metrics (onboarding time, deploy freq)
+    - Platform NPS; automated improvements
+  - id: d3c6
+    name: DevOps, SRE & secure delivery
+    statement: 'Delivery is automated and reliable: CI/CD, GitOps/IaC, observability, SLOs/error budgets, DevSecOps (SBOM/SLSA).'
+    levers:
+    - composability
+    - trust-security-privacy
+    anchors:
+    - level: 1
+      text: Manual deployments; no observability; security bolted on
+    - level: 2
+      text: CI/CD for some teams; basic monitoring; security reviews manual
+    - level: 3
+      text: CI/CD + IaC standard; observability stack (logs/metrics/traces); SLOs for top services; SBOM generated
+    - level: 4
+      text: GitOps everywhere; SLO/error budgets gate releases; DevSecOps automated (scans, SBOM, SLSA provenance); AIOps
+        assists
+    - level: 5
+      text: 'Self-healing delivery: predictive detection, auto-remediation, auto-rollback; DORA elite metrics'
+    evidence:
+    - Deployment records
+    - Pipeline configs
+    - Observability + SLO dashboards
+    - SBOM/SLSA artifacts; scan results
+    - DORA metrics; MTTD/MTTR trends
+- id: d3s3
+  name: AI, Agents & Intelligent Platforms
+  lite_question: We adopt AI and agentic AI responsibly, with graded autonomy and continuous trust/risk/security controls.
+  criteria:
+  - id: d3c7
+    name: AI/GenAI adoption & LLMOps
+    statement: 'AI/GenAI is adopted systematically with LLMOps/MLOps: versioned models, evals, monitoring, and safe rollout.'
+    levers:
+    - agentic-ai
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: No AI adoption or untracked personal use only
+    - level: 2
+      text: GenAI pilots in a few teams; no MLOps
+    - level: 3
+      text: AI use-case inventory; LLMOps pipelines (evals, versioning, monitoring) for production models
+    - level: 4
+      text: AI embedded in key workflows; RAG/agent patterns standardized; drift and quality monitored
+    - level: 5
+      text: 'AI-native operations: models and agents self-monitor and retrain safely; industry benchmarks met'
+    evidence:
+    - AI use-case register
+    - Pilot results
+    - Model registry + eval reports
+    - LLMOps dashboards (latency, accuracy, drift)
+    - Automated retraining/rollback logs
+  - id: d3c8
+    name: Agentic AI & multi-agent orchestration
+    statement: AI agents act goal-driven with graded agency levels and orchestrated multi-agent workflows in defined scopes.
+    levers:
+    - agentic-ai
+    - autonomy
+    anchors:
+    - level: 1
+      text: No agents; chatbots only, prompt-driven
+    - level: 2
+      text: Single agents in sandboxes; human approves every action
+    - level: 3
+      text: Agents deployed in defined workflows with human-in-the-loop; agent registry exists
+    - level: 4
+      text: Multi-agent orchestration in production for selected domains; agency levels defined per use case; transaction-level
+        logging
+    - level: 5
+      text: Agents operate with high autonomy within policy guardrails; self-coordinating multi-agent systems; outcomes
+        exceed human baselines safely
+    evidence:
+    - Agent inventory
+    - Sandbox demos
+    - Agent registry; HITL logs
+    - Orchestration platform; agency-level policy; audit trails
+    - Autonomous run metrics; safety incidents = 0 with kill-switch tests
+  - id: d3c9
+    name: 'AI TRiSM: trust, risk, security & compliance'
+    statement: 'AI TRiSM is operational: model risk scoring, explainability, bias/fairness testing, guardrails, guardian
+      agents, EU AI Act readiness.'
+    levers:
+    - agentic-ai
+    - trust-security-privacy
+    - grc
+    anchors:
+    - level: 1
+      text: No AI governance; no risk assessment
+    - level: 2
+      text: AI policy drafted; no technical enforcement
+    - level: 3
+      text: 'AI TRiSM framework live: inventory, risk-scored models, evals, monitoring, runtime guardrails'
+    - level: 4
+      text: Guardian agents enforce policy at runtime; explainability and bias tests in CI for models; EU AI Act docs per
+        high-risk system
+    - level: 5
+      text: 'Continuous TRiSM: automated enforcement, drift/bias monitoring, audit-ready evidence'
+    evidence:
+    - AI policy
+    - Risk assessments
+    - TRiSM dashboard (inventory, risk scores)
+    - Guardrail/guardian logs; bias/explainability reports
+    - EU AI Act technical files; audit opinions
+- id: d3s4
+  name: Security, Privacy & Resilience by Design
+  lite_question: Security, privacy, and resilience are designed in, not bolted on.
+  criteria:
+  - id: d3c10
+    name: Zero trust & identity
+    statement: Zero-trust architecture with federated IAM, strong authentication, least privilege, continuous monitoring
+      (ZTNA/SASE).
+    levers:
+    - trust-security-privacy
+    anchors:
+    - level: 1
+      text: Open network; no zero trust; shared credentials
+    - level: 2
+      text: Basic MFA; inconsistent least privilege
+    - level: 3
+      text: Standardized zero trust with federated IDM, MFA, segmentation
+    - level: 4
+      text: ZTNA/SASE enforced; continuous transaction-level monitoring; measurable risk reduction
+    - level: 5
+      text: Adaptive, AI-driven zero trust; passwordless/FIDO widespread; industry benchmarks exceeded
+    evidence:
+    - Network diagrams
+    - IAM policy
+    - IDM/MFA coverage
+    - ZTNA logs; access reviews
+    - Pen-test results; auth metrics
+  - id: d3c11
+    name: AppSec & software supply-chain security
+    statement: 'Application and supply-chain security is automated: vuln management, SBOM/SLSA, provenance, DevSecOps.'
+    levers:
+    - trust-security-privacy
+    anchors:
+    - level: 1
+      text: Ad hoc patching; no SBOM; no provenance
+    - level: 2
+      text: Vuln scans exist; patching inconsistent; no SBOM
+    - level: 3
+      text: Standardized vuln mgmt with timely patching; SBOM generated per release; signed provenance
+    - level: 4
+      text: Automated DevSecOps gates; SLSA level targets; supply-chain risk monitored (deps, vendors)
+    - level: 5
+      text: Predictive, AI-driven AppSec and supply-chain defense; zero-day readiness; benchmarks exceeded
+    evidence:
+    - Vuln scan reports; patch SLAs
+    - SBOM artifacts
+    - SLSA provenance attestations
+    - Pipeline security gates; dep risk alerts
+    - Threat-intel-driven remediation; pen-test/red-team results
+  - id: d3c12
+    name: Privacy, sovereignty & crypto roadmap
+    statement: Privacy by design (GDPR, consent, PETs), data sovereignty/residency, and a post-quantum cryptography roadmap.
+    levers:
+    - trust-security-privacy
+    - grc
+    anchors:
+    - level: 1
+      text: No DPIAs; consent not managed; no residency controls
+    - level: 2
+      text: Privacy policy exists; PETs not used; residency ad hoc
+    - level: 3
+      text: DPIAs for high-risk processing; consent platform; encryption standard; residency per region
+    - level: 4
+      text: PETs in use (anonymization, federated learning, synthetic data); sovereignty controls automated; PQC roadmap
+        approved
+    - level: 5
+      text: Privacy-preserving by default; PQC migration underway for long-lived data; audit-ready sovereignty posture
+    evidence:
+    - DPIA register
+    - Consent logs
+    - Encryption standards; residency reports
+    - PET deployments; PQC roadmap
+    - PQC migration progress; assurance reports

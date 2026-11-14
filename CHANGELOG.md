@@ -1,5 +1,23 @@
 # Changelog
 
+## [Unreleased] — 1.1.0-alpha: additive operationalized model line
+
+### Added (additive; standard R1/R2 — nothing renamed/moved/deleted)
+- `maturity/operationalized/` — Digital Transformation Operationalized model line v1.0.0-alpha:
+  `scale.yaml` (canonical L-0..L-4, value-named levels Unrealized/Proven/Standardized/Compounding/Leading,
+  v2 bands + effort multipliers, explicit correlation to `dea:scale-digital-transformation-v1`),
+  `evaluation.yaml` (weighted 0–100 over 6 dimension criteria), `model/` criteria register
+  (6 dimensions / 23 sub-dimensions / 70 criteria, 5 evidence anchors each, 12 lever hotspot views),
+  `components/` (6 dimension packages, kind: extend)
+- `examples/operationalized-2026.yaml` — worked scoring example (67.20 → band systematic → L-2)
+- `mappings/digital-transformation-operationalized.yaml` — cross-reference to the catalog twin
+  (dea-catalog-maturity-models PRs #6/#10/#12, proposal 0003) and registry issues #11/#12/#13
+- `scripts/local_validate.py` — extended (not replaced) with operationalized checks
+- README "Model lines" cross-reference table
+
+### Changed
+- `model.yaml` / `VERSION` / `standard.yaml` model.version → `1.1.0-alpha` (CI cross-checks equality)
+
 ## [Unreleased] — CR-AM-11 Phase 5: component references normalized
 
 ### Changed
@@ -41,12 +59,8 @@ repository (§14).
 ### Added — CI (three levels on this same repository)
 - **Level 1 — `.github/workflows/local-model-ci.yml`**: schema + scale +
   evaluation + component-kind guard + example-scoring math correctness.
-  Local simulation: OK — model + scale + evaluation + 4 components + 1
-  example all consistent.
 - **Level 2 — `.github/workflows/contract-conformance.yml`**: consumes the
   reusable Level 2 workflow from `Assessment-Models/assessment-ci` at the
   pinned dea-metamodel release (commit SHA `1bbc08d0` from Phase 3 merge).
-- **Level 3 — Level 1 + Level 2 together** demonstrate all three levels on
-  this same model per §31. Cross-ecosystem validation (Level 3 in the
-  stricter sense — registry-population checks) lands as a follow-on once
-  the registry has a meaningful population.
+- **Level 3** — cross-ecosystem registry-population checks land as a follow-on
+  once the registry has a meaningful population.

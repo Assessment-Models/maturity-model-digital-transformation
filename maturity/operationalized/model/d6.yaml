@@ -1,0 +1,304 @@
+# Operationalized register — dimension d6 Data & the Intelligent Enterprise
+
+id: dea:model-dto-d6
+dimension: d6
+name: Data & the Intelligent Enterprise
+weight: 0.15
+description: 'Data as the foundation of the digital business: modern architecture and data products, governance/trust/sharing,
+  AI- and agent-ready data, and decision intelligence that closes the loop into action.'
+sub_dimensions:
+- id: d6s1
+  name: Data Foundation & Architecture
+  lite_question: Our data platform is modern, real-time, and product-oriented.
+  criteria:
+  - id: d6c1
+    name: Modern data architecture & data products
+    statement: Data architecture (lakehouse/mesh/fabric) is modern, and data is managed as products with contracts, owners,
+      and SLAs.
+    levers:
+    - data-intelligence
+    - composability
+    anchors:
+    - level: 1
+      text: Siloed databases; no architecture
+    - level: 2
+      text: Central warehouse; no ownership
+    - level: 3
+      text: Lakehouse/fabric with domain ownership; first data products with contracts/SLAs
+    - level: 4
+      text: 'Data mesh operating: self-serve infrastructure, data products at scale, federated governance'
+    - level: 5
+      text: 'Autonomous data platform: products self-register, quality self-heals, marketplace thriving'
+    evidence:
+    - Data inventory
+    - Warehouse reports
+    - Data product catalog + contracts
+    - Mesh metrics; product SLAs
+    - Marketplace usage; automated quality
+  - id: d6c2
+    name: Real-time & streaming data
+    statement: Critical data is available in real time via streaming/event-driven pipelines.
+    levers:
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: Batch-only; days-old data
+    - level: 2
+      text: Some real-time feeds for key systems
+    - level: 3
+      text: Streaming platform (Kafka-class) for critical events; freshness SLAs
+    - level: 4
+      text: Event-driven architecture enterprise-wide; real-time by default
+    - level: 5
+      text: Real-time fabric powers agents, twins, and decisions autonomously
+    evidence:
+    - ETL batch jobs
+    - Streaming topics inventory
+    - Freshness SLA dashboards
+    - Event-driven service count
+    - Real-time use cases (agents, twins)
+  - id: d6c3
+    name: Data quality & observability
+    statement: 'Data quality is automated and observable: quality SLAs, anomaly detection, lineage, incident response for
+      data.'
+    levers:
+    - data-intelligence
+    - trust-security-privacy
+    anchors:
+    - level: 1
+      text: No quality checks; issues found by users
+    - level: 2
+      text: Manual checks on some datasets
+    - level: 3
+      text: Automated quality tests on critical data products; lineage captured; data SLOs
+    - level: 4
+      text: AI-driven anomaly detection; automated remediation; data observability platform
+    - level: 5
+      text: 'Self-healing data: quality issues prevented/detected/fixed automatically; trust metrics published'
+    evidence:
+    - Quality reports
+    - Data SLAs
+    - Observability dashboards
+    - Anomaly/alert logs
+    - Data incident MTTR; trust scores
+- id: d6s2
+  name: Data Governance, Trust & Sharing
+  lite_question: Data is governed, trusted, protected, and shared - internally and with the ecosystem.
+  criteria:
+  - id: d6c4
+    name: Data governance, catalog & lineage
+    statement: Data governance with catalog, lineage, policies, and stewardship is systematic.
+    levers:
+    - grc
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: No governance; tribal knowledge
+    - level: 2
+      text: Policy doc; no catalog
+    - level: 3
+      text: Central catalog with owners/stewards; lineage; policies enforced
+    - level: 4
+      text: Federated governance automated; policy-as-code; compliance evidenced
+    - level: 5
+      text: 'Self-governing data: policies self-enforce and self-audit; benchmarks set'
+    evidence:
+    - Governance policy
+    - Stewardship roster
+    - Catalog + lineage coverage
+    - Policy-as-code logs
+    - Audit reports
+  - id: d6c5
+    name: Data protection, privacy & sovereignty
+    statement: Data is protected (encryption, access control, DLP), privacy-compliant, and sovereignty-respecting.
+    levers:
+    - trust-security-privacy
+    - grc
+    anchors:
+    - level: 1
+      text: No access controls beyond basic; no DLP
+    - level: 2
+      text: RBAC in place; encryption partial; no residency controls
+    - level: 3
+      text: Encryption at rest/in transit; DLP; consent-aware access; residency per jurisdiction
+    - level: 4
+      text: Automated classification + protection; PETs for sensitive analytics; sovereignty audits
+    - level: 5
+      text: Zero-trust data fabric; privacy-preserving analytics by default; audit-ready sovereignty
+    evidence:
+    - Access reviews
+    - Encryption standards
+    - DLP reports; classification coverage
+    - PET usage; sovereignty audit results
+    - Zero-trust data access logs
+  - id: d6c6
+    name: Open & collaborative data ecosystems
+    statement: Data is shared securely with partners/ecosystem (data spaces, contracts, marketplaces) and open data where
+      appropriate.
+    levers:
+    - ecosystem-platforms
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: No external data sharing
+    - level: 2
+      text: Ad hoc extracts for partners
+    - level: 3
+      text: Governed data-sharing agreements; data exchange platform
+    - level: 4
+      text: Data marketplace/ecosystem live; API-based data products monetized
+    - level: 5
+      text: 'Trusted data ecosystem at scale: federated sharing, consent-managed, value measured'
+    evidence:
+    - Sharing agreements
+    - Extract logs
+    - Data exchange platform
+    - Marketplace transactions
+    - Ecosystem data value reports
+- id: d6s3
+  name: AI- & Agent-Ready Data
+  lite_question: 'Data is ready for AI agents and twins: accessible, well-described, and tool-exposed.'
+  criteria:
+  - id: d6c7
+    name: Agent-accessible data & tool interfaces
+    statement: Agents can safely discover and use data/tools via governed interfaces (e.g., MCP-class), with permissions
+      and logging.
+    levers:
+    - agentic-ai
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: Agents have no data access or use scraping
+    - level: 2
+      text: Manual extracts for AI projects
+    - level: 3
+      text: Curated datasets for AI; access-controlled tool APIs
+    - level: 4
+      text: 'Governed agent data fabric: semantic layer + tool registry; per-agent permissions; usage logged'
+    - level: 5
+      text: Agents self-serve governed data/tools; autonomous discovery within policy; audit complete
+    evidence:
+    - AI project data requests
+    - Dataset catalog
+    - Tool/API registry
+    - Agent permission policies + access logs
+    - Discovery analytics; audit reports
+  - id: d6c8
+    name: RAG, vector, feature & synthetic data
+    statement: LLM/agent data stack (vector stores, feature stores, RAG pipelines, synthetic data) is managed and governed.
+    levers:
+    - agentic-ai
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: No vector/feature infra; prompts use raw docs
+    - level: 2
+      text: Ad hoc vector DB; no governance
+    - level: 3
+      text: Managed vector/feature stores; RAG pipelines with evals; synthetic data for privacy
+    - level: 4
+      text: Feature/vector platforms as a service; RAG quality monitored; synthetic data certified
+    - level: 5
+      text: 'AI data platform self-optimizing: retrieval quality, freshness, and privacy automated'
+    evidence:
+    - RAG prototype
+    - Vector DB inventory
+    - Feature store catalog
+    - RAG eval dashboards; synthetic data certs
+    - Automated retrieval quality; privacy proofs
+  - id: d6c9
+    name: Twin & simulation data pipelines
+    statement: Twins/simulations are fed by governed, high-fidelity data pipelines (telemetry, events, context).
+    levers:
+    - digital-twins
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: No twin data pipelines
+    - level: 2
+      text: Manual data pulls for models
+    - level: 3
+      text: Automated pipelines feeding domain twins; data contracts with twin teams
+    - level: 4
+      text: Enterprise twin data fabric; freshness/quality SLAs for simulation data
+    - level: 5
+      text: Twins self-fed and self-validating; simulation data audit-ready
+    evidence:
+    - Model input logs
+    - Pipeline configs
+    - Data contracts with twin teams
+    - Twin data SLA dashboards
+    - Simulation validation reports
+- id: d6s4
+  name: Decision Intelligence
+  lite_question: Insights become decisions and actions automatically.
+  criteria:
+  - id: d6c10
+    name: Self-service & augmented analytics
+    statement: Business users self-serve governed data with augmented analytics (AutoML, NLQ).
+    levers:
+    - data-intelligence
+    anchors:
+    - level: 1
+      text: Analyst bottleneck; static reports
+    - level: 2
+      text: BI tool for analysts; some self-service
+    - level: 3
+      text: Self-service analytics widely adopted; data products consumed via NLQ
+    - level: 4
+      text: 'Augmented analytics: AutoML, NLQ, auto-insights for all teams'
+    - level: 5
+      text: 'Analytics self-serve and proactive: insights delivered before asked'
+    evidence:
+    - BI usage reports
+    - Self-service adoption metrics
+    - NLQ/AutoML usage
+    - Auto-insight delivery logs
+    - Insight-to-action time
+  - id: d6c11
+    name: Autonomous insights & decision loops
+    statement: 'Insights drive decisions automatically: closed loops from detection to action (ops, pricing, CX).'
+    levers:
+    - agentic-ai
+    - data-intelligence
+    - autonomy
+    anchors:
+    - level: 1
+      text: Insights in slide decks; decisions manual
+    - level: 2
+      text: Dashboards reviewed weekly
+    - level: 3
+      text: Automated alerts with recommended actions; some auto-executed
+    - level: 4
+      text: Closed-loop decision systems in key domains (dynamic pricing, assurance) with guardrails
+    - level: 5
+      text: 'Autonomous decision fabric: insights-to-decisions-to-actions-to-learning, human-on-the-loop'
+    evidence:
+    - Alert fatigue reports
+    - Review cadence
+    - Action logs; guardrail configs
+    - Closed-loop success metrics
+    - Decision latency; human override logs
+  - id: d6c12
+    name: Insight-to-action accountability
+    statement: Every automated insight/decision is attributable, explainable, and auditable; outcomes measured.
+    levers:
+    - data-intelligence
+    - grc
+    anchors:
+    - level: 1
+      text: No tracking of insight outcomes
+    - level: 2
+      text: Some decisions logged
+    - level: 3
+      text: Decision logs with rationale; outcomes tracked for key loops
+    - level: 4
+      text: 'Full audit trail: data-to-model-to-decision-to-action-to-outcome; explainability on demand'
+    - level: 5
+      text: 'Self-auditing intelligence: drift, bias, and value monitored continuously; regulator-ready'
+    evidence:
+    - Decision logs
+    - Outcome reports
+    - Audit trail coverage
+    - Explainability reports
+    - Continuous audit; value-of-insights metrics
