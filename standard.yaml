@@ -1,24 +1,34 @@
 # CR-AM-ORG-RES-000 repository-standard declaration.
 #
 # Declares this repository's adoption of the Assessment-Models maturity-model
-# repository standard (AM-MODEL-REPOSITORY-STANDARD v1.0.0) at conformance
-# level `registered`, as the second, materially different implementation for
+# repository standard (AM-MODEL-REPOSITORY-STANDARD v1.0.1) at conformance
+# level `structural`, as the second, materially different implementation for
 # AC-28 (composite model).
 #
 # model.yaml remains the authoritative identity manifest (CR-AM-11 §15
 # contract handshake); this declaration restates model identity for
-# cross-checking only. Level is `registered` (not `structural`) because the
-# composite model definition lives in maturity/evaluation.yaml +
-# maturity/components/ instead of maturity/model/ — an established structure
-# that is mapped, never restructured (migration matrix M2; structure-mappings
-# amendment: maturity-model-standard#3).
+# cross-checking only. The composite model definition lives in
+# maturity/evaluation.yaml + maturity/components/ instead of maturity/model/
+# — an established structure recorded as a structure mapping (rule R1: map,
+# never rename) now that the v1.0.1 structure-mappings amendment has landed
+# (maturity-model-standard#3; migration matrix M2). The mapping is
+# integrity-checked and logged (MAPPED:) by the reusable conformance workflow.
 repository:
   type: maturity-model
 standard:
   id: AM-MODEL-REPOSITORY-STANDARD
-  version: "1.0.0"
-  conformance: registered
+  version: "1.0.1"
+  conformance: structural
 model:
   id: maturity-model-digital-transformation
   name: Digital Transformation Maturity Model
   version: "1.0.0"
+structure:
+  mappings:
+    model-definition:
+      paths:
+        - maturity/evaluation.yaml
+        - maturity/components/
+      note: >-
+        Composite model definition (CR-AM-10 components; R1 mapping,
+        migration matrix M2).
