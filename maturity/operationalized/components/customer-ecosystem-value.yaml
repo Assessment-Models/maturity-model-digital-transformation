@@ -1,0 +1,41 @@
+# DTO dimension component - Customer & Ecosystem Value (kind: extend)
+
+id: dea:component-dto-customer-ecosystem-value
+type: component
+kind: extend
+source:
+  repository: Assessment-Models/maturity-model-digital-transformation
+version: 1.1.0-alpha
+reference: v1.1.0-alpha
+name: DTO dimension - Customer & Ecosystem Value
+description: How the digital business understands, serves, and grows with customers and the ecosystems it cultivates - journeys,
+  personalization, partnerships, and monetization.
+content:
+- id: d1s1
+  name: Customer Experience & Journey Orchestration
+  criteria:
+  - id: d1c1
+    name: Omni-channel journey orchestration
+  - id: d1c2
+    name: Real-time personalization & next-best-action
+  - id: d1c3
+    name: Voice of customer & CX measurement
+- id: d1s2
+  name: Ecosystem & Partner Orchestration
+  criteria:
+  - id: d1c4
+    name: Partner lifecycle & marketplace operations
+  - id: d1c5
+    name: B2B2X value networks
+  - id: d1c6
+    name: API products, developer ecosystem & network APIs
+- id: d1s3
+  name: Digital Products, Monetization & Growth
+  criteria:
+  - id: d1c7
+    name: Composable digital product portfolio
+  - id: d1c8
+    name: Pricing, billing & charging models
+  - id: d1c9
+    name: Revenue assurance, fraud & growth experimentation
+notes: Local component of the operationalized model line; publish to Assessment-Models/maturity-components as a follow-up.
