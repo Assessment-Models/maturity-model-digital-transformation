@@ -1,0 +1,36 @@
+# =============================================================================
+# touchpoints.yaml — CR-AM-13 Phase 2 DRAFT (mirror record)
+# Contract: maturity-touchpoint-contract v0.1.0-draft (technehub-labs/dea-metamodel)
+# =============================================================================
+id: dea:touchpoints-digital-transformation-v1
+repo_id: maturity-model-digital-transformation
+version: 0.1.0-draft
+status: draft
+metamodel_version: 1.0.0
+contract:
+  id: maturity-touchpoint-contract
+  version: 0.1.0-draft
+  source: { organization: technehub-labs, repository: dea-metamodel }
+
+touchpoints:
+- id: tp-digital-transformation-x-operations
+  mirrors: tp-ops-x-digital-transformation
+  peer_asset: dea:maturity-operations
+  peer_repo: maturity-model-operations
+  peer_touchpoint_id: tp-ops-x-digital-transformation
+  direction: feeds
+  mapping_type: feeds
+  summary: >-
+    This composite model's strategy and transformation-roadmap maturity feeds
+    the peer's D6 (Strategy Alignment & Operating Blueprint) criteria. The
+    peer assesses strategy-to-operations linkage, not the strategy itself.
+  overlap_resolution: >-
+    Transformation strategy is assessed HERE. Operations' role in executing
+    the strategy is assessed BY THE PEER (D6).
+  criteria_mapping:
+  - ours: strategy-dimension     # composite per-component criteria (maturity/components/)
+    theirs: OPS-D6-SD1-C01
+    note: >-
+      Component criterion IDs resolve when the composite register publishes;
+      mapping anchored at the strategy dimension as declared by the peer.
+  reciprocity: mirrors-tp-ops-x-digital-transformation
