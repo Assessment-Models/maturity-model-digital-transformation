@@ -1,0 +1,29 @@
+{
+  "id": "maturity-model-digital-transformation",
+  "title": "Digital Transformation Maturity Model",
+  "layer": "maturity-model",
+  "architectural_concern": "Digital Transformation",
+  "version": "v1.1.0-alpha",
+  "license": "MIT",
+  "conformance_status": "structural",
+  "standards_alignment": [
+    "OpenDEA",
+    "AM-MODEL-REPOSITORY-STANDARD"
+  ],
+  "locales": [
+    "en"
+  ],
+  "dimensions": [
+    "Leadership sponsorship",
+    "Shared DT vocabulary",
+    "Safe-to-fail experimentation",
+    "Reference architecture",
+    "Automation coverage",
+    "Service reliability",
+    "Incident response",
+    "DT instrumentation coverage",
+    "DT observability budget",
+    "Platform engineering"
+  ],
+  "description": "Composite maturity model spanning operations, technology, and services-delivery child models, plus the org's own adoption of OpenDEA itself. First independent model in the Assessment-Models ecosystem (CR-AM-11 §31 first-model candidate)."
+}
