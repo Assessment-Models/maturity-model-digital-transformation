@@ -35,11 +35,11 @@ weights:
 aggregated_score: 78.60
 
 # v2 band resolution (canonical bands: 0-20 / 21-45 / 46-70 / 71-88 / 89-100):
-# 78.60 falls into the 71-88 band -> Adaptive (L-3 ordinal 3).
+# 78.60 falls into the 71-88 band -> Adaptive (L-4 ordinal 3).
 resolved_band: dea:maturity-band-adaptive
-resolved_level: L-3
+resolved_level: L-4
 
-# Per-level effort_multiplier from scale.yaml (L-3 = 4.0):
+# Per-level effort_multiplier from scale.yaml (L-4 = 4.0):
 #   effort-adjusted = 78.60 * 4.0 / 100.0 = 3.144 (ratio form)
 # Or, expressed as the canonical effort-adjusted value with the
 # maturity-v2 diminishing-returns semantics:
@@ -49,14 +49,14 @@ effort_multiplier: 4.0
 effort_adjusted_value: 314.40
 
 # Conformance status (CR-AM-09 §25):
-# Per the evaluation model's level_expectations for L-3, every mandatory
-# criterion (digital-culture, technology-adoption) reaches L-3; the
+# Per the evaluation model's level_expectations for L-4, every mandatory
+# criterion (digital-culture, technology-adoption) reaches L-4; the
 # optional criteria (operations-modernization, services-delivery) reach
-# L-3 and L-3 respectively. Highest-conformant-level resolution -> L-3.
+# L-4 and L-4 respectively. Highest-conformant-level resolution -> L-4.
 conformance_status: conformant
 
 notes: >-
   Worked example for the composite DT model's first scoring run. Aggregated
-  score 78.60 resolves to L-3 (Adaptive) under the v2 band scheme; effort-
+  score 78.60 resolves to L-4 (Adaptive) under the v2 band scheme; effort-
   adjusted value 314.40 reflects the maturity-v2 diminishing-returns
-  insight at L-3 (4.0x multiplier).
+  insight at L-4 (4.0x multiplier).

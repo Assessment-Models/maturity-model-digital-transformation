@@ -11,7 +11,7 @@
 # CR-AM-09 §9 — never normalised across models.
 
 id: dea:scale-digital-transformation-v1
-version: "1.0.0"
+version: "2.0.0"
 metamodel_version: "1.0.0"
 name: Digital Transformation Maturity Scale (composite, 5-level)
 description: >-
@@ -25,6 +25,14 @@ status: stable
 levels:
   - id: L-0
     ordinal: 0
+    name: Not Assessed
+    definition: 'Criterion not assessed: no evidence examined. Not a capability level: it scores 0 points
+      and lowers evidence-confidence, and it never inflates the index.'
+    characteristics:
+    - No evidence collected or verified.
+    short_description: Unassessed
+  - id: L-1
+    ordinal: 1
     name: Absent
     definition: >-
       No digital transformation initiative is in flight. Operations,
@@ -37,8 +45,8 @@ levels:
         digital transformation.
       - No measurable DT KPIs.
 
-  - id: L-1
-    ordinal: 1
+  - id: L-2
+    ordinal: 2
     name: Piloting
     definition: >-
       Isolated digital pilots exist (one or two teams experimenting with
@@ -50,8 +58,8 @@ levels:
       - A champion drives adoption informally.
       - No centralised metric for DT outcomes.
 
-  - id: L-2
-    ordinal: 2
+  - id: L-3
+    ordinal: 3
     name: Defined
     definition: >-
       The org has documented a DT strategy and a small set of shared
@@ -66,8 +74,8 @@ levels:
         OpenDEA component registry.
       - A DT review board meets on a fixed cadence (>= monthly).
 
-  - id: L-3
-    ordinal: 3
+  - id: L-4
+    ordinal: 4
     name: Scaled
     definition: >-
       DT practice is operationalised across most of the org. Adoption
@@ -82,8 +90,8 @@ levels:
       - The org participates in the OpenDEA Benchmark 2026 cohort
         (composite scoring against the v2 bands).
 
-  - id: L-4
-    ordinal: 4
+  - id: L-5
+    ordinal: 5
     name: Self-Optimising
     definition: >-
       The org's DT practice is self-improving: usage telemetry feeds
@@ -113,11 +121,11 @@ progression:
   # Per-level effort_multiplier is a model-level parameter; reported in
   # AssessmentResults as the effort-adjusted value.
   effort_multiplier:
-    L-0: 1.0
-    L-1: 1.5
-    L-2: 2.5
-    L-3: 4.0
-    L-4: 6.0
+    L-1: 1.0
+    L-2: 1.5
+    L-3: 2.5
+    L-4: 4.0
+    L-5: 6.0
 
 conformance:
   statuses:
