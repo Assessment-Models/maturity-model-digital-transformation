@@ -22,7 +22,7 @@ sources:
 - kind: composite-scale-in-this-repo
   id: dea:scale-digital-transformation-v1
   path: maturity/scale.yaml
-  note: Canonical L-0..L-4; the operationalized scale correlates 1:1 (never normalised, CR-AM-09 section 9)
+  note: Canonical L-0 Not Assessed + L-1..L-5; the operationalized scale correlates 1:1 (never normalised, CR-AM-09 section 9)
 local_paths:
 - maturity/operationalized/scale.yaml
 - maturity/operationalized/evaluation.yaml

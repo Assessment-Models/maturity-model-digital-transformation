@@ -40,11 +40,12 @@ MANIFEST_SCHEMA_URL = (
 )
 
 EXPECTED_LEVELS = [
-    ("L-0", "Absent"),
-    ("L-1", "Piloting"),
-    ("L-2", "Defined"),
-    ("L-3", "Scaled"),
-    ("L-4", "Self-Optimising"),
+    ("L-0", "Not Assessed"),
+    ("L-1", "Absent"),
+    ("L-2", "Piloting"),
+    ("L-3", "Defined"),
+    ("L-4", "Scaled"),
+    ("L-5", "Self-Optimising"),
 ]
 
 V2_BANDS = [
@@ -92,7 +93,7 @@ def main() -> int:
         errors.append(
             f"maturity/scale.yaml: levels {actual} != expected {EXPECTED_LEVELS}"
         )
-    if [l["ordinal"] for l in scale_levels] != list(range(5)):
+    if [l["ordinal"] for l in scale_levels] != list(range(6)):
         errors.append("maturity/scale.yaml: ordinals must be 0,1,2,3,4 in order")
 
     # 3. evaluation references scale + covers every level
@@ -101,7 +102,8 @@ def main() -> int:
         errors.append(
             f"maturity/evaluation.yaml: scale.id {eval_doc.get('scale')} != {scale.get('id')}"
         )
-    level_ids = {l["id"] for l in scale_levels}
+    # capability levels only — the L-0 "Not Assessed" sentinel carries no expectations
+    level_ids = {l["id"] for l in scale_levels} - {"L-0"}
     for c in eval_doc.get("criteria") or []:
         covered = {e["level"] for e in c.get("level_expectations") or []}
         if covered != level_ids:
@@ -162,12 +164,12 @@ def main() -> int:
     if (op / "scale.yaml").exists():
         oscale = load_yaml(op / "scale.yaml")
         ol = oscale.get("levels") or []
-        if [(x["id"], x["ordinal"]) for x in ol] != [(f"L-{i}", i) for i in range(5)]:
-            errors.append("operationalized/scale.yaml: levels must be L-0..L-4 ordinals 0..4")
+        if [(x["id"], x["ordinal"]) for x in ol] != [(f"L-{i}", i) for i in range(6)]:
+            errors.append("operationalized/scale.yaml: levels must be L-0 Not Assessed + L-1..L-5 ordinals 0..5")
         oev = load_yaml(op / "evaluation.yaml")
         if (oev.get("scale") or {}).get("id") != oscale.get("id"):
             errors.append("operationalized/evaluation.yaml: scale.id mismatch")
-        lvl_ids = {x["id"] for x in ol}
+        lvl_ids = {x["id"] for x in ol} - {"L-0"}  # capability levels only (dea-metamodel #214)
         for c in oev.get("criteria") or []:
             covered = {e["level"] for e in c.get("level_expectations") or []}
             if covered != lvl_ids:

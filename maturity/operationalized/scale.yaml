@@ -1,10 +1,11 @@
-# Operationalized model-line scale - canonical L-0..L-4, correlated to dea:scale-digital-transformation-v1
+# Operationalized model-line scale - canonical L-0 Not Assessed + L-1..L-5 (dea-metamodel #214),
+# correlated 1:1 to dea:scale-digital-transformation-v1
 
 id: dea:scale-digital-transformation-operationalized-v1
-version: 1.0.0-alpha
+version: 2.0.0
 metamodel_version: 1.0.0
-name: Digital Transformation Operationalized Maturity Scale (canonical L-0..L-4)
-description: Model line scale for the operationalized model. Canonical L-0..L-4 identifiers with v2 bands and effort multipliers;
+name: Digital Transformation Operationalized Maturity Scale (canonical L-0 Not Assessed + L-1..L-5)
+description: Model line scale for the operationalized model. Canonical L-0 Not Assessed + L-1..L-5 identifiers with v2 bands and effort multipliers;
   value-named level aliases (Unrealized/Proven/Standardized/Compounding/Leading). Scale identity is (model, scale, level)
   per CR-AM-09 section 9 - never normalised across models; correlation_to records the 1:1 mapping to this repository's composite
   scale dea:scale-digital-transformation-v1 (maturity/scale.yaml).
@@ -12,6 +13,14 @@ status: alpha
 levels:
 - id: L-0
   ordinal: 0
+  name: Not Assessed
+  definition: 'Criterion not assessed: no evidence examined. Not a capability level: it scores 0 points
+    and lowers evidence-confidence, and it never inflates the index.'
+  characteristics:
+  - No evidence collected or verified.
+  short_description: Unassessed
+- id: L-1
+  ordinal: 1
   name: Absent
   v2_name: Emergent
   value_name: Unrealized
@@ -42,8 +51,8 @@ levels:
   - No strategy/charter; initiatives tracked in personal spreadsheets
   - No architecture review board; decisions in chat threads
   - No AI inventory or data catalog
-- id: L-1
-  ordinal: 1
+- id: L-2
+  ordinal: 2
   name: Piloting
   v2_name: Structured
   value_name: Proven
@@ -75,8 +84,8 @@ levels:
   - Strategy doc signed off; architecture decision records (ADRs) in use
   - CI/CD pipelines for most teams; security scans in pipeline for key apps
   - Data catalog live with owners assigned for critical data
-- id: L-2
-  ordinal: 2
+- id: L-3
+  ordinal: 3
   name: Defined
   v2_name: Systematic
   value_name: Standardized
@@ -114,8 +123,8 @@ levels:
   - SLO dashboards per service; error budgets gate releases
   - AI inventory with risk scores; runtime guardrails and audit logs
   - DTO/process-mining pipeline live for top value streams
-- id: L-3
-  ordinal: 3
+- id: L-4
+  ordinal: 4
   name: Scaled
   v2_name: Adaptive
   value_name: Compounding
@@ -154,8 +163,8 @@ levels:
   - Predictive alerts >50% of sev-1; auto-remediation >30% of incidents
   - Agent actions logged, explainable, and reversible; kill-switch tested
   - Cost and carbon per workload tracked weekly
-- id: L-4
-  ordinal: 4
+- id: L-5
+  ordinal: 5
   name: Self-Optimising
   v2_name: Self-Optimising
   value_name: Leading
@@ -194,11 +203,11 @@ progression:
   - Exit from a level requires the documented exit criteria AND evidence expectations from the corresponding criterion anchors
     (evaluation model).
   effort_multiplier:
-    L-0: 1.0
-    L-1: 1.5
-    L-2: 2.5
-    L-3: 4.0
-    L-4: 6.0
+    L-1: 1.0
+    L-2: 1.5
+    L-3: 2.5
+    L-4: 4.0
+    L-5: 6.0
 conformance:
   statuses:
   - conformant
@@ -209,6 +218,6 @@ conformance:
   highest_conformant_level_resolution: true
 correlation_to:
   scale_id: dea:scale-digital-transformation-v1
-  version: 1.0.0
+  version: 2.0.0
   path: maturity/scale.yaml
-  mapping: this scale level N == canonical ordinal N-1 == composite L-(N-1)
+  mapping: this scale level N == composite L-N == band level-N, 1:1 under the aligned numbering of dea-metamodel #214 (L-0 is the Not Assessed sentinel, not a capability level)

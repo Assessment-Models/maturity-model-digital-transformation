@@ -4,7 +4,7 @@ id: dea:model-digital-transformation-operationalized-v1
 version: 1.0.0-alpha
 name: Digital Transformation Operationalized — criteria register
 description: 'MECE register: 6 dimensions -> 23 sub-dimensions -> 70 criteria. Each criterion has one home, 12 transversal
-  levers as tags (not dimensions), 5 evidence-anchored progression levels (model levels 1-5 = canonical L-0..L-4 per scale.yaml
+  levers as tags (not dimensions), 5 evidence-anchored progression levels (model levels 1-5 = capability levels L-1..L-5 per scale.yaml;
   correlation), and observable evidence. Lite rapid path: lite_question per sub-dimension (5-point Likert). Local home:
   maturity-model-digital-transformation/maturity/operationalized/model/. Catalog twin: dea:maturity-digital-transformation-operationalized
   (dea-catalog-maturity-models, PRs #6/#10/#12).'

@@ -16,7 +16,7 @@ services-delivery child models. It uses the **OpenDEA EA reference instance**
 
 ## Status
 
-`1.1.0-alpha` · composite model `1.0.0` stable + additive **operationalized** model line `1.0.0-alpha` · anchored on the OpenDEA EA reference instance
+`2.0.0` · adoption pending [dea-metamodel #214] — scale renumbering adopted across both model lines · anchored on the OpenDEA EA reference instance
 
 ## Model lines (cross-reference)
 
@@ -24,8 +24,8 @@ This repository hosts the digital-transformation domain with two model lines:
 
 | Line | Version | Definition | Scale | Status |
 |---|---|---|---|---|
-| Composite (CR-AM-11 §31 first-model candidate) | 1.0.0 | `maturity/evaluation.yaml` + `maturity/components/` (structure mapping in `standard.yaml`) | `dea:scale-digital-transformation-v1` (L-0..L-4) | stable |
-| **Operationalized** (digital-business framing; from TM Forum DMM v5.0.2 re-harvest) | 1.0.0-alpha | `maturity/operationalized/` (scale + evaluation + model register 6 dims / 23 sub-dims / 70 criteria + 6 dimension components) + `examples/operationalized-2026.yaml` | `dea:scale-digital-transformation-operationalized-v1` (L-0..L-4, value-named levels, correlated 1:1 to the composite scale — never normalised, CR-AM-09 §9) | alpha |
+| Composite (CR-AM-11 §31 first-model candidate) | 1.0.0 | `maturity/evaluation.yaml` + `maturity/components/` (structure mapping in `standard.yaml`) | `dea:scale-digital-transformation-v1` (L-0 Not Assessed + L-1..L-5) | stable |
+| **Operationalized** (digital-business framing; from TM Forum DMM v5.0.2 re-harvest) | 1.0.0-alpha | `maturity/operationalized/` (scale + evaluation + model register 6 dims / 23 sub-dims / 70 criteria + 6 dimension components) + `examples/operationalized-2026.yaml` | `dea:scale-digital-transformation-operationalized-v1` (L-0 Not Assessed + L-1..L-5, value-named levels, correlated 1:1 to the composite scale — never normalised, CR-AM-09 §9) | alpha |
 
 Cross-references: catalog twin `dea:maturity-digital-transformation-operationalized` in
 `dea-catalog-maturity-models` (PRs #6/#10/#12, proposal 0003 with the DMM v5.0.2 gap review);
@@ -72,7 +72,7 @@ maturity-model-digital-transformation/
 │   ├── scale.yaml                         ← composite model-owned scale (5-level digital-native)
 │   ├── evaluation.yaml                    ← weighted 0–100 evaluation over four criteria
 │   ├── components/                        ← CR-AM-10 components (reusable)
-│   └── operationalized/                   ← operationalized model line v1.0.0-alpha (added 1.1.0-alpha)
+│   └── operationalized/                   ← operationalized model line (added 1.1.0-alpha; renumbered 2.0.0)
 │       ├── scale.yaml / evaluation.yaml / model/ / components/
 ├── mappings/                              ← cross-references (incl. operationalized model line)
 ├── examples/
