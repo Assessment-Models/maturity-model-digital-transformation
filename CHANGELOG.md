@@ -1,6 +1,15 @@
 # Changelog
 
-## [Unreleased] — 1.1.0-alpha: additive operationalized model line
+## [Unreleased]
+
+### Changed — BREAKING
+
+- **Scale level renumbering adopted (dea-metamodel #214): `L-0 Not Assessed` + `L-1..L-5`, in both model lines.** Release 2.0.0 — blocked on upstream ratification of dea-metamodel #214; do not merge before the renumbered canonical scale instance is released and CI pins are bumped.
+  - Mapping: old L-0→new L-1 … old L-4→new L-5 in both scales; new L-0 is the Not Assessed sentinel (0 points, not a capability level).
+  - Unchanged: level names/definitions, band instance `dea:maturity-bands-v2` v1.0.0 (ids, ranges, effort multipliers), band ids, register content (70 criteria, numeric anchors 1..5), component kinds.
+  - Comparability: historical index values and bands remain valid; only per-criterion level labels shift (+1). Worked examples re-labelled in place (enterprise 78.60 → L-4; operationalized 67.20 → L-3) with bands and effort-adjusted values unchanged.
+  - Lockstep consuming-side changes: VERSION/model.yaml/standard.yaml declare 2.0.0 (the unreleased 1.1.0-alpha line is folded into 2.0.0); scripts/local_validate.py validates the six-level scale in both lines; README presents the aligned numbering.
+ — 1.1.0-alpha: additive operationalized model line
 
 ### Added (additive; standard R1/R2 — nothing renamed/moved/deleted)
 - `maturity/operationalized/` — Digital Transformation Operationalized model line v1.0.0-alpha:
