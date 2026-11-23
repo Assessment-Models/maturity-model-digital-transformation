@@ -35,16 +35,22 @@ scoring:
     operations-modernization 0.25, services-delivery 0.25. The result
     is banded through the maturity-v2 canonical band instance
     (dea:maturity-bands-v2 v1.0.0) and resolved to the L-1...L-5
-    scale via highest-conformant-level resolution. Per-level
-    effort_multiplier from scale.yaml is applied to the aggregated
-    value to produce the effort-adjusted value reported in
-    AssessmentResults.
+    scale via highest-conformant-level resolution. Calculate EAV from the unrounded aggregate by allocating score points progressively across the canonical bands and summing each marginal band's points divided by its effort multiplier. EAV is supplementary and does not determine the resolved maturity level.
 
 level_resolution_inputs:
   - criterion-scores
   - mandatory-criteria
   - evidence-confidence
   - ecosystem-participation
+
+effort_adjusted_value:
+  formula: EAV(S) = sum(P_k(S) / M_k), for k = 1..5
+  input: unrounded aggregate S in [0, 100]
+  allocation: 'Marginal intervals [0,20], (20,45], (45,70], (70,88], (88,100]; each score point is counted once.'
+  multipliers: [1.0, 1.5, 2.5, 4.0, 6.0]
+  theoretical_maximum: 53.1666666667
+  reporting_precision: 2
+  distinction: Supplementary index; not the maturity score or a maturity-level determinant.
 
 criteria:
   - id: digital-culture
