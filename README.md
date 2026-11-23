@@ -189,7 +189,7 @@ flowchart TD
     F --> G["Prioritize improvement"]
 ```
 
-The weighted arithmetic is 67.20. The example reports the Systematic band and L-3. It is an **illustration of the reported calculation**, not a validated organization assessment or benchmark. It supplies dimension scores directly and does not demonstrate the full criterion-level evidence and rating process. The example's effort-adjusted value of 168.0 is mathematically 67.2 × 2.5; its meaning and units remain subject to model reconciliation. It must not be interpreted as realized financial or enterprise value.
+The weighted arithmetic is 67.20. The example reports the Systematic band and L-3. It is an **illustration of the model calculation**, not an organizational assessment or benchmark. It supplies dimension scores directly to demonstrate weighted aggregation. The example also reports an effort-adjusted indicator of 168.0, calculated as 67.2 × 2.5. This supplementary indicator is distinct from the 0–100 maturity score and should not be interpreted as realized financial or enterprise value.
 
 ## The boundary with Autonomous Operations
 
@@ -242,7 +242,7 @@ See the full [Persona Guide](docs/guides/persona-guide.md) for role-specific que
 | `maturity/operationalized/components/` | Operationalized dimension components |
 | `mappings/` | Cross-references and model-line mapping |
 | `examples/` | Illustrative assessment examples |
-| `docs/reconciliation/` | Artifact-level findings and decisions required |
+| `docs/reconciliation/` | Maintainer reference material and model-artifact traceability |
 | `docs/methodology/` | Assessment lifecycle and interpretation |
 | `docs/guides/` | Persona-oriented navigation |
 | `change-requests/` | Governed change proposals |
