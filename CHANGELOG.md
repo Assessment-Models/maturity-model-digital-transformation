@@ -4,6 +4,10 @@
 
 ### Changed
 
+- CR-AM-13 Phase 2: increment the draft touchpoint manifest to v0.1.1 and declare `touchpoints.yaml` through the model's typed manifest path. The existing reciprocal peer IDs, mirror pointers, mappings and ownership boundaries are preserved; unresolved composite/practice-area mappings remain explicitly unresolved.
+
+### Changed
+
 - CR-AM-16: align the composite and operationalized Digital Transformation model lines with the marginal canonical v2 EAV formula; calculate from unrounded aggregate scores and validate both worked examples.
 - Keep EAV supplementary and distinct from maturity score and maturity-level resolution.
 
