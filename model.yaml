@@ -73,3 +73,6 @@ components:
 dependencies:
   - id: dea-evaluation-opendea-enterprise-architecture-v1
     reference: v1.0.0
+
+touchpoints:
+  declaration: touchpoints.yaml
