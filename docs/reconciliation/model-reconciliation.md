@@ -1,6 +1,6 @@
 # Digital Transformation Model Reconciliation
 
-**Purpose:** Establish what the repository currently defines, distinguish the two model lines, and identify the discrepancies that must be resolved before the documentation can be treated as a normative explanation.
+**Purpose:** Provide maintainers with an artifact-level trace of model definitions, historical migration residue and technical follow-up. This is an engineering working document, not part of the reader-facing model introduction.
 
 **Review basis:** Current repository artifacts on the `main` branch at the time this document was prepared. Paths below are the source of truth for the observations; this document does not supersede them.
 
@@ -81,35 +81,39 @@ The evaluation declares six dimensions:
 
 The repository README declares 23 subdimensions and 70 criteria in the operationalized register. Those counts should be verified automatically against the actual register as part of the model validation pipeline.
 
-## 4. Scale and evaluation reconciliation
+## 4. Definitive maturity numbering and migration residue
 
-### 4.1 L-0 is a sentinel, not a maturity level
+### 4.1 Adopted numbering
 
-Both scale artifacts define L-0 Not Assessed as a state in which no evidence has been examined. They explicitly say it is not a capability maturity level.
+The repository changelog records the breaking scale migration adopted under `dea-metamodel #214` and the 2.0.0 release line:
 
-The five capability maturity levels are L-1 through L-5. Documentation must not count L-0 as one of the five maturity levels.
+- The definitive capability maturity identifiers are **L-1 through L-5** in both model lines.
+- **L-0 Not Assessed** is a new sentinel state, not a capability maturity level.
+- The previous L-0…L-4 sequence was renumbered: former L-0…L-4 capability levels map to new L-1…L-5.
+- The level names and definitions, maturity-band identifiers and ranges, effort multipliers, numeric criterion anchors and component kinds were retained through the renumbering.
+- Worked examples were relabelled to the definitive identifiers without changing their reported scores or maturity bands.
 
-### 4.2 Composite model inconsistency
+This is an adopted model decision, not an open design question. The changelog is the migration record; current scale artifacts are authoritative for the current identifiers and definitions.
 
-The composite scale defines L-0 through L-5, with L-0 as Not Assessed and L-1 through L-5 as capability levels. Its evaluation model's narrative and aggregation comments refer in places to resolution to L-0…L-4, while its criterion expectations include L-1 through L-5.
+### 4.2 Stale references found during documentation review
 
-The composite worked example also contains comments describing L-0…L-4 and refers to an L-4 ordinal that does not match the declared five-level sequence.
+A number of comments and descriptions retained the superseded L-0…L-4 terminology after the migration. Examples include the composite and Operationalized evaluation descriptions, scale header commentary and worked-example comments. These are stale references and should be corrected to L-1…L-5 where they refer to the five capability maturity levels.
 
-**Required decision:** confirm the intended five-level scale, map score bands to L-1…L-5, and correct stale comments and ordinal descriptions. Do not change level IDs or score semantics by inference.
+The documentation branch corrects these descriptive references without changing the scale identifiers, level definitions, band mappings, criterion anchors or assessment outcomes. Any functional resolver behavior must continue to be validated against the published scale and conformance tests.
 
-### 4.3 Operationalized model inconsistency
+### 4.3 Current scale interpretation
 
-The operationalized scale defines L-0 Not Assessed and five capability levels L-1…L-5. Its evaluation description, however, says the result is resolved to L-0…L-4. The evaluation dimension expectations include L-1…L-5, and the scale includes five score bands:
+L-0 is reserved for a criterion or assessment state that has not been assessed. The five capability maturity levels are:
 
-| Level | Value alias | Score band |
-|---|---|---:|
-| L-1 | Unrealized | 0–20 |
-| L-2 | Proven | 21–45 |
-| L-3 | Standardized | 46–70 |
-| L-4 | Compounding | 71–88 |
-| L-5 | Leading | 89–100 |
+| Level | Composite canonical name | Operationalized canonical name |
+|---|---|---|
+| L-1 | Absent | Absent |
+| L-2 | Piloting | Piloting |
+| L-3 | Defined | Defined |
+| L-4 | Scaled | Scaled |
+| L-5 | Self-Optimising | Self-Optimising |
 
-**Required decision:** confirm that the five score bands resolve to L-1…L-5, with L-0 reserved for Not Assessed, and update the evaluation's resolution description and any dependent resolver logic accordingly.
+The Operationalized scale additionally carries value aliases and v2 maturity-band labels. These are descriptive layers on the same level identifiers, not alternative level numbering schemes.
 
 ### 4.4 Band boundaries and unassessed responses
 
@@ -182,11 +186,11 @@ These are different evidence classes and must not be conflated.
 
 | ID | Finding | Severity | Required disposition |
 |---|---|---|---|
-| REC-01 | L-0…L-4 resolution text conflicts with L-1…L-5 capability levels | Critical | Align scale, evaluation, examples and resolver |
+| REC-01 | Stale L-0…L-4 wording remained in evaluation descriptions and comments after the adopted renumbering | Medium | Corrected in this documentation branch; validate resolver behavior against the definitive L-1…L-5 scale |
 | REC-02 | Repository/model-line version authority is ambiguous | High | Define version scope and reference rules |
 | REC-03 | Criterion 1–5 to 0–100 conversion is underspecified | Critical | Specify formula and missing-data rules |
 | REC-04 | Effort-adjusted value lacks clear semantics and units | High | Define or remove through a model CR |
-| REC-05 | Composite worked-example comments contain stale level/ordinal descriptions | High | Correct after REC-01 |
+| REC-05 | Composite worked-example comments contained stale level/ordinal descriptions | Medium | Corrected in this documentation branch |
 | REC-06 | Operationalized example bypasses criterion-level calculation | Medium | Add full traceable worked example |
 | REC-07 | Evidence confidence and incomplete-evidence treatment need explicit methodology | High | Define evidence and confidence contract |
 | REC-08 | Register counts need automated verification | Medium | Add CI count/reference checks |
@@ -194,7 +198,7 @@ These are different evidence classes and must not be conflated.
 
 ## 10. Safe documentation claims
 
-Until the reconciliation items are resolved, documentation may safely state that:
+The following statements reflect the adopted model state and can be used in reader-facing documentation:
 
 - The repository contains two distinct Digital Transformation model lines.
 - The Operationalized line defines six weighted dimensions and declares a 23-subdimension/70-criterion register.
@@ -203,4 +207,4 @@ Until the reconciliation items are resolved, documentation may safely state that
 - The example is illustrative and does not establish a benchmark.
 - The model covers autonomous operations at an enterprise transformation level; specialist operational autonomy is assessed in the Autonomous Operations model.
 
-Documentation must not claim that all scoring semantics, level resolution and version references are fully reconciled until the relevant model changes are approved and validated.
+This reconciliation register is maintained for engineering traceability. It is not a changelog and should not be linked as a qualification or warning from the public-facing README.
