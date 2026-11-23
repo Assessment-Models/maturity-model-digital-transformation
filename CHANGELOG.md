@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+- CR-AM-16: align the composite and operationalized Digital Transformation model lines with the marginal canonical v2 EAV formula; calculate from unrounded aggregate scores and validate both worked examples.
+- Keep EAV supplementary and distinct from maturity score and maturity-level resolution.
+
+
 ### Changed — BREAKING
 
 - **Scale level renumbering adopted (dea-metamodel #214): `L-0 Not Assessed` + `L-1..L-5`, in both model lines.** Release 2.0.0 — blocked on upstream ratification of dea-metamodel #214; do not merge before the renumbered canonical scale instance is released and CI pins are bumped.
