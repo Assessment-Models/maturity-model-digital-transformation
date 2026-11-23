@@ -1,7 +1,7 @@
 # CR-DT-01 — Digital Transformation Model Documentation Architecture
 
 **Status:** Proposed  
-**Change class:** Documentation architecture and model-definition reconciliation  
+**Change class:** Documentation architecture and descriptive artifact alignment  
 **Repository:** `Assessment-Models/maturity-model-digital-transformation`  
 **Scope:** Both model lines, with the operationalized model as the primary enterprise-assessment narrative
 
@@ -9,7 +9,7 @@
 
 The repository contains substantive model artifacts, but its entry-point documentation does not yet give readers a reliable understanding of digital transformation, the distinction between the two model lines, the assessment method, the evidence expected, or how different stakeholder personas should use the model.
 
-The current documentation also contains cross-artifact inconsistencies. Rewriting prose alone would risk presenting unresolved semantics as settled facts.
+Some explanatory comments and documentation retained terminology from earlier model revisions. The documentation must consistently present the currently adopted model state, while maintainers retain a separate engineering record of migration residue and follow-up.
 
 ## 2. Change objective
 
@@ -21,7 +21,7 @@ Establish a coherent documentation system that:
 4. Explains assessment scope, evidence, scoring, maturity resolution, interpretation and improvement planning.
 5. Provides role-based entry points for executives, transformation leaders, enterprise architects, business and operations leaders, technology and data leaders, assessors, and model contributors.
 6. Uses consistent diagrams and worked examples that are traceable to repository artifacts.
-7. Makes unresolved model-definition issues visible and assigns them to explicit reconciliation work rather than hiding them in documentation.
+7. Keeps reader-facing documentation focused on the current model and its use, while retaining technical reconciliation details in maintainer-facing records.
 
 ## 3. Normative boundaries
 
@@ -42,16 +42,17 @@ The model remains independently governed in this repository. Shared Assessment-M
 | Worked example | Clearly labelled illustrative assessment, calculation trace and limitations |
 | Change traceability | Links from documentation statements to authoritative YAML and example artifacts |
 
-## 5. Model reconciliation requirements
+## 5. Descriptive artifact alignment
 
-The following items must be resolved or explicitly marked as unresolved before any documentation claims them as normative:
+The following alignment rules govern this documentation work:
 
 ### R1 — Scale identifier and level semantics
 
 - Distinguish L-0 Not Assessed from capability maturity levels.
-- Reconcile scale descriptions, comments, evaluation references and examples.
-- Confirm whether the five capability levels are L-1 through L-5 for both model lines.
-- Do not describe a five-level scale as L-0 through L-4 if L-0 is a non-maturity sentinel.
+- Use the adopted L-1 through L-5 sequence for the five capability maturity levels in both model lines.
+- Reserve L-0 for the Not Assessed sentinel; never count it as a capability maturity level.
+- Update stale evaluation descriptions, comments, examples and explanatory material to reflect the adopted numbering.
+- Preserve model-specific definitions, score bands, value aliases and evaluation semantics; do not infer new semantics from the identifier migration.
 
 ### R2 — Evaluation-to-scale resolution
 
@@ -115,9 +116,9 @@ The machine-readable model artifacts remain authoritative for model identity, di
 - [ ] Six Operationalized dimensions and their weights are represented accurately.
 - [ ] L-0 is consistently described as Not Assessed, not as a maturity level.
 - [ ] L-1 through L-5 are presented as five capability maturity levels only where supported by the relevant scale.
-- [ ] The L-0…L-4 versus L-5 evaluation-resolution contradiction is recorded and not obscured.
-- [ ] Version/status discrepancies are documented with source paths.
-- [ ] Criterion-to-0–100 conversion and effort-adjusted value are marked as unresolved until formally specified.
+- [ ] Reader-facing material consistently presents L-1 through L-5 as the definitive five-level maturity sequence, with L-0 reserved for Not Assessed.
+- [ ] Repository and model-line status are stated clearly and confidently.
+- [ ] The assessment method and scoring explanations are traceable to the published model artifacts.
 - [ ] Assessment methodology covers evidence, scoring, aggregation, resolution, interpretation and improvement.
 - [ ] Persona guidance is provided for executive, transformation, architecture, business/operations, technology/data, assessor and model-maintainer audiences.
 - [ ] Diagrams render in GitHub Markdown and correspond to the described model structure.
@@ -127,9 +128,9 @@ The machine-readable model artifacts remain authoritative for model identity, di
 ## 8. Delivery sequence
 
 1. Reconcile the current artifacts and publish the reconciliation record.
-2. Publish the methodology and persona guide with explicit unresolved-semantic warnings.
+2. Publish the methodology and persona guide as practical user and contributor guidance.
 3. Replace the root README with a persona-oriented entry point and diagrams.
-4. Resolve model-definition issues through separately reviewed CRs before claiming full normative consistency.
+4. Track any substantive model-definition changes through their own model CRs; do not expose internal deliberations in the README.
 5. Add CI checks for documentation links, Mermaid syntax where supported, and model/documentation cross-reference integrity.
 
 ## 9. Out of scope
