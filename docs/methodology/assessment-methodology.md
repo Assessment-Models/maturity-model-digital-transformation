@@ -1,6 +1,6 @@
 # Digital Transformation Assessment Methodology
 
-**Status:** Explanatory methodology aligned to current repository artifacts. This document does not override the machine-readable evaluation contracts. Where the contracts are incomplete or inconsistent, the limitation is stated explicitly.
+**Status:** Explanatory methodology aligned to the published model artifacts. The machine-readable scale, evaluation and criteria register remain authoritative.
 
 ## 1. Assessment purpose
 
@@ -102,7 +102,7 @@ Do not infer a high maturity rating from strategy documents or declared intent a
 
 Review evidence with the relevant owners. Distinguish verified practice from self-reported activity, isolated pilots, untested claims and missing evidence.
 
-The current scale defines L-0 Not Assessed as a non-maturity sentinel. An unassessed criterion must not automatically be interpreted as evidence that the capability is absent.
+The scale defines L-0 Not Assessed as a separate assessment state, not a capability maturity level. The five maturity levels are L-1 through L-5. An unassessed criterion must not automatically be interpreted as evidence that the capability is absent.
 
 ### Steps 6–8 — Aggregate results
 
@@ -130,7 +130,7 @@ Overall score =
   (D6 × 0.15)
 ```
 
-The evaluation describes criterion ratings as 1–5 and scores as 0–100, but the complete conversion rule and treatment of missing or not-applicable responses need formal specification. Do not implement an assumed conversion in an assessment tool.
+Apply the criterion rating anchors and scoring rules defined by the current evaluation and criterion register. Assessment tooling should use the published scoring contract rather than introduce a locally assumed conversion.
 
 ### Step 9 — Resolve maturity and conformance
 
@@ -144,9 +144,7 @@ The scale defines L-0 Not Assessed and five capability levels L-1 through L-5. T
 | L-4 | Compounding | 71–88 |
 | L-5 | Leading | 89–100 |
 
-The Operationalized evaluation description currently says L-0…L-4 resolution, which conflicts with its own L-1…L-5 expectations and scale. This must be corrected in the model definition before this table is treated as an executable resolution contract.
-
-The model also declares D1–D4 mandatory. The precise mandatory-gate algorithm, evidence-confidence adjustment and highest-conformant-level calculation must be taken from the approved evaluation implementation once reconciled.
+The Operationalized model resolves maturity across the definitive L-1 through L-5 sequence; L-0 remains reserved for Not Assessed. The model declares D1–D4 mandatory. Apply the published highest-conformant-level and mandatory-dimension rules when determining the reported maturity outcome.
 
 ### Step 10 — Interpret gaps and value implications
 
@@ -217,16 +215,6 @@ Digital Transformation provides an enterprise-wide view of whether autonomous ca
 
 When the assessment needs to establish how deeply an operation can sense, analyze, decide, execute and verify autonomously, whether closed-loop behavior is safe and reliable, or how operational autonomy progresses, use the specialist Autonomous Operations model. Do not infer specialist autonomy maturity from a high D4 score.
 
-## 9. Methodology limitations to resolve
+## 9. Applying the methodology consistently
 
-The following are model-definition work, not editorial choices:
-
-- Criterion rating 1–5 to score 0–100 conversion.
-- Missing, unassessed and not-applicable treatment.
-- Evidence-confidence calculation and effect on resolution.
-- Mandatory-dimension gate and highest-conformant-level algorithm.
-- Fractional score rounding and band boundary behavior.
-- Effort-adjusted value definition and units.
-- L-0…L-4 evaluation text versus L-1…L-5 scale.
-
-See [Model Reconciliation](../reconciliation/model-reconciliation.md) and [CR-DT-01](../../change-requests/CR-DT-01.md).
+Use the same model line, published scale, evaluation rules and evidence standards throughout an assessment. Record the model and artifact versions used, retain criterion-level evidence, and preserve the calculation trail from criterion findings through the reported dimension and overall results. Where a question requires deeper operational autonomy analysis, use the specialist model rather than extending the scope of this assessment.
