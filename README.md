@@ -21,7 +21,7 @@ This repository contains two related but distinct model lines. The **Operational
 | Assessor | [Assessor pathway](docs/guides/persona-guide.md#8-assessor-pathway) |
 | Model contributor | [Model maintainer pathway](docs/guides/persona-guide.md#9-model-maintainer-pathway) |
 
-For a guided explanation, read the [assessment methodology](docs/methodology/assessment-methodology.md). For the current model-definition discrepancies and decisions required, read the [model reconciliation](docs/reconciliation/model-reconciliation.md).
+For a guided explanation, read the [assessment methodology](docs/methodology/assessment-methodology.md), or follow the [persona guide](docs/guides/persona-guide.md) for a role-specific route through the model.
 
 ## What does the model assess?
 
@@ -121,20 +121,19 @@ The scales record a 1:1 level correlation. This does **not** make the two model 
 
 ## Maturity progression
 
-Both scale artifacts define **L-0 Not Assessed** as a sentinel state, not a capability maturity level. The five capability maturity levels are L-1 through L-5.
+Both model lines use the definitive five-level maturity sequence **L-1 through L-5**. **L-0 Not Assessed** is a separate assessment state for a criterion that has not been assessed; it is not a maturity level and is not included in the five-level progression.
 
-The Operationalized scale associates the following value aliases and score bands with its five levels:
+The Operationalized scale associates the following canonical level names, maturity bands and value interpretations:
 
-| Level | Value alias | Score band | Interpretation |
-|---|---|---:|---|
-| L-0 | Not Assessed | — | No evidence examined; not a maturity level |
-| L-1 | Unrealized | 0–20 | Digital activity is informal and value is at risk |
-| L-2 | Proven | 21–45 | Value is demonstrated in governed pilots, but adoption is uneven |
-| L-3 | Standardized | 46–70 | Digital practices are governed and repeatable |
-| L-4 | Compounding | 71–88 | Metrics-driven, predictive and adaptive capabilities scale value |
-| L-5 | Leading | 89–100 | Intent-driven, self-optimizing practices set benchmarks |
+| Level | Canonical level name | Maturity band | Value interpretation | Score band |
+|---|---|---|---|---:|
+| L-1 | Absent | Emergent | Unrealized | 0–20 |
+| L-2 | Piloting | Structured | Proven | 21–45 |
+| L-3 | Defined | Systematic | Standardized | 46–70 |
+| L-4 | Scaled | Adaptive | Compounding | 71–88 |
+| L-5 | Self-Optimising | Self-Optimising | Leading | 89–100 |
 
-The score bands and aliases above are read from the Operationalized scale. Its evaluation description currently contains an inconsistent L-0…L-4 resolution statement. The reconciliation is recorded in [REC-01](docs/reconciliation/model-reconciliation.md#4-scale-and-evaluation-reconciliation); do not treat the contradictory resolver description as settled.
+The sequence expresses increasing organizational capability, from the absence of an established transformation practice through piloting, definition and scale to self-optimising performance. Each model line retains its own model-specific level definitions and assessment criteria; aligned identifiers do not make the two models' assessment results interchangeable.
 
 ## How an assessment works
 
@@ -164,7 +163,7 @@ Criterion ratings
     → evidence-backed improvement priorities
 ```
 
-D1–D4 are currently mandatory. The detailed treatment of incomplete evidence, criterion rating conversion, confidence and highest-conformant-level resolution requires reconciliation in the model contract. The [Assessment Methodology](docs/methodology/assessment-methodology.md) explains the current process and explicitly identifies these limitations.
+D1–D4 are mandatory dimensions in the Operationalized evaluation. The [Assessment Methodology](docs/methodology/assessment-methodology.md) explains the evidence-led assessment lifecycle, aggregation approach and interpretation of results.
 
 ## Worked example: reading an assessment result
 
@@ -250,23 +249,24 @@ See the full [Persona Guide](docs/guides/persona-guide.md) for role-specific que
 
 ## Model status and governance
 
-The repository is at release `2.0.0` and declares conformance to `AM-MODEL-REPOSITORY-STANDARD` v1.0.1 at structural level. The README and manifests identify the Composite line as stable and the Operationalized line as alpha. These are model/repository status declarations, not an assertion that every scoring and versioning discrepancy has been resolved.
+The repository is released as `2.0.0` and declares conformance to `AM-MODEL-REPOSITORY-STANDARD` v1.0.1 at structural level. The Composite model line is stable; the Operationalized model line is alpha. These status labels distinguish the maturity of each model line and do not affect the use of the published model definitions.
 
-The model is part of the Assessment-Models ecosystem and its conformance process. Machine-readable artifacts remain authoritative for model identity, dimensions, criteria, weights, scale and evaluation. Documentation explains those artifacts and must remain traceable to them.
+The machine-readable artifacts define model identity, dimensions, criteria, weights, scales and evaluation. The documentation provides an accessible explanation and practical route into those definitions.
 
-### Current reconciliation priorities
+## Contribute to the model
 
-- Align evaluation resolution descriptions with L-0 Not Assessed and L-1…L-5 capability maturity levels.
-- Establish version authority across repository, model lines, scales, evaluations and examples.
-- Specify criterion rating conversion, missing-data handling, evidence confidence and mandatory gates.
-- Define the effort-adjusted value construct and reporting semantics.
-- Add criterion-level worked examples and automated register consistency checks.
+Contributions are welcome from practitioners, enterprise architects, transformation leaders, assessors and model specialists. Useful contributions include:
 
-The detailed register is maintained in [Model Reconciliation](docs/reconciliation/model-reconciliation.md). The governing documentation proposal is [CR-DT-01](change-requests/CR-DT-01.md).
+- Improving definitions, examples and guidance while preserving the model's established semantics.
+- Providing evidence-informed feedback on dimensions, subdimensions and assessment criteria.
+- Proposing additional assessment examples, interpretation guidance and use cases.
+- Improving validation, traceability, diagrams and supporting documentation.
+
+Start with the [persona guide](docs/guides/persona-guide.md), review the relevant machine-readable model artifacts, and submit a focused proposal or pull request with its rationale and supporting evidence. Model-definition changes should identify their impact on criteria, scoring, conformance and existing assessments.
 
 ## Conformance and ecosystem
 
-This repository demonstrates the Assessment-Models repository and model conformance approach, including local validation, contract conformance and registry reference checks. These mechanisms validate structural and interoperability expectations; they do not replace domain-specific assessment methodology or evidence quality.
+This repository participates in the Assessment-Models ecosystem, including local validation, contract conformance and registry reference checks. These mechanisms support model quality, interoperability and reliable reuse.
 
 - [Assessment-Models organization](https://github.com/Assessment-Models)
 - [Maturity Model Repository Standard](https://github.com/Assessment-Models/maturity-model-standard)
