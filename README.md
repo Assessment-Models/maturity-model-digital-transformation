@@ -127,7 +127,7 @@ The Operationalized scale associates the following canonical level names, maturi
 
 | Level | Canonical level name | Maturity band | Value interpretation | Score band |
 |---|---|---|---|---:|
-| L-1 | Absent | Emergent | Unrealized | 0–20 |
+| L-1 | Absent/Ad-hoc | Emergent | Unrealized | 0–20 |
 | L-2 | Piloting | Structured | Proven | 21–45 |
 | L-3 | Defined | Systematic | Standardized | 46–70 |
 | L-4 | Scaled | Adaptive | Compounding | 71–88 |
