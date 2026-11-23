@@ -1,6 +1,6 @@
 # Maturity Evaluation Model — maturity-model-digital-transformation v1.0.0
 # Composite model evaluation. Native 0–100 weighted mean over four criteria,
-# each carrying per-level expectations against the L-0…L-4 composite scale.
+# each carrying per-level expectations against the L-1…L-5 composite scale.
 #
 # This model is the FIRST INDEPENDENT MODEL in the Assessment-Models
 # ecosystem. It is published as a Phase 4 first-model candidate under
@@ -15,7 +15,7 @@ description: >-
   Model-owned evaluation contract for the Digital Transformation composite
   maturity model. Weighted native 0–100 aggregation over four criteria
   (digital-culture, technology-adoption, operations-modernization,
-  services-delivery). Per-level expectations reference the L-0…L-4
+  services-delivery). Per-level expectations reference the L-1…L-5
   composite scale (scale.yaml).
 status: stable
 
@@ -34,7 +34,7 @@ scoring:
     declared weights: digital-culture 0.20, technology-adoption 0.30,
     operations-modernization 0.25, services-delivery 0.25. The result
     is banded through the maturity-v2 canonical band instance
-    (dea:maturity-bands-v2 v1.0.0) and resolved to the L-0...L-4
+    (dea:maturity-bands-v2 v1.0.0) and resolved to the L-1...L-5
     scale via highest-conformant-level resolution. Per-level
     effort_multiplier from scale.yaml is applied to the aggregated
     value to produce the effort-adjusted value reported in

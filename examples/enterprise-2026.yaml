@@ -4,7 +4,7 @@
 #   1. Four criteria each scored on the native 0-100 domain.
 #   2. Weighted mean produces an aggregated score.
 #   3. Aggregated score banded into one of five v2 bands.
-#   4. Band resolves to the L-0..L-4 scale via highest-conformant-level.
+#   4. Band resolves to the L-1..L-5 maturity scale via highest-conformant-level.
 #   5. Per-level effort_multiplier applied to the aggregated score to
 #      produce the effort-adjusted value reported in AssessmentResults.
 #
@@ -35,7 +35,7 @@ weights:
 aggregated_score: 78.60
 
 # v2 band resolution (canonical bands: 0-20 / 21-45 / 46-70 / 71-88 / 89-100):
-# 78.60 falls into the 71-88 band -> Adaptive (L-4 ordinal 3).
+# 78.60 falls into the 71-88 band -> Adaptive (L-4 ordinal 4).
 resolved_band: dea:maturity-band-adaptive
 resolved_level: L-4
 

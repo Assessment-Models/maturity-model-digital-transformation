@@ -1,11 +1,11 @@
 # Maturity Scale — maturity-model-digital-transformation v1.0.0 (5-level)
 # Composite model-owned scale (CR-AM-11 §6, §31). Five levels with
-# structural L-0…L-4 identifiers, linear topology, exponential
+# definitive L-1…L-5 maturity identifiers (L-0 is Not Assessed), linear topology, exponential
 # progression (the maturity-v2 diminishing-returns insight). Subject of
 # the assessment is the org's overall digital-transformation posture,
 # spanning operations + technology + services-delivery + culture.
 #
-# This scale is COMPOSITE — it borrows the L-0..L-4 structural identifiers
+# This scale is COMPOSITE — it uses the definitive L-1..L-5 identifiers
 # from the canonical OpenDEA scale convention but its level semantics are
 # the composite model's own. Identity is (model, scale, level) per
 # CR-AM-09 §9 — never normalised across models.
@@ -114,7 +114,7 @@ progression:
   function: exponential
   transition_rules:
     - Forward-only; no level skipping (the maturity-v2 diminishing-
-      returns insight — reaching L-4 is intentionally costly).
+      returns insight — reaching L-5 is intentionally costly).
     - Exit from a level requires the documented exit criteria AND
       evidence expectations from the corresponding criterion's level
       expectations (evaluation model).
