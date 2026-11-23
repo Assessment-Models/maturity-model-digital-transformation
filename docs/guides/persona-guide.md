@@ -90,10 +90,10 @@ Use this sequence:
 7. Record missing evidence and confidence limitations.
 8. Produce the complete assessment output described in the methodology.
 
-Do not invent a rating conversion or treat an unassessed criterion as proof of absence. Consult the [Model Reconciliation](../reconciliation/model-reconciliation.md) for unresolved rules.
+Use the published criterion anchors and evaluation rules consistently. L-0 denotes Not Assessed; the five capability maturity levels are L-1 through L-5. An unassessed criterion is not evidence that the capability is absent.
 
 ## 9. Model maintainer pathway
 
 Treat YAML model artifacts as the authoritative machine-readable definition. Keep documentation claims traceable to those artifacts. Changes to scale semantics, scoring, weights, criteria, mandatory gates, benchmarks or version authority require explicit model governance and validation; they must not be introduced through a README edit.
 
-Review [CR-DT-01](../../change-requests/CR-DT-01.md) and [Model Reconciliation](../reconciliation/model-reconciliation.md) before changing the documentation or model contract.
+Review the relevant change requests and model artifacts before changing the documentation or model contract. Keep model-definition changes traceable, evidence-based and covered by validation.
