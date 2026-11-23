@@ -5,8 +5,7 @@
 #   2. Weighted mean produces an aggregated score.
 #   3. Aggregated score banded into one of five v2 bands.
 #   4. Band resolves to the L-1..L-5 maturity scale via highest-conformant-level.
-#   5. Per-level effort_multiplier applied to the aggregated score to
-#      produce the effort-adjusted value reported in AssessmentResults.
+#   5. Marginal band contributions produce the supplementary effort-adjusted value.
 #
 # Numbers are illustrative; the worked example proves the math flows
 # through the model consistently with CR-AM-09 v2 band semantics.
@@ -39,14 +38,16 @@ aggregated_score: 78.60
 resolved_band: dea:maturity-band-adaptive
 resolved_level: L-4
 
-# Per-level effort_multiplier from scale.yaml (L-4 = 4.0):
-#   effort-adjusted = 78.60 * 4.0 / 100.0 = 3.144 (ratio form)
-# Or, expressed as the canonical effort-adjusted value with the
-# maturity-v2 diminishing-returns semantics:
-#   effort-adjusted-value = aggregated_score * effort_multiplier = 78.60 * 4.0 = 314.40
-#   which is reported alongside the raw 78.60 for stakeholder context.
-effort_multiplier: 4.0
-effort_adjusted_value: 314.40
+# Marginal-band EAV = 20/1.0 + 25/1.5 + 25/2.5 + 8.6/4.0 = 48.82.
+effort_multiplier: 4.0  # resolved-band metadata only; not applied to the full aggregate
+effort_adjusted_value: 48.8166666667
+effort_adjusted_value_display: 48.82
+effort_adjusted_value_contributions:
+  - { band_id: dea:maturity-band-emergent, marginal_points: 20, multiplier: 1.0, adjusted_contribution: 20.0 }
+  - { band_id: dea:maturity-band-structured, marginal_points: 25, multiplier: 1.5, adjusted_contribution: 16.6666666667 }
+  - { band_id: dea:maturity-band-systematic, marginal_points: 25, multiplier: 2.5, adjusted_contribution: 10.0 }
+  - { band_id: dea:maturity-band-adaptive, marginal_points: 8.6, multiplier: 4.0, adjusted_contribution: 2.15 }
+  - { band_id: dea:maturity-band-self-optimising, marginal_points: 0, multiplier: 6.0, adjusted_contribution: 0.0 }
 
 # Conformance status (CR-AM-09 §25):
 # Per the evaluation model's level_expectations for L-4, every mandatory

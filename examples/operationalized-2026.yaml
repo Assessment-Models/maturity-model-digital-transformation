@@ -22,7 +22,8 @@ aggregated_score: 67.2
 resolved_band: dea:maturity-band-systematic
 resolved_level: L-3
 effort_multiplier: 2.5
-effort_adjusted_value: 168.0
+effort_adjusted_value: 45.5466666667
+effort_adjusted_value_display: 45.55
 conformance_status: conformant
 notes: Weighted mean 67.2 -> v2 band dea:maturity-band-systematic -> L-3 (Systematic); mandatory dims d1-d4 all >= 46, so
-  highest-conformant-level holds; effort-adjusted = 67.2 * 2.5 = 168.0.
+  highest-conformant-level holds; EAV = 20/1.0 + 25/1.5 + 22.2/2.5 = 45.55.

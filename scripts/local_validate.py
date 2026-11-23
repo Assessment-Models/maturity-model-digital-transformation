@@ -62,10 +62,23 @@ def load_yaml(path: Path):
 
 
 def band_for(score: float) -> str:
-    for band_id, (lo, hi) in V2_BANDS:
-        if lo <= score <= hi:
+    for (band_id, _), upper in zip(V2_BANDS, (20.0, 45.0, 70.0, 88.0, 100.0)):
+        if score <= upper:
             return band_id
     raise ValueError(f"score {score} falls outside all v2 bands")
+
+
+def marginal_points(score: float) -> list[float]:
+    lower = 0.0
+    points = []
+    for upper in (20.0, 45.0, 70.0, 88.0, 100.0):
+        points.append(max(0.0, min(score, upper) - lower))
+        lower = upper
+    return points
+
+
+def effort_adjusted_value(score: float) -> float:
+    return sum(p / m for p, m in zip(marginal_points(score), (1.0, 1.5, 2.5, 4.0, 6.0)))
 
 
 def main() -> int:
@@ -151,13 +164,16 @@ def main() -> int:
                 f"{example_path.relative_to(ROOT)}: resolved_band {example['resolved_band']!r} "
                 f"!= computed {expected_band!r} for score {total}"
             )
-        expected_adjusted = total * example["effort_multiplier"]
+        expected_adjusted = effort_adjusted_value(total)
         if not math.isclose(example["effort_adjusted_value"],
                             expected_adjusted, abs_tol=0.01):
             errors.append(
                 f"{example_path.relative_to(ROOT)}: effort_adjusted_value "
-                f"{example['effort_adjusted_value']} != computed {round(expected_adjusted, 2)}"
+                f"{example['effort_adjusted_value']} != marginal-band EAV {round(expected_adjusted, 2)}"
             )
+        display = example.get("effort_adjusted_value_display")
+        if display is not None and not math.isclose(float(display), round(expected_adjusted, 2), abs_tol=0.001):
+            errors.append(f"{example_path.relative_to(ROOT)}: displayed EAV is incorrect")
 
     # 6. operationalized model line (maturity/operationalized/) — additive check
     op = ROOT / "maturity/operationalized"
@@ -204,6 +220,16 @@ def main() -> int:
             errors.append(f"operationalized-2026.yaml: aggregated {ex['aggregated_score']} != {round(t,2)}")
         if ex["resolved_band"] != band_for(t):
             errors.append(f"operationalized-2026.yaml: band {ex['resolved_band']} != {band_for(t)}")
+        expected_eav = effort_adjusted_value(t)
+        if not math.isclose(ex["effort_adjusted_value"], expected_eav, abs_tol=0.01):
+            errors.append(f"operationalized-2026.yaml: EAV {ex['effort_adjusted_value']} != marginal-band EAV {round(expected_eav, 2)}")
+        if "effort_adjusted_value_display" in ex and not math.isclose(ex["effort_adjusted_value_display"], round(expected_eav, 2), abs_tol=0.001):
+            errors.append("operationalized-2026.yaml: displayed EAV is incorrect")
+        expected_eav = effort_adjusted_value(t)
+        if not math.isclose(ex["effort_adjusted_value"], expected_eav, abs_tol=0.01):
+            errors.append(f"operationalized-2026.yaml: EAV {ex['effort_adjusted_value']} != marginal-band EAV {round(expected_eav, 2)}")
+        if "effort_adjusted_value_display" in ex and not math.isclose(ex["effort_adjusted_value_display"], round(expected_eav, 2), abs_tol=0.001):
+            errors.append("operationalized-2026.yaml: displayed EAV is incorrect")
 
     if errors:
         print(f"FAIL — Level 1 local validation, {len(errors)} error(s):")
