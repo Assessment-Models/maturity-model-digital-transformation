@@ -21,4 +21,5 @@ jobs:
     uses: Assessment-Models/assessment-ci/.github/workflows/contract-conformance.yml@fa81288827daed477f0b599a59a670940a6dff72
     with:
       dea-metamodel-ref: v0.1.0-draft  # dea-metamodel main tip at Phase 3 merge (40-char SHA); switch to v1.0.0 tag when published
+      assessment-ci-ref: fa81288827daed477f0b599a59a670940a6dff72
       manifest-path: model.yaml
