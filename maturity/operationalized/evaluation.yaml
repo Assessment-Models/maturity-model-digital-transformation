@@ -5,7 +5,7 @@ version: 2.0.0
 metamodel_version: 1.0.0
 name: Digital Transformation Operationalized Evaluation Model
 description: Weighted 0-100 over the six dimension criteria (0.20/0.20/0.20/0.15/0.10/0.15); criterion 1-5 -> 0-100; banded
-  via v2 bands; resolved to L-0..L-4 by highest-conformant-level with the mandatory-dimension gate (d1-d4).
+  via v2 bands; resolved to L-1..L-5 by highest-conformant-level with the mandatory-dimension gate (d1-d4).
 status: alpha
 scale:
   id: dea:scale-digital-transformation-operationalized-v1
