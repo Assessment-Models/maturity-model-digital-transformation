@@ -1,10 +1,10 @@
 # =============================================================================
-# touchpoints.yaml — CR-AM-13 Phase 2 DRAFT (mirror record)
+# touchpoints.yaml — CR-AM-13 Phase 2 DRAFT v0.1.1 (mirror record)
 # Contract: maturity-touchpoint-contract v0.1.0-draft (technehub-labs/dea-metamodel)
 # =============================================================================
 id: dea:touchpoints-digital-transformation-v1
 repo_id: maturity-model-digital-transformation
-version: 0.1.0-draft
+version: 0.1.1-draft
 status: draft
 metamodel_version: 1.0.0
 contract:
