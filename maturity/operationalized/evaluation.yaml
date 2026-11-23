@@ -18,6 +18,14 @@ scoring:
     minimum: 0
     maximum: 100
   aggregation_rule: overall = sum(dim_score * weight); dim = mean(subdims); subdim = mean(criteria 0-100).
+  effort_adjusted_value:
+    formula: EAV(S) = sum(P_k(S) / M_k), for k = 1..5
+    input: unrounded overall aggregate S in [0, 100]
+    allocation: 'Marginal intervals [0,20], (20,45], (45,70], (70,88], (88,100]; each score point is counted once.'
+    multipliers: [1.0, 1.5, 2.5, 4.0, 6.0]
+    theoretical_maximum: 53.1666666667
+    reporting_precision: 2
+    distinction: Supplementary index; not the 0-100 maturity score or a maturity-level determinant.
 criteria:
 - id: d1
   name: Customer & Ecosystem Value
