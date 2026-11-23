@@ -135,6 +135,16 @@ The Operationalized scale associates the following canonical level names, maturi
 
 The sequence expresses increasing organizational capability, from the absence of an established transformation practice through piloting, definition and scale to self-optimising performance. Each model line retains its own model-specific level definitions and assessment criteria; aligned identifiers do not make the two models' assessment results interchangeable.
 
+### Effort-adjusted value
+
+Both model lines report effort-adjusted value (EAV) as a supplementary index calculated from the unrounded aggregate score:
+
+`EAV(S) = Σ [Pₖ(S) / Mₖ]`
+
+Here, `Pₖ(S)` is the marginal number of score points allocated to canonical band `k`, and `Mₖ` is that band's effort multiplier. Score points are allocated progressively across the intervals 0–20, above 20–45, above 45–70, above 70–88 and above 88–100. Each point is counted once. The full aggregate is not multiplied by the multiplier of its resolved band.
+
+EAV does not replace the 0–100 aggregate and does not determine the maturity level. The composite worked example (78.60) yields EAV 48.82; the Operationalized worked example (67.20) yields EAV 45.55.
+
 ## How an assessment works
 
 The methodology is evidence-led. It should establish current operating reality, not simply collect statements of intent.
@@ -189,7 +199,7 @@ flowchart TD
     F --> G["Prioritize improvement"]
 ```
 
-The weighted arithmetic is 67.20. The example reports the Systematic band and L-3. It is an **illustration of the model calculation**, not an organizational assessment or benchmark. It supplies dimension scores directly to demonstrate weighted aggregation. The example also reports an effort-adjusted indicator of 168.0, calculated as 67.2 × 2.5. This supplementary indicator is distinct from the 0–100 maturity score and should not be interpreted as realized financial or enterprise value.
+The weighted arithmetic is 67.20. The example reports the Systematic band and L-3. It is an **illustration of the model calculation**, not an organizational assessment or benchmark. It supplies dimension scores directly to demonstrate weighted aggregation. Under the canonical marginal-band calculation, the Operationalized example's score of 67.20 produces an EAV of 45.55. EAV is a supplementary index, not the 0–100 maturity score, the resolved maturity level or realized financial or enterprise value.
 
 ## The boundary with Autonomous Operations
 
